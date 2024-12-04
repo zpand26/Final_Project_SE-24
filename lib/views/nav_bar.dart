@@ -3,6 +3,8 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 import 'settings_page_view.dart';
 import '../presenters/theme_presenter.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:northstars_final/views/auth_page_view.dart';
 
 class NavBar extends StatefulWidget {
   final ThemePresenter themePresenter;
@@ -26,10 +28,33 @@ class _NavBarState extends State<NavBar> {
     ];
   }
 
+  void _logout() async {
+    await FirebaseAuth.instance.signOut();
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(builder: (context) => const AuthPage()),
+          (route) => false,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _buildPages()[_selectedIndex],
+      body: Stack(
+        children: [
+        _buildPages()[_selectedIndex],
+          // Optional Logout Button
+          Positioned(
+            top: 40,
+            right: 20,
+            child: FloatingActionButton.small(
+              onPressed: _logout,
+              backgroundColor: Colors.tealAccent,
+              child: const Icon(Icons.logout),
+            ),
+          ),
+        ],
+      ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
         child: GNav(
