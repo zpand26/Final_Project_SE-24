@@ -1,42 +1,61 @@
 import 'package:flutter/material.dart';
 import '../presenters/theme_presenter.dart';
 
-class SettingsPageView extends StatelessWidget {
+class SettingsPageView extends StatefulWidget {
   final ThemePresenter themePresenter;
 
   const SettingsPageView({super.key, required this.themePresenter});
 
   @override
+  _SettingsPageViewState createState() => _SettingsPageViewState();
+}
+
+class _SettingsPageViewState extends State<SettingsPageView> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey, // Assign the key to the Scaffold
       appBar: AppBar(
-        title: const Text('Settings'),
+        title: const Text('Settings Page'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.settings, size: 30),
+            onPressed: () {
+              _scaffoldKey.currentState?.openEndDrawer(); // Use the key to open the drawer
+            },
+          ),
+        ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+      endDrawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
           children: [
-            const Text(
-              'Appearance',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Theme.of(context).primaryColor,
+              ),
+              child: const Text(
+                'Appearance Settings',
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
             ),
-            const SizedBox(height: 16),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text('Dark Mode', style: TextStyle(fontSize: 16)),
-                Switch(
-                  value: themePresenter.isDarkMode,
-                  onChanged: (isDark) {
-                    themePresenter.toggleTheme(isDark);
-                  },
-                ),
-              ],
+            ListTile(
+              title: const Text('Dark Mode'),
+              trailing: Switch(
+                value: widget.themePresenter.isDarkMode,
+                onChanged: (isDark) {
+                  setState(() {
+                    widget.themePresenter.toggleTheme(isDark); // Toggle the theme
+                  });
+                },
+              ),
             ),
           ],
         ),
       ),
+      body: const SizedBox.shrink(), // Empty content for now
     );
   }
 }

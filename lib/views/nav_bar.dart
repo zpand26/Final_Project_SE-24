@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
+import 'settings_page_view.dart';
 import '../presenters/theme_presenter.dart';
-import '../views/theme_view.dart';
 
 class NavBar extends StatefulWidget {
   final ThemePresenter themePresenter;
@@ -27,8 +27,8 @@ class _NavBarState extends State<NavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _selectedIndex == 4 // Navigate to ThemeView for Profile tab
-          ? ThemeView(themePresenter: widget.themePresenter)
+      body: _selectedIndex == 4
+          ? SettingsPageView(themePresenter: widget.themePresenter)
           : _pages[_selectedIndex],
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),

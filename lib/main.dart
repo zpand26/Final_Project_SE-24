@@ -28,8 +28,8 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
+      theme: ThemeData.light().copyWith(primaryColor: Colors.blue,),
+      darkTheme: ThemeData.dark().copyWith(),
       themeMode: _themeModel.isDarkMode ? ThemeMode.dark : ThemeMode.light,
       home: NavBar(themePresenter: _themePresenter),
     );
