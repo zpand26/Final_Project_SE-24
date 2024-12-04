@@ -54,11 +54,11 @@ class _NavBarState extends State<NavBar> {
             });
           },
           tabs: const [
-            GButton(icon: LineIcons.search, text: ''),
-            GButton(icon: LineIcons.suitcase, text: ''),
-            GButton(icon: LineIcons.clock, text: ''),
-            GButton(icon: LineIcons.music, text: ''),
-            GButton(icon: LineIcons.user, text: ''),
+            GButton(icon: LineIcons.search),
+            GButton(icon: LineIcons.suitcase),
+            GButton(icon: LineIcons.clock),
+            GButton(icon: LineIcons.music),
+            GButton(icon: LineIcons.user),
           ],
         ),
       ),
