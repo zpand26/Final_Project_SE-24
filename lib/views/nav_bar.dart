@@ -16,20 +16,20 @@ class NavBar extends StatefulWidget {
 class _NavBarState extends State<NavBar> {
   int _selectedIndex = 0;
 
-  final List<Widget> _pages = [
-    Center(child: Text('')),
-    Center(child: Text('')),
-    Center(child: Text('')),
-    Center(child: Text('')),
-    Center(child: Text('')),
-  ];
+  List<Widget> _buildPages() {
+    return [
+      Center(child: Text('Search Page', style: TextStyle(fontSize: 24))),
+      Center(child: Text('Business Page', style: TextStyle(fontSize: 24))),
+      Center(child: Text('Alerts Page', style: TextStyle(fontSize: 24))),
+      Center(child: Text('Music Page', style: TextStyle(fontSize: 24))),
+      SettingsPageView(themePresenter: widget.themePresenter),
+    ];
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _selectedIndex == 4
-          ? SettingsPageView(themePresenter: widget.themePresenter)
-          : _pages[_selectedIndex],
+      body: _buildPages()[_selectedIndex],
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
         child: GNav(
