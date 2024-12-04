@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
+import '../presenters/theme_presenter.dart';
+import '../views/theme_view.dart';
 
 class NavBar extends StatefulWidget {
-  const NavBar({super.key});
+  final ThemePresenter themePresenter;
+
+  const NavBar({super.key, required this.themePresenter});
 
   @override
   _NavBarState createState() => _NavBarState();
@@ -12,20 +16,20 @@ class NavBar extends StatefulWidget {
 class _NavBarState extends State<NavBar> {
   int _selectedIndex = 0;
 
-  // Pages for each tab in the NavBar
   final List<Widget> _pages = [
     Center(child: Text('')),
     Center(child: Text('')),
     Center(child: Text('')),
     Center(child: Text('')),
     Center(child: Text('')),
-
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pages[_selectedIndex],
+      body: _selectedIndex == 4 // Navigate to ThemeView for Profile tab
+          ? ThemeView(themePresenter: widget.themePresenter)
+          : _pages[_selectedIndex],
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
         child: GNav(
