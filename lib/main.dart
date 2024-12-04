@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'models/theme_model.dart';
 import 'presenters/theme_presenter.dart';
+import 'models/se_compare_model.dart';
+import 'presenters/se_compare_presenter.dart';
 import 'views/nav_bar.dart';
 
 void main() {
@@ -15,6 +17,8 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   final ThemeModel _themeModel = ThemeModel();
   late final ThemePresenter _themePresenter;
+  final SECompareModel _seCompareModel = SECompareModel();
+  late final SEComparePresenter _seComparePresenter;
 
   @override
   void initState() {
@@ -23,6 +27,7 @@ class _MyAppState extends State<MyApp> {
     _themeModel.addListener(() {
       setState(() {});
     });
+    _seComparePresenter = SEComparePresenter(_seCompareModel, (data) => print(data));
   }
 
   @override
@@ -31,7 +36,8 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData.light().copyWith(primaryColor: Colors.blue,),
       darkTheme: ThemeData.dark().copyWith(),
       themeMode: _themeModel.isDarkMode ? ThemeMode.dark : ThemeMode.light,
-      home: NavBar(themePresenter: _themePresenter),
+      home: NavBar(themePresenter: _themePresenter,
+      seComparePresenter: _seComparePresenter,),
     );
   }
 }

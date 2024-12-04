@@ -3,11 +3,17 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 import 'settings_page_view.dart';
 import '../presenters/theme_presenter.dart';
+import '../presenters/se_compare_presenter.dart';
+import 'se_compare_view.dart';
 
 class NavBar extends StatefulWidget {
   final ThemePresenter themePresenter;
+  final SEComparePresenter seComparePresenter;
 
-  const NavBar({super.key, required this.themePresenter});
+  const NavBar({super.key,
+    required this.themePresenter,
+  required this.seComparePresenter,
+  });
 
   @override
   _NavBarState createState() => _NavBarState();
@@ -22,7 +28,7 @@ class _NavBarState extends State<NavBar> {
       Center(child: Text('Business Page', style: TextStyle(fontSize: 24))),
       Center(child: Text('Alerts Page', style: TextStyle(fontSize: 24))),
       Center(child: Text('Music Page', style: TextStyle(fontSize: 24))),
-      SettingsPageView(themePresenter: widget.themePresenter),
+      SECompareView(widget.seComparePresenter),
     ];
   }
 
