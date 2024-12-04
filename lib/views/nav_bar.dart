@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:northstars_final/views/search_view.dart';
 import 'settings_page_view.dart';
 import '../presenters/theme_presenter.dart';
+import '../presenters/search_presenter.dart';
+
 
 class NavBar extends StatefulWidget {
   final ThemePresenter themePresenter;
+  final SearchPresenter searchPresenter;
+  const NavBar({super.key, required this.themePresenter, required this.searchPresenter });
 
-  const NavBar({super.key, required this.themePresenter});
 
   @override
   _NavBarState createState() => _NavBarState();
@@ -18,7 +22,8 @@ class _NavBarState extends State<NavBar> {
 
   List<Widget> _buildPages() {
     return [
-      Center(child: Text('Search Page', style: TextStyle(fontSize: 24))),
+      SearchView(searchPresenter: widget.searchPresenter),
+      //Center(child: Text('Search Page', style: TextStyle(fontSize: 24))),
       Center(child: Text('Business Page', style: TextStyle(fontSize: 24))),
       Center(child: Text('Alerts Page', style: TextStyle(fontSize: 24))),
       Center(child: Text('Music Page', style: TextStyle(fontSize: 24))),
