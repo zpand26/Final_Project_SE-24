@@ -1,37 +1,42 @@
 import 'package:flutter/material.dart';
-import 'models/theme_model.dart';
-import 'presenters/theme_presenter.dart';
-import 'views/nav_bar.dart';
+import 'views/auth_page_view.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
 
-class _MyAppState extends State<MyApp> {
-  final ThemeModel _themeModel = ThemeModel();
-  late final ThemePresenter _themePresenter;
+class MyApp extends StatelessWidget {
 
-  @override
-  void initState() {
-    super.initState();
-    _themePresenter = ThemePresenter(_themeModel);
-    _themeModel.addListener(() {
-      setState(() {});
-    });
-  }
-
+  MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData.light().copyWith(primaryColor: Colors.blue,),
-      darkTheme: ThemeData.dark().copyWith(),
-      themeMode: _themeModel.isDarkMode ? ThemeMode.dark : ThemeMode.light,
-      home: NavBar(themePresenter: _themePresenter),
-    );
+    return FutureBuilder(
+        future: Firebase.initializeApp(),
+        builder: (context, snapshot) {
+          if (snapshot.hasError) {
+            return const MaterialApp(
+              home: Scaffold(
+                body: Center(child: Text("Couldn't connect to Firebase")),
+              ),
+            );
+          }
+          //Once complete, show application
+          if (snapshot.connectionState == ConnectionState.done){
+            return const MaterialApp(
+              home: AuthPage(),
+            );
+          }
+          //loading indicator
+          return const MaterialApp(
+            home: Scaffold(
+              body: Center(child: CircularProgressIndicator()),
+            ),
+          );
+
+        });
   }
 }

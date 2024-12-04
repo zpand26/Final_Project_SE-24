@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "73484906705",
+    "project_id": "north-stars-final",
+    "storage_bucket": "north-stars-final.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73484906705:android:51f218629f61b7663855f0",
+        "android_client_info": {
+          "package_name": "com.company.guidingHand"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "73484906705-6o73pu6dfq2gkacq24ugtpunop561vm9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.company.guidingHand",
+            "certificate_hash": "f39875dc64c01d9d1424dd50ac8f5e486a3482e2"
+          }
+        },
+        {
+          "client_id": "73484906705-qrprai4hvl89ldkkdoi5b7n0qtvvli2o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqLaaRyKfPTatYwTHyaLSlwf84bFlOjBw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "73484906705-qrprai4hvl89ldkkdoi5b7n0qtvvli2o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
