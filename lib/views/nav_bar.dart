@@ -45,8 +45,8 @@ class _NavBarState extends State<NavBar> {
         _buildPages()[_selectedIndex],
           // Optional Logout Button
           Positioned(
-            top: 40,
-            right: 20,
+            top: 53,
+            right: 40,
             child: FloatingActionButton.small(
               onPressed: _logout,
               backgroundColor: Colors.tealAccent,
