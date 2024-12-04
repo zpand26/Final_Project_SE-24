@@ -54,7 +54,7 @@ class _NavBarState extends State<NavBar> {
             GButton(icon: LineIcons.suitcase, text: ''),
             GButton(icon: LineIcons.clock, text: ''),
             GButton(icon: LineIcons.music, text: ''),
-            GButton(icon: LineIcons.user, text: 'Profile'),
+            GButton(icon: LineIcons.user, text: ''),
           ],
         ),
       ),
