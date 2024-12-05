@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import '../presenters/theme_presenter.dart';
+import 'auth_page_view.dart';
 
 class SettingsPageView extends StatefulWidget {
   final ThemePresenter themePresenter;
@@ -13,6 +15,16 @@ class SettingsPageView extends StatefulWidget {
 class _SettingsPageViewState extends State<SettingsPageView> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
+  // Logout function
+  void _logout() async {
+    await FirebaseAuth.instance.signOut();
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(builder: (context) => const AuthPage()),
+          (route) => false,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +35,7 @@ class _SettingsPageViewState extends State<SettingsPageView> {
           IconButton(
             icon: const Icon(Icons.settings, size: 30),
             onPressed: () {
-              _scaffoldKey.currentState?.openEndDrawer(); // Use the key to open the drawer
+              _scaffoldKey.currentState?.openEndDrawer(); // Open the drawer
             },
           ),
         ],
@@ -41,21 +53,30 @@ class _SettingsPageViewState extends State<SettingsPageView> {
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
             ),
+            // Dark mode switch
             ListTile(
               title: const Text('Dark Mode'),
               trailing: Switch(
                 value: widget.themePresenter.isDarkMode,
                 onChanged: (isDark) {
-                  setState(() {
-                    widget.themePresenter.toggleTheme(isDark); // Toggle the theme
-                  });
+                  widget.themePresenter.toggleTheme(isDark); // Update theme
+                  setState(() {}); // Rebuild for immediate effect
                 },
               ),
+            ),
+            // Logout button
+
+            const SizedBox(height:20), //vertical space
+
+            ListTile(
+              title: const Text('Logout'),
+              leading: const Icon(Icons.logout, color: Colors.red),
+              onTap: _logout, // Call logout function
             ),
           ],
         ),
       ),
-      body: const SizedBox.shrink(), // Empty content for now
+      body: const SizedBox.shrink(), // Empty content
     );
   }
 }

@@ -3,14 +3,17 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 import 'settings_page_view.dart';
 import '../presenters/theme_presenter.dart';
+//import '../presenters/search_presenter.dart';
+//import 'search_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:northstars_final/views/auth_page_view.dart';
+import 'auth_page_view.dart';
 
 class NavBar extends StatefulWidget {
   final ThemePresenter themePresenter;
+  // final SearchPresenter searchPresenter;
 
   const NavBar({super.key, required this.themePresenter});
-
+//, required this.searchPresenter
   @override
   _NavBarState createState() => _NavBarState();
 }
@@ -18,16 +21,19 @@ class NavBar extends StatefulWidget {
 class _NavBarState extends State<NavBar> {
   int _selectedIndex = 0;
 
+  // Define the pages for each tab
   List<Widget> _buildPages() {
     return [
+      //  SearchView(searchPresenter: widget.searchPresenter), // Search Page
       Center(child: Text('Search Page', style: TextStyle(fontSize: 24))),
       Center(child: Text('Business Page', style: TextStyle(fontSize: 24))),
       Center(child: Text('Alerts Page', style: TextStyle(fontSize: 24))),
       Center(child: Text('Music Page', style: TextStyle(fontSize: 24))),
-      SettingsPageView(themePresenter: widget.themePresenter),
+      SettingsPageView(themePresenter: widget.themePresenter), // Settings Page
     ];
   }
 
+  // Logout function
   void _logout() async {
     await FirebaseAuth.instance.signOut();
     Navigator.pushAndRemoveUntil(
@@ -42,17 +48,18 @@ class _NavBarState extends State<NavBar> {
     return Scaffold(
       body: Stack(
         children: [
-        _buildPages()[_selectedIndex],
-          // Optional Logout Button
-          Positioned(
-            top: 53,
-            right: 40,
-            child: FloatingActionButton.small(
-              onPressed: _logout,
-              backgroundColor: Colors.tealAccent,
-              child: const Icon(Icons.logout),
-            ),
-          ),
+          // Display the current page
+          _buildPages()[_selectedIndex],
+          // Optional old Logout Button
+    //      Positioned(
+    //        top: 53,
+    //        right: 40,
+    //        child: FloatingActionButton.small(
+    //          onPressed: _logout,
+    //          backgroundColor: Colors.tealAccent,
+    //          child: const Icon(Icons.logout),
+    //        ),
+    //      ),
         ],
       ),
       bottomNavigationBar: Padding(
@@ -75,15 +82,15 @@ class _NavBarState extends State<NavBar> {
           selectedIndex: _selectedIndex,
           onTabChange: (index) {
             setState(() {
-              _selectedIndex = index;
+              _selectedIndex = index; // Update the selected tab index
             });
           },
           tabs: const [
-            GButton(icon: LineIcons.search),
-            GButton(icon: LineIcons.suitcase),
-            GButton(icon: LineIcons.clock),
-            GButton(icon: LineIcons.music),
-            GButton(icon: LineIcons.user),
+            GButton(icon: LineIcons.search), // Search Tab
+            GButton(icon: LineIcons.suitcase), // Business Tab
+            GButton(icon: LineIcons.clock), // Alerts Tab
+            GButton(icon: LineIcons.music), // Music Tab
+            GButton(icon: LineIcons.user), // Profile/Settings Tab
           ],
         ),
       ),

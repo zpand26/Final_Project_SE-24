@@ -7,6 +7,6 @@ class ThemeModel extends ChangeNotifier {
 
   void toggleTheme(bool isDark) {
     _isDarkMode = isDark;
-    notifyListeners(); // Notify listeners about the change
+    notifyListeners(); // Notify listeners of the change
   }
 }
