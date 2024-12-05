@@ -1,6 +1,5 @@
-//import 'package:audioplayers/audioplayers.dart';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:just_audio/just_audio.dart';
 
 void main() => runApp(MP3PlayerApp());
 
@@ -37,8 +36,8 @@ class _MP3PlayerScreenState extends State<MP3PlayerScreen> {
       // Replace with the URL or file path of your MP3
       const audioUrl = 'https://www.example.com/sample.mp3';
       try {
-        await _audioPlayer.setUrl(audioUrl);
-        await _audioPlayer.play();
+        await _audioPlayer.setSource(UrlSource(audioUrl)); // Set the source correctly
+        await _audioPlayer.resume(); // Resume playback
       } catch (e) {
         print('Error loading audio: $e');
       }
