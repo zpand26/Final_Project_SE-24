@@ -1,0 +1,6026 @@
+[
+ {
+   "Company": "viewsoft",
+   "Company Score": 4.8,
+   "Job Title": "software engineer",
+   "Location": "manassas, va",
+   "Date": "8d",
+   "Salary": "$68k - $94k (glassdoor est.)"
+ },
+ {
+   "Company": "workiva",
+   "Company Score": 4.3,
+   "Job Title": "software support engineer",
+   "Location": "remote",
+   "Date": "2d",
+   "Salary": "$61k - $104k (employer est.)"
+ },
+ {
+   "Company": "garmin international, inc.",
+   "Company Score": 3.9,
+   "Job Title": "c# software engineer",
+   "Location": "cary, nc",
+   "Date": "2d",
+   "Salary": "$95k - $118k (glassdoor est.)"
+ },
+ {
+   "Company": "snapchat",
+   "Company Score": 3.5,
+   "Job Title": "software engineer, fullstack, 1+ years of experience",
+   "Location": "los angeles, ca",
+   "Date": "2d",
+   "Salary": "$97k - $145k (employer est.)"
+ },
+ {
+   "Company": "vitesco technologies group ag",
+   "Company Score": 3.1,
+   "Job Title": "software engineer",
+   "Location": "seguin, tx",
+   "Date": "2d",
+   "Salary": "$85k - $108k (glassdoor est.)"
+ },
+ {
+   "Company": "spotify",
+   "Company Score": 3.9,
+   "Job Title": "backend engineer ii",
+   "Location": "new york, ny",
+   "Date": "1d",
+   "Salary": "$123k - $175k (employer est.)"
+ },
+ {
+   "Company": "infor",
+   "Company Score": 4,
+   "Job Title": "associate software engineer",
+   "Location": "alpharetta, ga",
+   "Date": "7d",
+   "Salary": "$77k - $94k (glassdoor est.)"
+ },
+ {
+   "Company": "amerisoft corporation",
+   "Company Score": 5,
+   "Job Title": "software developers",
+   "Location": "farmington hills, mi",
+   "Date": "30d+",
+   "Salary": "$71k - $100k (glassdoor est.)"
+ },
+ {
+   "Company": "whoop",
+   "Company Score": 3.3,
+   "Job Title": "software engineer ii (backend, health)",
+   "Location": "boston, ma",
+   "Date": "10d",
+   "Salary": "$94k - $148k (glassdoor est.)"
+ },
+ {
+   "Company": "pff",
+   "Company Score": 4.2,
+   "Job Title": "sr. software engineer",
+   "Location": "remote",
+   "Date": "1d",
+   "Salary": "$147k - $189k (employer est.)"
+ },
+ {
+   "Company": "salesforce",
+   "Company Score": 4.1,
+   "Job Title": "mts software engineer",
+   "Location": "san francisco, ca",
+   "Date": "5d",
+   "Salary": "$90k - $113k (employer est.)"
+ },
+ {
+   "Company": "healthmine services, inc.",
+   "Company Score": 3.8,
+   "Job Title": "software engineer",
+   "Location": "remote",
+   "Date": "1d",
+   "Salary": "$54k - $79k (glassdoor est.)"
+ },
+ {
+   "Company": "honeywell",
+   "Company Score": 4.1,
+   "Job Title": "software engineer i",
+   "Location": "aguadilla, pr",
+   "Date": "2d",
+   "Salary": "$91k - $135k (glassdoor est.)"
+ },
+ {
+   "Company": "legrand av",
+   "Company Score": 3.7,
+   "Job Title": "software engineer",
+   "Location": "minneapolis-saint paul",
+   "Date": "2d",
+   "Salary": "$70k - $135k (employer est.)"
+ },
+ {
+   "Company": "athenahealth",
+   "Company Score": 4,
+   "Job Title": "software engineer, athenacollector – rcm rules",
+   "Location": "boston, ma",
+   "Date": "2d",
+   "Salary": "$192k - $288k (employer est.)"
+ },
+ {
+   "Company": "amex",
+   "Company Score": 4.1,
+   "Job Title": "java engineer",
+   "Location": "plantation, fl",
+   "Date": "6d",
+   "Salary": "$100k - $125k (employer est.)"
+ },
+ {
+   "Company": "soft labs na",
+   "Company Score": 5,
+   "Job Title": "entry level to senior level software developers",
+   "Location": "northborough, ma",
+   "Date": "30d+",
+   "Salary": "$85k - $127k (glassdoor est.)"
+ },
+ {
+   "Company": "snapchat",
+   "Company Score": 3.5,
+   "Job Title": "software engineer, c++",
+   "Location": "los angeles, ca",
+   "Date": "2d",
+   "Salary": "$69k - $109k (glassdoor est.)"
+ },
+ {
+   "Company": "hertz",
+   "Company Score": 3.2,
+   "Job Title": "software engineer",
+   "Location": "seattle, wa",
+   "Date": "2d",
+   "Salary": "$124k - $234k (employer est.)"
+ },
+ {
+   "Company": "7-eleven, inc.",
+   "Company Score": 3.4,
+   "Job Title": "software engineer",
+   "Location": "irving, tx",
+   "Date": "1d",
+   "Salary": "$85k - $150k (employer est.)"
+ },
+ {
+   "Company": "summit technologies, inc.",
+   "Company Score": 4.2,
+   "Job Title": "software engineer",
+   "Location": "springfield, ma",
+   "Date": "10d",
+   "Salary": "$48k - $89k (glassdoor est.)"
+ },
+ {
+   "Company": "adobe",
+   "Company Score": 2.9,
+   "Job Title": "software development engineer",
+   "Location": "san jose, ca",
+   "Date": "10d",
+   "Salary": "$66k - $97k (glassdoor est.)"
+ },
+ {
+   "Company": "the mitre corporation",
+   "Company Score": 4,
+   "Job Title": "associate software engineer",
+   "Location": "bedford, ma",
+   "Date": "2d",
+   "Salary": "$108k - $199k (employer est.)"
+ },
+ {
+   "Company": "boston children's hospital",
+   "Company Score": 4.1,
+   "Job Title": "software engineer - ha (hybrid)",
+   "Location": "boston, ma",
+   "Date": "30d+",
+   "Salary": "$102k - $173k (employer est.)"
+ },
+ {
+   "Company": "amex",
+   "Company Score": 3.2,
+   "Job Title": "engineer - react/javascript",
+   "Location": "sunrise, fl",
+   "Date": "5d",
+   "Salary": "$124k - $142k (employer est.)"
+ },
+ {
+   "Company": "ahold delhaize usa",
+   "Company Score": 4,
+   "Job Title": "software engineer - martech",
+   "Location": "carlisle, pa",
+   "Date": "2d",
+   "Salary": "$94k - $133k (glassdoor est.)"
+ },
+ {
+   "Company": "artera technologies",
+   "Company Score": 4.2,
+   "Job Title": "software engineers",
+   "Location": "annapolis junction, md",
+   "Date": "6d",
+   "Salary": "$70k - $116k (glassdoor est.)"
+ },
+ {
+   "Company": "adobe",
+   "Company Score": 4.3,
+   "Job Title": "software engineer",
+   "Location": "lehi, ut",
+   "Date": "13d",
+   "Salary": "$142k - $178k (employer est.)"
+ },
+ {
+   "Company": "workiva",
+   "Company Score": 3.5,
+   "Job Title": "senior software engineer",
+   "Location": "remote",
+   "Date": "3d",
+   "Salary": "$87k - $135k (employer est.)"
+ },
+ {
+   "Company": "samsung electronics",
+   "Company Score": 3.4,
+   "Job Title": "software engineer",
+   "Location": "mountain view, ca",
+   "Date": "2d",
+   "Salary": "$77k - $182k (employer est.)"
+ },
+ {
+   "Company": "ipg photonics",
+   "Company Score": 3.7,
+   "Job Title": "software engineer",
+   "Location": "oxford, ma",
+   "Date": "4d",
+   "Salary": "$101k - $144k (glassdoor est.)"
+ },
+ {
+   "Company": "crafty",
+   "Company Score": 3.3,
+   "Job Title": "software engineer",
+   "Location": "chicago, il",
+   "Date": "2d",
+   "Salary": "$101k - $168k (employer est.)"
+ },
+ {
+   "Company": "crunchyroll, llc",
+   "Company Score": 4.2,
+   "Job Title": "software engineer iii, payments",
+   "Location": "san francisco, ca",
+   "Date": "13d",
+   "Salary": "$74k - $118k (glassdoor est.)"
+ },
+ {
+   "Company": "lego",
+   "Company Score": 3.9,
+   "Job Title": "backend software engineer",
+   "Location": "irvine, ca",
+   "Date": "9d",
+   "Salary": "$100k - $200k (employer est.)"
+ },
+ {
+   "Company": "principal financial group",
+   "Company Score": 4.1,
+   "Job Title": "experienced software engineer",
+   "Location": "des moines, ia",
+   "Date": "2d",
+   "Salary": "$51k - $78k (glassdoor est.)"
+ },
+ {
+   "Company": "intel",
+   "Company Score": 3.4,
+   "Job Title": "security software engineer",
+   "Location": "phoenix, az",
+   "Date": "22d",
+   "Salary": "$71k - $237k (employer est.)"
+ },
+ {
+   "Company": "hasbro",
+   "Company Score": 4.4,
+   "Job Title": "software engineer, unreal engine",
+   "Location": "renton, wa",
+   "Date": "18d",
+   "Salary": "$87k - $116k (glassdoor est.)"
+ },
+ {
+   "Company": "software engineering institute",
+   "Company Score": 4.2,
+   "Job Title": "software engineer",
+   "Location": "pittsburgh, pa",
+   "Date": "30d+",
+   "Salary": "$116k - $184k (employer est.)"
+ },
+ {
+   "Company": "university of dayton",
+   "Company Score": 4.4,
+   "Job Title": "associate software engineer",
+   "Location": "dayton, oh",
+   "Date": "2d",
+   "Salary": "$75k - $103k (glassdoor est.)"
+ },
+ {
+   "Company": "mit",
+   "Company Score": 3.7,
+   "Job Title": "software developer",
+   "Location": "cambridge, ma",
+   "Date": "17d",
+   "Salary": "$155k - $221k (employer est.)"
+ },
+ {
+   "Company": "amazon.com services llc",
+   "Company Score": 5,
+   "Job Title": "software dev engineer - computer science",
+   "Location": "seattle, wa",
+   "Date": "2d",
+   "Salary": "$112k - $165k (employer est.)"
+ },
+ {
+   "Company": "daqscribe solutions",
+   "Company Score": 3.9,
+   "Job Title": "jr. software engineer",
+   "Location": "united states",
+   "Date": "10d",
+   "Salary": "$73k - $109k (glassdoor est.)"
+ },
+ {
+   "Company": "west virginia university",
+   "Company Score": 4.5,
+   "Job Title": "software engineer - libraries",
+   "Location": "morgantown, wv",
+   "Date": "4d",
+   "Salary": "$120k - $150k (employer est.)"
+ },
+ {
+   "Company": "noblis",
+   "Company Score": 2,
+   "Job Title": "software engineer (all levels)",
+   "Location": "chantilly, va",
+   "Date": "1d",
+   "Salary": "$77k - $87k (employer est.)"
+ },
+ {
+   "Company": "eimagine",
+   "Company Score": 3.5,
+   "Job Title": "software engineer",
+   "Location": "united states",
+   "Date": "30d+",
+   "Salary": "$65k - $90k (employer est.)"
+ },
+ {
+   "Company": "csl software solutions",
+   "Company Score": 4.1,
+   "Job Title": "software/database developer",
+   "Location": "burlington, vt",
+   "Date": "18d",
+   "Salary": "$74k - $101k (glassdoor est.)"
+ },
+ {
+   "Company": "chewy",
+   "Company Score": 3.8,
+   "Job Title": "software engineer ii",
+   "Location": "bellevue, wa",
+   "Date": "2d",
+   "Salary": "$74k - $111k (glassdoor est.)"
+ },
+ {
+   "Company": "erpa",
+   "Company Score": 4.3,
+   "Job Title": "software test engineer",
+   "Location": "dublin, oh",
+   "Date": "2d",
+   "Salary": "$147k - $186k (employer est.)"
+ },
+ {
+   "Company": "afterpay",
+   "Company Score": 4.1,
+   "Job Title": "software engineer, incentive",
+   "Location": "seattle, wa",
+   "Date": "3d",
+   "Salary": "$129k - $174k (glassdoor est.)"
+ },
+ {
+   "Company": "harvard university",
+   "Company Score": 5,
+   "Job Title": "software engineer",
+   "Location": "boston, ma",
+   "Date": "30d+",
+   "Salary": "$89k - $125k (glassdoor est.)"
+ },
+ {
+   "Company": "brooks automation",
+   "Company Score": 3,
+   "Job Title": "software development engineer",
+   "Location": "fremont, ca",
+   "Date": "4d",
+   "Salary": "$165k - $190k (employer est.)"
+ },
+ {
+   "Company": "dlrdmv",
+   "Company Score": 3.5,
+   "Job Title": "software engineer",
+   "Location": "dallas, tx",
+   "Date": "2d",
+   "Salary": "$110k - $160k (employer est.)"
+ },
+ {
+   "Company": "movius interactive corporation",
+   "Company Score": 3.3,
+   "Job Title": "software engineer- frontend",
+   "Location": "fremont, ca",
+   "Date": "1d",
+   "Salary": "$61k - $110k (glassdoor est.)"
+ },
+ {
+   "Company": "state street",
+   "Company Score": 3.7,
+   "Job Title": "software engineer",
+   "Location": "burlington, ma",
+   "Date": "3d",
+   "Salary": "$94k - $154k (employer est.)"
+ },
+ {
+   "Company": "sonalysts, inc.",
+   "Company Score": 3.8,
+   "Job Title": "junior software engineer",
+   "Location": "waterford, ct",
+   "Date": "1d",
+   "Salary": "$75k - $115k (employer est.)"
+ },
+ {
+   "Company": "preco, llc",
+   "Company Score": 3.6,
+   "Job Title": "software engineer",
+   "Location": "somerset, wi",
+   "Date": "4d",
+   "Salary": "$62k - $106k (glassdoor est.)"
+ },
+ {
+   "Company": "healthstream",
+   "Company Score": 3.6,
+   "Job Title": "software developer",
+   "Location": "nashville, tn",
+   "Date": "10d",
+   "Salary": "$72k - $118k (glassdoor est.)"
+ },
+ {
+   "Company": "aptiv plc",
+   "Company Score": 4,
+   "Job Title": "software engineer",
+   "Location": "troy, mi",
+   "Date": "30d+",
+   "Salary": "$75k - $118k (glassdoor est.)"
+ },
+ {
+   "Company": "zipongo",
+   "Company Score": 3.8,
+   "Job Title": "software engineer - epic integrations",
+   "Location": "remote",
+   "Date": "30d+",
+   "Salary": "$98k - $137k (glassdoor est.)"
+ },
+ {
+   "Company": "snowflake",
+   "Company Score": 3.7,
+   "Job Title": "software engineer - snowpark",
+   "Location": "bellevue, wa",
+   "Date": "2d",
+   "Salary": "$113k - $150k (employer est.)"
+ },
+ {
+   "Company": "staffed4u",
+   "Company Score": 4.2,
+   "Job Title": "software engineer (level 0 - level ii)",
+   "Location": "annapolis junction, md",
+   "Date": "10d",
+   "Salary": "$110k - $140k (employer est.)"
+ },
+ {
+   "Company": "honeycomb.io",
+   "Company Score": 4.2,
+   "Job Title": "midlevel site reliability engineer",
+   "Location": "united states",
+   "Date": "10d",
+   "Salary": "$141k - $179k (employer est.)"
+ },
+ {
+   "Company": "topaz labs",
+   "Company Score": 3.8,
+   "Job Title": "software engineer, infrastructure",
+   "Location": "dallas, tx",
+   "Date": "8d",
+   "Salary": "$77k - $136k (glassdoor est.)"
+ },
+ {
+   "Company": "weg electric corp",
+   "Company Score": 4.3,
+   "Job Title": "software engineer - wind",
+   "Location": "barre, vt",
+   "Date": "6d",
+   "Salary": "$80k (employer est.)"
+ },
+ {
+   "Company": "brown and caldwell",
+   "Company Score": 4.3,
+   "Job Title": "software engineer",
+   "Location": "atlanta, ga",
+   "Date": "3d",
+   "Salary": "$79k - $126k (glassdoor est.)"
+ },
+ {
+   "Company": "vertafore",
+   "Company Score": 3.7,
+   "Job Title": "software engineer ii",
+   "Location": "melville, ny",
+   "Date": "2d",
+   "Salary": "$87k - $119k (glassdoor est.)"
+ },
+ {
+   "Company": "aerodyne industries, llc",
+   "Company Score": 3.1,
+   "Job Title": "simulation software engineer (adv00095i)",
+   "Location": "kennedy sp ct, fl",
+   "Date": "1d",
+   "Salary": "$72k - $94k (glassdoor est.)"
+ },
+ {
+   "Company": "kairos inc",
+   "Company Score": 3.5,
+   "Job Title": "software engineer",
+   "Location": "dahlgren, va",
+   "Date": "16d",
+   "Salary": "$6k - $7k (employer est.)"
+ },
+ {
+   "Company": "topaz labs",
+   "Company Score": 3.7,
+   "Job Title": "senior software engineer - photo ai",
+   "Location": "dallas, tx",
+   "Date": "30d+",
+   "Salary": "$68k - $106k (glassdoor est.)"
+ },
+ {
+   "Company": "s3",
+   "Company Score": 3.8,
+   "Job Title": "software engineer- 826245",
+   "Location": "stennis space center, ms",
+   "Date": "20d",
+   "Salary": "$56k - $88k (glassdoor est.)"
+ },
+ {
+   "Company": "j. paul getty trust, the",
+   "Company Score": 4.1,
+   "Job Title": "software engineer sr",
+   "Location": "los angeles, ca",
+   "Date": "30d+",
+   "Salary": "$72k - $113k (glassdoor est.)"
+ },
+ {
+   "Company": "topaz labs",
+   "Company Score": 3.4,
+   "Job Title": "software engineer - ml performance / hpc",
+   "Location": "dallas, tx",
+   "Date": "30d+",
+   "Salary": "$90k - $119k (glassdoor est.)"
+ },
+ {
+   "Company": "rover.com",
+   "Company Score": 3.2,
+   "Job Title": "senior software engineer, orders team",
+   "Location": "seattle, wa",
+   "Date": "25d",
+   "Salary": "$101k - $135k (glassdoor est.)"
+ },
+ {
+   "Company": "university of oregon",
+   "Company Score": 3.8,
+   "Job Title": "research software engineer",
+   "Location": "eugene, or",
+   "Date": "2d",
+   "Salary": "$155k - $180k (employer est.)"
+ },
+ {
+   "Company": "dōterra international",
+   "Company Score": 4,
+   "Job Title": "software engineer ii",
+   "Location": "utah",
+   "Date": "12d",
+   "Salary": "$85k - $114k (glassdoor est.)"
+ },
+ {
+   "Company": "ahu technologies",
+   "Company Score": 4.6,
+   "Job Title": "software engineer",
+   "Location": "newark, de",
+   "Date": "12d",
+   "Salary": "$130k - $160k (employer est.)"
+ },
+ {
+   "Company": "alstom",
+   "Company Score": 3.4,
+   "Job Title": "software engineer",
+   "Location": "pittsburgh, pa",
+   "Date": "2d",
+   "Salary": "$160k - $250k (employer est.)"
+ },
+ {
+   "Company": "jack henry & associates",
+   "Company Score": 2.9,
+   "Job Title": "software release engineer",
+   "Location": "united states",
+   "Date": "8d",
+   "Salary": "$100k (employer est.)"
+ },
+ {
+   "Company": "ispa technology",
+   "Company Score": 3,
+   "Job Title": "junior software systems engineer",
+   "Location": "washington, dc",
+   "Date": "23d",
+   "Salary": "$120k - $150k (employer est.)"
+ },
+ {
+   "Company": "universal health services, inc. - corporate office",
+   "Company Score": 3.4,
+   "Job Title": "associate software engineer - data analytics",
+   "Location": "king of prussia, pa",
+   "Date": "30d+",
+   "Salary": "$96k - $146k (glassdoor est.)"
+ },
+ {
+   "Company": "relias",
+   "Company Score": 3.8,
+   "Job Title": "associate software engineer",
+   "Location": "morrisville, nc",
+   "Date": "4d",
+   "Salary": "$107k - $144k (glassdoor est.)"
+ },
+ {
+   "Company": "tickrs clearing",
+   "Company Score": 3.1,
+   "Job Title": "software engineer",
+   "Location": "irvine, ca",
+   "Date": "2d",
+   "Salary": "$138k - $189k (glassdoor est.)"
+ },
+ {
+   "Company": "ctc group",
+   "Company Score": 4.8,
+   "Job Title": "software engineer",
+   "Location": "fort meade, md",
+   "Date": "30d+",
+   "Salary": "$78k - $118k (glassdoor est.)"
+ },
+ {
+   "Company": "gotab inc",
+   "Company Score": 3.5,
+   "Job Title": "jr. deployment engineer",
+   "Location": "arlington, va",
+   "Date": "10d",
+   "Salary": "$113k - $139k (glassdoor est.)"
+ },
+ {
+   "Company": "ilogic inc",
+   "Company Score": 3.5,
+   "Job Title": "software developers",
+   "Location": "township of hamilton",
+   "Date": "30d+",
+   "Salary": "$80.00 per hour (employer est.)"
+ },
+ {
+   "Company": "csx",
+   "Company Score": 3.8,
+   "Job Title": "software engineer ii - service now",
+   "Location": "jacksonville, fl",
+   "Date": "23d",
+   "Salary": "$70k - $109k (glassdoor est.)"
+ },
+ {
+   "Company": "synergy ecp",
+   "Company Score": 4.4,
+   "Job Title": "junior software engineer",
+   "Location": "fort meade, md",
+   "Date": "2d",
+   "Salary": "$73k - $117k (glassdoor est.)"
+ },
+ {
+   "Company": "m&t bank",
+   "Company Score": 5,
+   "Job Title": "software engineer iii",
+   "Location": "wilmington, de",
+   "Date": "30d+",
+   "Salary": "$62k - $107k (glassdoor est.)"
+ },
+ {
+   "Company": "cardlytics",
+   "Company Score": 5,
+   "Job Title": "software engineer iii",
+   "Location": "menlo park, ca",
+   "Date": "18d",
+   "Salary": "$124k - $169k (glassdoor est.)"
+ },
+ {
+   "Company": "stefanini, inc",
+   "Company Score": 3.8,
+   "Job Title": "aws cloud engineer",
+   "Location": "richmond, va",
+   "Date": "1d",
+   "Salary": "$96k - $117k (employer est.)"
+ },
+ {
+   "Company": "innovative systems",
+   "Company Score": 3.8,
+   "Job Title": "c software engineer",
+   "Location": "pittsburgh, pa",
+   "Date": "9d",
+   "Salary": "$84k - $140k (glassdoor est.)"
+ },
+ {
+   "Company": "parabola",
+   "Company Score": 3.8,
+   "Job Title": "software engineer, full stack",
+   "Location": "united states",
+   "Date": "8d",
+   "Salary": "$66k - $94k (glassdoor est.)"
+ },
+ {
+   "Company": "vibrint",
+   "Company Score": 3.5,
+   "Job Title": "software engineer i (python developer)",
+   "Location": "united states",
+   "Date": "11d",
+   "Salary": "$70k - $120k (employer est.)"
+ },
+ {
+   "Company": "millennium management",
+   "Company Score": 4.2,
+   "Job Title": "front end engineer",
+   "Location": "united states",
+   "Date": "4d",
+   "Salary": "$78k - $126k (employer est.)"
+ },
+ {
+   "Company": "sagitec",
+   "Company Score": 3.9,
+   "Job Title": "software engineer",
+   "Location": "saint paul, mn",
+   "Date": "2d",
+   "Salary": "$165k - $209k (employer est.)"
+ },
+ {
+   "Company": "innovien solutions",
+   "Company Score": 3.3,
+   "Job Title": "sr. software engineer",
+   "Location": "atlanta, ga",
+   "Date": "6d",
+   "Salary": "$116k - $150k (employer est.)"
+ },
+ {
+   "Company": "ocean power technologies inc",
+   "Company Score": 3.8,
+   "Job Title": "software engineer",
+   "Location": "united states",
+   "Date": "2d",
+   "Salary": "$107k - $192k (employer est.)"
+ },
+ {
+   "Company": "riverside research institute",
+   "Company Score": 4.8,
+   "Job Title": "software engineer",
+   "Location": "fairborn, oh",
+   "Date": "3d",
+   "Salary": "$79k - $120k (glassdoor est.)"
+ },
+ {
+   "Company": "staffed4u",
+   "Company Score": 5,
+   "Job Title": "java software engineer",
+   "Location": "annapolis junction, md",
+   "Date": "30d+",
+   "Salary": "$94k - $153k (employer est.)"
+ },
+ {
+   "Company": "uber freight",
+   "Company Score": 5,
+   "Job Title": "software engineer ii",
+   "Location": "chicago, il",
+   "Date": "1d",
+   "Salary": "$84k - $129k (glassdoor est.)"
+ },
+ {
+   "Company": "snowflake",
+   "Company Score": 4.1,
+   "Job Title": "software engineer - database engineering",
+   "Location": "bellevue, wa",
+   "Date": "4d",
+   "Salary": "$82k - $129k (glassdoor est.)"
+ },
+ {
+   "Company": "likewize",
+   "Company Score": 4,
+   "Job Title": "jr devops engineer",
+   "Location": "dallas, tx",
+   "Date": "2d",
+   "Salary": "$61k - $104k (glassdoor est.)"
+ },
+ {
+   "Company": "massmutual ascend",
+   "Company Score": 4,
+   "Job Title": "senior software engineer ii",
+   "Location": "cincinnati, oh",
+   "Date": "19d",
+   "Salary": "$182k - $244k (employer est.)"
+ },
+ {
+   "Company": "washington dc government",
+   "Company Score": 4.7,
+   "Job Title": "react developer",
+   "Location": "remote",
+   "Date": "2d",
+   "Salary": "$96k - $116k (employer est.)"
+ },
+ {
+   "Company": "anavation",
+   "Company Score": 3.7,
+   "Job Title": "software developer",
+   "Location": "quantico, va",
+   "Date": "3d",
+   "Salary": "$68k - $136k (employer est.)"
+ },
+ {
+   "Company": "3r info",
+   "Company Score": 3.9,
+   "Job Title": "software engineer",
+   "Location": "canton, mi",
+   "Date": "30d+",
+   "Salary": "$93k - $132k (glassdoor est.)"
+ },
+ {
+   "Company": "strategic mission elements",
+   "Company Score": 3.5,
+   "Job Title": "software developer (typescript/javascript)",
+   "Location": "chantilly, va",
+   "Date": "26d",
+   "Salary": "$77k - $125k (glassdoor est.)"
+ },
+ {
+   "Company": "ipsecure, inc.",
+   "Company Score": 3.9,
+   "Job Title": "senior software engineer",
+   "Location": "patrick afb, fl",
+   "Date": "4d",
+   "Salary": "$52k - $200k (employer est.)"
+ },
+ {
+   "Company": "relx",
+   "Company Score": 3.2,
+   "Job Title": "software engineer ii",
+   "Location": "georgia",
+   "Date": "2d",
+   "Salary": "$81k - $118k (glassdoor est.)"
+ },
+ {
+   "Company": "solventum",
+   "Company Score": 3.6,
+   "Job Title": "software engineer - front-end (solventum)",
+   "Location": "maplewood, mn",
+   "Date": "3d",
+   "Salary": "$128k - $192k (employer est.)"
+ },
+ {
+   "Company": "focus technology solutions inc",
+   "Company Score": 3,
+   "Job Title": "cloud engineer",
+   "Location": "boston, ma",
+   "Date": "4d",
+   "Salary": "$150k - $225k (employer est.)"
+ },
+ {
+   "Company": "two six technologies",
+   "Company Score": 4.1,
+   "Job Title": "software engineer",
+   "Location": "warrenton, va",
+   "Date": "17d",
+   "Salary": "$50.00 per hour (employer est.)"
+ },
+ {
+   "Company": "adams, inc.",
+   "Company Score": 3.2,
+   "Job Title": "software engineer",
+   "Location": "tennessee",
+   "Date": "4d",
+   "Salary": "$85k - $120k (employer est.)"
+ },
+ {
+   "Company": "cps insurance services",
+   "Company Score": 3.4,
+   "Job Title": "junior software developer",
+   "Location": "phoenix, az",
+   "Date": "1d",
+   "Salary": "$192k - $245k (employer est.)"
+ },
+ {
+   "Company": "cephas",
+   "Company Score": 3.1,
+   "Job Title": "software engineer",
+   "Location": "melbourne, fl",
+   "Date": "4d",
+   "Salary": "$114k - $182k (employer est.)"
+ },
+ {
+   "Company": "chubb",
+   "Company Score": 3.4,
+   "Job Title": "software engineer - java springboot (dt)",
+   "Location": "whitehouse station, nj",
+   "Date": "3d",
+   "Salary": "$102k - $134k (glassdoor est.)"
+ },
+ {
+   "Company": "uber freight",
+   "Company Score": 3.6,
+   "Job Title": "software engineer iii - mobile (multiple openings)",
+   "Location": "san francisco, ca",
+   "Date": "9d",
+   "Salary": "$101k - $160k (employer est.)"
+ },
+ {
+   "Company": "consumers energy",
+   "Company Score": 4.8,
+   "Job Title": "assoc software engineer",
+   "Location": "jackson, mi",
+   "Date": "6d",
+   "Salary": "$90k - $124k (glassdoor est.)"
+ },
+ {
+   "Company": "u.s. bank national association",
+   "Company Score": 3.4,
+   "Job Title": "senior software engineer",
+   "Location": "hopkins, mn",
+   "Date": "1d",
+   "Salary": "$88k - $128k (glassdoor est.)"
+ },
+ {
+   "Company": "medimpact healthcare systems",
+   "Company Score": 3.5,
+   "Job Title": "software engineer iv",
+   "Location": "san diego, ca",
+   "Date": "30d+",
+   "Salary": "$83k - $131k (glassdoor est.)"
+ },
+ {
+   "Company": "imc financial markets",
+   "Company Score": 3.1,
+   "Job Title": "graduate software engineer",
+   "Location": "chicago, il",
+   "Date": "17d",
+   "Salary": "$70k - $90k (employer est.)"
+ },
+ {
+   "Company": "truveta",
+   "Company Score": 4,
+   "Job Title": "software engineer - normalization",
+   "Location": "seattle, wa",
+   "Date": "3d",
+   "Salary": "$164k - $182k (employer est.)"
+ },
+ {
+   "Company": "signature science, llc",
+   "Company Score": 4.2,
+   "Job Title": "software engineer",
+   "Location": "egg harbor township, nj",
+   "Date": "23d",
+   "Salary": "$73k - $92k (employer est.)"
+ },
+ {
+   "Company": "jyg innovations",
+   "Company Score": 4.1,
+   "Job Title": "web developers",
+   "Location": "frederick, md",
+   "Date": "2d",
+   "Salary": "$108k - $200k (employer est.)"
+ },
+ {
+   "Company": "vensit",
+   "Company Score": 3.5,
+   "Job Title": "software engineer",
+   "Location": "sayreville, nj",
+   "Date": "30d+",
+   "Salary": "$123k - $160k (glassdoor est.)"
+ },
+ {
+   "Company": "independent software",
+   "Company Score": 3.9,
+   "Job Title": "software engineer - apprentice",
+   "Location": "united states",
+   "Date": "17d",
+   "Salary": "$112k - $141k (glassdoor est.)"
+ },
+ {
+   "Company": "visionist, inc.",
+   "Company Score": 3.5,
+   "Job Title": "junior software engineer",
+   "Location": "fort meade, md",
+   "Date": "10d",
+   "Salary": "$101k - $160k (employer est.)"
+ },
+ {
+   "Company": "ncr",
+   "Company Score": 3.1,
+   "Job Title": "software dev ops engineer ii",
+   "Location": "indiana",
+   "Date": "3d",
+   "Salary": "$69k - $143k (employer est.)"
+ },
+ {
+   "Company": "clearwater analytics",
+   "Company Score": 3.6,
+   "Job Title": "senior software development engineer",
+   "Location": "seattle, wa",
+   "Date": "9d",
+   "Salary": "$120k - $140k (employer est.)"
+ },
+ {
+   "Company": "technical intelligence solutions, llc",
+   "Company Score": 3,
+   "Job Title": "software engineer",
+   "Location": "crystal city, va",
+   "Date": "2d",
+   "Salary": "$68k - $120k (glassdoor est.)"
+ },
+ {
+   "Company": "cvs health",
+   "Company Score": 3.8,
+   "Job Title": "associate software development engineer - colleague experience",
+   "Location": "woonsocket, ri",
+   "Date": "29d",
+   "Salary": "$104k - $136k (glassdoor est.)"
+ },
+ {
+   "Company": "delta defense, llc",
+   "Company Score": 3.9,
+   "Job Title": "associate engineer, analytics",
+   "Location": "west bend, wi",
+   "Date": "2d",
+   "Salary": "$82k - $115k (glassdoor est.)"
+ },
+ {
+   "Company": "koalafi",
+   "Company Score": 3.2,
+   "Job Title": "backend software engineer",
+   "Location": "richmond, va",
+   "Date": "13d",
+   "Salary": "$161k - $239k (employer est.)"
+ },
+ {
+   "Company": "intel",
+   "Company Score": 4.1,
+   "Job Title": "ai research engineer",
+   "Location": "arizona",
+   "Date": "17d",
+   "Salary": "$107k - $150k (employer est.)"
+ },
+ {
+   "Company": "no.inc",
+   "Company Score": 5,
+   "Job Title": "software engineer",
+   "Location": "baltimore, md",
+   "Date": "5d",
+   "Salary": "$91k - $122k (glassdoor est.)"
+ },
+ {
+   "Company": "f5",
+   "Company Score": 3.5,
+   "Job Title": "software engineer iii",
+   "Location": "seattle, wa",
+   "Date": "30d+",
+   "Salary": "$103k - $144k (glassdoor est.)"
+ },
+ {
+   "Company": "arcadia science",
+   "Company Score": 3.3,
+   "Job Title": "software engineer, product",
+   "Location": "berkeley, ca",
+   "Date": "6d",
+   "Salary": "$80k - $100k (employer est.)"
+ },
+ {
+   "Company": "artint knowledge tech",
+   "Company Score": 3.5,
+   "Job Title": "firmware (linux) dev i",
+   "Location": "remote",
+   "Date": "5d",
+   "Salary": "$100k - $128k (employer est.)"
+ },
+ {
+   "Company": "castellum inc",
+   "Company Score": 4.1,
+   "Job Title": "software engineer",
+   "Location": "patuxent river, md",
+   "Date": "30d+",
+   "Salary": "$90k - $180k (employer est.)"
+ },
+ {
+   "Company": "instacart",
+   "Company Score": 3.7,
+   "Job Title": "senior software engineer, core experiences",
+   "Location": "remote",
+   "Date": "12d",
+   "Salary": "$110k - $130k (employer est.)"
+ },
+ {
+   "Company": "walgreens",
+   "Company Score": 4.4,
+   "Job Title": "software engineer (rxr)",
+   "Location": "deerfield, il",
+   "Date": "1d",
+   "Salary": "$76k - $121k (glassdoor est.)"
+ },
+ {
+   "Company": "duquesne light",
+   "Company Score": 3.6,
+   "Job Title": "software engineer iii",
+   "Location": "pittsburgh, pa",
+   "Date": "16d",
+   "Salary": "$88k - $111k (employer est.)"
+ },
+ {
+   "Company": "super micro computer",
+   "Company Score": 3,
+   "Job Title": "software engineer",
+   "Location": "san jose, ca",
+   "Date": "30d+",
+   "Salary": "$73k - $116k (glassdoor est.)"
+ },
+ {
+   "Company": "ucare",
+   "Company Score": 4.4,
+   "Job Title": "software engineer senior â€“ azure",
+   "Location": "minneapolis, mn",
+   "Date": "19d",
+   "Salary": "$182k - $273k (employer est.)"
+ },
+ {
+   "Company": "cybercore technologies",
+   "Company Score": 2.6,
+   "Job Title": "software engineer 0",
+   "Location": "annapolis junction, md",
+   "Date": "9d",
+   "Salary": "$85k - $113k (glassdoor est.)"
+ },
+ {
+   "Company": "coinflip",
+   "Company Score": 3.5,
+   "Job Title": "aws devops engineer",
+   "Location": "chicago, il",
+   "Date": "25d",
+   "Salary": "$65k - $95k (employer est.)"
+ },
+ {
+   "Company": "bi labs",
+   "Company Score": 4.1,
+   "Job Title": "software developers (021)",
+   "Location": "plainsboro, nj",
+   "Date": "30d+",
+   "Salary": "$109k - $168k (employer est.)"
+ },
+ {
+   "Company": "sahbi systems",
+   "Company Score": 4.1,
+   "Job Title": "software engineers",
+   "Location": "alabama",
+   "Date": "18d",
+   "Salary": "$80k - $99k (glassdoor est.)"
+ },
+ {
+   "Company": "cultura technologies inc",
+   "Company Score": 4.4,
+   "Job Title": "sr software engineer",
+   "Location": "remote",
+   "Date": "1d",
+   "Salary": "$104k - $153k (glassdoor est.)"
+ },
+ {
+   "Company": "excelacom",
+   "Company Score": 4,
+   "Job Title": "devops engineer",
+   "Location": "denver, co",
+   "Date": "3d",
+   "Salary": "$78k - $129k (glassdoor est.)"
+ },
+ {
+   "Company": "cityblock health",
+   "Company Score": 4.1,
+   "Job Title": "senior software engineer",
+   "Location": "new york state",
+   "Date": "9d",
+   "Salary": "$82k - $118k (glassdoor est.)"
+ },
+ {
+   "Company": "rocket software",
+   "Company Score": 4.3,
+   "Job Title": "machine learning software engineer",
+   "Location": "massachusetts",
+   "Date": "3d",
+   "Salary": "$138k - $294k (employer est.)"
+ },
+ {
+   "Company": "huntington ingalls industries inc.",
+   "Company Score": 3.3,
+   "Job Title": "software engineer (hybrid) - 19943",
+   "Location": "columbia, md",
+   "Date": "11d",
+   "Salary": "$136k - $187k (glassdoor est.)"
+ },
+ {
+   "Company": "intuitive machines llc",
+   "Company Score": 3.8,
+   "Job Title": "research software engineer",
+   "Location": "houston, tx",
+   "Date": "10d",
+   "Salary": "$295k - $440k (employer est.)"
+ },
+ {
+   "Company": "equifax",
+   "Company Score": 4.4,
+   "Job Title": "software engineer - career",
+   "Location": "alpharetta, ga",
+   "Date": "3d",
+   "Salary": "$95k - $146k (glassdoor est.)"
+ },
+ {
+   "Company": "super micro computer",
+   "Company Score": 4,
+   "Job Title": "software engineer",
+   "Location": "san jose, ca",
+   "Date": "19d",
+   "Salary": "$117k - $161k (employer est.)"
+ },
+ {
+   "Company": "akamai",
+   "Company Score": 4,
+   "Job Title": "software engineer - remote",
+   "Location": "united states",
+   "Date": "9d",
+   "Salary": "$173k (employer est.)"
+ },
+ {
+   "Company": "mailprotector",
+   "Company Score": 4.6,
+   "Job Title": "software engineer",
+   "Location": "remote",
+   "Date": "2d",
+   "Salary": "$50.00 per hour (employer est.)"
+ },
+ {
+   "Company": "blockit now inc",
+   "Company Score": 3.8,
+   "Job Title": "elixir software engineer",
+   "Location": "mckinney, tx",
+   "Date": "5d",
+   "Salary": "$175k - $250k (employer est.)"
+ },
+ {
+   "Company": "tenica and associates llc",
+   "Company Score": 4.1,
+   "Job Title": "software systems engineer ts/sci ci poly",
+   "Location": "las cruces, nm",
+   "Date": "5d",
+   "Salary": "$55k - $140k (employer est.)"
+ },
+ {
+   "Company": "arch capital group ltd.",
+   "Company Score": 3.9,
+   "Job Title": "software engineer ii",
+   "Location": "greensboro, nc",
+   "Date": "5d",
+   "Salary": "$126k - $234k (employer est.)"
+ },
+ {
+   "Company": "lynker corporation",
+   "Company Score": 3.9,
+   "Job Title": "software engineer",
+   "Location": "stennis space center, ms",
+   "Date": "30d+",
+   "Salary": "$78k - $129k (employer est.)"
+ },
+ {
+   "Company": "youtube",
+   "Company Score": 3.2,
+   "Job Title": "senior software engineer, full stack, youtube",
+   "Location": "new york, ny",
+   "Date": "1d",
+   "Salary": "$75k - $102k (glassdoor est.)"
+ },
+ {
+   "Company": "perforce software",
+   "Company Score": 4.2,
+   "Job Title": "senior software engineer - us",
+   "Location": "remote",
+   "Date": "2d",
+   "Salary": "$115k - $150k (employer est.)"
+ },
+ {
+   "Company": "world vision usa",
+   "Company Score": 3.8,
+   "Job Title": "sr. software engineer",
+   "Location": "united states",
+   "Date": "16d",
+   "Salary": "$115k - $160k (employer est.)"
+ },
+ {
+   "Company": "featurespace",
+   "Company Score": 5,
+   "Job Title": "software engineer",
+   "Location": "atlanta, ga",
+   "Date": "30d+",
+   "Salary": "$82k - $92k (employer est.)"
+ },
+ {
+   "Company": "bigbear.ai",
+   "Company Score": 3.7,
+   "Job Title": "software engineer",
+   "Location": "columbia, md",
+   "Date": "9d",
+   "Salary": "$120k - $130k (employer est.)"
+ },
+ {
+   "Company": "benistar administrative services, inc.",
+   "Company Score": 3.9,
+   "Job Title": "aws cloud engineer",
+   "Location": "avon, ct",
+   "Date": "2d",
+   "Salary": "$86k - $131k (glassdoor est.)"
+ },
+ {
+   "Company": "state of colorado job opportunities",
+   "Company Score": 4.7,
+   "Job Title": "cloud engineer (remote from anywhere in colorado)",
+   "Location": "colorado",
+   "Date": "2d",
+   "Salary": "$92k - $133k (glassdoor est.)"
+ },
+ {
+   "Company": "intellisource colorado llc",
+   "Company Score": 3.1,
+   "Job Title": "senior software engineer - enterprise people technology",
+   "Location": "bentonville, ar",
+   "Date": "3d",
+   "Salary": "$112k - $165k (glassdoor est.)"
+ },
+ {
+   "Company": "nbcuniversal",
+   "Company Score": 4.4,
+   "Job Title": "post software engineer",
+   "Location": "englewood cliffs, nj",
+   "Date": "3d",
+   "Salary": "$145k - $162k (employer est.)"
+ },
+ {
+   "Company": "artera technologies",
+   "Company Score": 4.4,
+   "Job Title": "cloud software engineers",
+   "Location": "united states",
+   "Date": "6d",
+   "Salary": "$147k - $189k (employer est.)"
+ },
+ {
+   "Company": "thompson gray inc.",
+   "Company Score": 4.7,
+   "Job Title": "engineer (software)",
+   "Location": "redstone arsenal",
+   "Date": "30d+",
+   "Salary": "$72k - $159k (employer est.)"
+ },
+ {
+   "Company": "origence",
+   "Company Score": 4,
+   "Job Title": "software engineer - cudl modernization",
+   "Location": "remote",
+   "Date": "1d",
+   "Salary": "$79k - $111k (glassdoor est.)"
+ },
+ {
+   "Company": "medius",
+   "Company Score": 3.6,
+   "Job Title": "software engineer",
+   "Location": "jacksonville, fl",
+   "Date": "30d+",
+   "Salary": "$115k - $161k (employer est.)"
+ },
+ {
+   "Company": "f5",
+   "Company Score": 3.8,
+   "Job Title": "principal software engineer",
+   "Location": "seattle, wa",
+   "Date": "4d",
+   "Salary": "$82k - $102k (employer est.)"
+ },
+ {
+   "Company": "cnh industrial",
+   "Company Score": 3.8,
+   "Job Title": "software engineer ii",
+   "Location": "remote",
+   "Date": "2d",
+   "Salary": "$86k - $136k (glassdoor est.)"
+ },
+ {
+   "Company": "fusion plus solutions inc.",
+   "Company Score": 3.7,
+   "Job Title": "software engineers",
+   "Location": "edison, nj",
+   "Date": "30d+",
+   "Salary": "$170k - $200k (employer est.)"
+ },
+ {
+   "Company": "university of florida",
+   "Company Score": 3.2,
+   "Job Title": "software engineer i/ii",
+   "Location": "florida",
+   "Date": "16d",
+   "Salary": "$90k - $116k (glassdoor est.)"
+ },
+ {
+   "Company": "northwestern mutual",
+   "Company Score": 3.8,
+   "Job Title": "software engineer",
+   "Location": "franklin, wi",
+   "Date": "4d",
+   "Salary": "$114k - $152k (glassdoor est.)"
+ },
+ {
+   "Company": "vibrint",
+   "Company Score": 3.8,
+   "Job Title": "software engineer i",
+   "Location": "annapolis junction, md",
+   "Date": "30d+",
+   "Salary": "$80k - $120k (employer est.)"
+ },
+ {
+   "Company": "hubbell incorporated",
+   "Company Score": 3.4,
+   "Job Title": "sr assoc software engineer",
+   "Location": "avon, ct",
+   "Date": "1d",
+   "Salary": "$95k - $126k (glassdoor est.)"
+ },
+ {
+   "Company": "valkyrie enterprises",
+   "Company Score": 3.8,
+   "Job Title": "junior computer/software engineer (job id: 3433)",
+   "Location": "huntsville, al",
+   "Date": "23d",
+   "Salary": "$138k - $178k (employer est.)"
+ },
+ {
+   "Company": "two six technologies",
+   "Company Score": 4.5,
+   "Job Title": "software engineer",
+   "Location": "herndon, va",
+   "Date": "30d+",
+   "Salary": "$61k - $147k (employer est.)"
+ },
+ {
+   "Company": "decision six",
+   "Company Score": 3.6,
+   "Job Title": "software engineer",
+   "Location": "united states",
+   "Date": "5d",
+   "Salary": "$124k - $211k (employer est.)"
+ },
+ {
+   "Company": "microsoft",
+   "Company Score": 4.4,
+   "Job Title": "software engineer",
+   "Location": "redmond, wa",
+   "Date": "4d",
+   "Salary": "$90k - $117k (glassdoor est.)"
+ },
+ {
+   "Company": "ateliere creative technologies",
+   "Company Score": 4.1,
+   "Job Title": "senior devops engineer - los angeles",
+   "Location": "los angeles, ca",
+   "Date": "2d",
+   "Salary": "$98k - $209k (employer est.)"
+ },
+ {
+   "Company": "openai",
+   "Company Score": 3.1,
+   "Job Title": "software engineer, hardware health",
+   "Location": "san francisco, ca",
+   "Date": "5d",
+   "Salary": "$78k - $121k (glassdoor est.)"
+ },
+ {
+   "Company": "two six technologies",
+   "Company Score": 2.7,
+   "Job Title": "software engineer",
+   "Location": "tysons corner, va",
+   "Date": "17d",
+   "Salary": "$100k - $165k (employer est.)"
+ },
+ {
+   "Company": "splunk",
+   "Company Score": 3.5,
+   "Job Title": "software engineer (us remote available)",
+   "Location": "remote",
+   "Date": "3d",
+   "Salary": "$125k (employer est.)"
+ },
+ {
+   "Company": "sasken",
+   "Company Score": 4.1,
+   "Job Title": "software engineer",
+   "Location": "united states",
+   "Date": "6d",
+   "Salary": "$71k - $112k (glassdoor est.)"
+ },
+ {
+   "Company": "realmone",
+   "Company Score": 3.8,
+   "Job Title": "software engineer",
+   "Location": "united states",
+   "Date": "5d",
+   "Salary": "$95k - $152k (employer est.)"
+ },
+ {
+   "Company": "the wolf works llc",
+   "Company Score": 4.4,
+   "Job Title": "node js",
+   "Location": "austin, tx",
+   "Date": "2d",
+   "Salary": "$86k - $105k (glassdoor est.)"
+ },
+ {
+   "Company": "millennium management",
+   "Company Score": 3.8,
+   "Job Title": "software engineer - c#",
+   "Location": "new york, ny",
+   "Date": "30d+",
+   "Salary": "$135k - $216k (employer est.)"
+ },
+ {
+   "Company": "aflac, incorporated",
+   "Company Score": 4,
+   "Job Title": "software engineer iii",
+   "Location": "remote",
+   "Date": "1d",
+   "Salary": "$93k - $112k (employer est.)"
+ },
+ {
+   "Company": "ringcentral",
+   "Company Score": 3.9,
+   "Job Title": "software engineer",
+   "Location": "belmont, ca",
+   "Date": "24d",
+   "Salary": "$104k - $161k (glassdoor est.)"
+ },
+ {
+   "Company": "dallas area rapid transit",
+   "Company Score": 3.7,
+   "Job Title": "software engineer-bi",
+   "Location": "dallas, tx",
+   "Date": "30d+",
+   "Salary": "$77k - $121k (glassdoor est.)"
+ },
+ {
+   "Company": "w r systems",
+   "Company Score": 3.5,
+   "Job Title": "software engineer",
+   "Location": "dahlgren, va",
+   "Date": "4d",
+   "Salary": "$95k - $134k (glassdoor est.)"
+ },
+ {
+   "Company": "carecraft, inc",
+   "Company Score": 3.7,
+   "Job Title": "software engineer",
+   "Location": "carlsbad, ca",
+   "Date": "10d",
+   "Salary": "$125k - $178k (employer est.)"
+ },
+ {
+   "Company": "specialt tech",
+   "Company Score": 3.1,
+   "Job Title": "cloud engineer manager",
+   "Location": "remote",
+   "Date": "25d",
+   "Salary": "$76k - $108k (glassdoor est.)"
+ },
+ {
+   "Company": "hottinger, bruel & kjaer",
+   "Company Score": 4.5,
+   "Job Title": "software engineer",
+   "Location": "pompano beach, fl",
+   "Date": "30d+",
+   "Salary": "$77k - $116k (glassdoor est.)"
+ },
+ {
+   "Company": "cps solutions, llc",
+   "Company Score": 4.1,
+   "Job Title": "devops engineer",
+   "Location": "united states",
+   "Date": "3d",
+   "Salary": "$82k - $106k (glassdoor est.)"
+ },
+ {
+   "Company": "northwestern memorial healthcare",
+   "Company Score": 4.2,
+   "Job Title": "software developers",
+   "Location": "chicago, il",
+   "Date": "10d",
+   "Salary": "$86k - $120k (glassdoor est.)"
+ },
+ {
+   "Company": "the swift group",
+   "Company Score": 4.1,
+   "Job Title": "software engineer",
+   "Location": "columbia, md",
+   "Date": "30d+",
+   "Salary": "$96k - $146k (employer est.)"
+ },
+ {
+   "Company": "asus computer international",
+   "Company Score": 4.9,
+   "Job Title": "software engineer - ai",
+   "Location": "hillsboro, or",
+   "Date": "30d+",
+   "Salary": "$96k - $137k (glassdoor est.)"
+ },
+ {
+   "Company": "persistent systems",
+   "Company Score": 4.6,
+   "Job Title": "workday software engineer",
+   "Location": "united states",
+   "Date": "9d",
+   "Salary": "$141k - $239k (employer est.)"
+ },
+ {
+   "Company": "cedar inc",
+   "Company Score": 3.3,
+   "Job Title": "software engineer ii (communications platform)",
+   "Location": "new york, ny",
+   "Date": "20d",
+   "Salary": "$108k - $140k (employer est.)"
+ },
+ {
+   "Company": "salesforce",
+   "Company Score": 3.1,
+   "Job Title": "software engineering mts",
+   "Location": "san francisco, ca",
+   "Date": "3d",
+   "Salary": "$40.00 - $55.00 per hour (employer est.)"
+ },
+ {
+   "Company": "cvs health",
+   "Company Score": 2.4,
+   "Job Title": "software developer - c#, .net",
+   "Location": "scottsdale, az",
+   "Date": "3d",
+   "Salary": "$108k - $195k (employer est.)"
+ },
+ {
+   "Company": "nautilus hyosung america inc",
+   "Company Score": 3.1,
+   "Job Title": "software engineer",
+   "Location": "irving, tx",
+   "Date": "3d",
+   "Salary": "$111k - $184k (employer est.)"
+ },
+ {
+   "Company": "blue origin",
+   "Company Score": 4.4,
+   "Job Title": "embedded flight software engineer – new glenn",
+   "Location": "seattle, wa",
+   "Date": "2d",
+   "Salary": "$189k - $284k (employer est.)"
+ },
+ {
+   "Company": "west bend insurance company",
+   "Company Score": 4.9,
+   "Job Title": "software engineer",
+   "Location": "west bend, wi",
+   "Date": "1d",
+   "Salary": "$79k - $109k (glassdoor est.)"
+ },
+ {
+   "Company": "jbt corporation",
+   "Company Score": 4.1,
+   "Job Title": "software engineer c#",
+   "Location": "chalfont, pa",
+   "Date": "15d",
+   "Salary": "$94k - $129k (glassdoor est.)"
+ },
+ {
+   "Company": "cedar inc",
+   "Company Score": 3.1,
+   "Job Title": "software engineer iii (payment workflows)",
+   "Location": "new york, ny",
+   "Date": "19d",
+   "Salary": "$56k - $83k (glassdoor est.)"
+ },
+ {
+   "Company": "allied business consulting",
+   "Company Score": 3.8,
+   "Job Title": "software developers",
+   "Location": "somerset, nj",
+   "Date": "13d",
+   "Salary": "$202k - $290k (employer est.)"
+ },
+ {
+   "Company": "chick-fil-a, inc.",
+   "Company Score": 2.3,
+   "Job Title": "senior software engineer - backend development",
+   "Location": "atlanta, ga",
+   "Date": "11d",
+   "Salary": "$70k - $103k (glassdoor est.)"
+ },
+ {
+   "Company": "us amr-jones lang lasalle americas, inc.",
+   "Company Score": 3.8,
+   "Job Title": "software engineering",
+   "Location": "san francisco, ca",
+   "Date": "2d",
+   "Salary": "$86k - $121k (glassdoor est.)"
+ },
+ {
+   "Company": "smart ims",
+   "Company Score": 3.8,
+   "Job Title": "software engineer",
+   "Location": "austin, tx",
+   "Date": "30d+",
+   "Salary": "$74k - $107k (glassdoor est.)"
+ },
+ {
+   "Company": "clearwater analytics",
+   "Company Score": 4.7,
+   "Job Title": "software development engineer",
+   "Location": "san jose, ca",
+   "Date": "30d+",
+   "Salary": "$81k - $113k (glassdoor est.)"
+ },
+ {
+   "Company": "paypal",
+   "Company Score": 3.9,
+   "Job Title": "software engineer, backend",
+   "Location": "san jose, ca",
+   "Date": "2d",
+   "Salary": "$72k - $119k (glassdoor est.)"
+ },
+ {
+   "Company": "walgreens",
+   "Company Score": 4.6,
+   "Job Title": "principal software engineer",
+   "Location": "bellevue, wa",
+   "Date": "1d",
+   "Salary": "$90k - $125k (glassdoor est.)"
+ },
+ {
+   "Company": "the swift group",
+   "Company Score": 3.7,
+   "Job Title": "software engineer",
+   "Location": "mclean, va",
+   "Date": "18d",
+   "Salary": "$80k - $150k (employer est.)"
+ },
+ {
+   "Company": "hewlett packard",
+   "Company Score": 3.5,
+   "Job Title": "software engineer",
+   "Location": "spring, tx",
+   "Date": "10d",
+   "Salary": "$72k - $144k (employer est.)"
+ },
+ {
+   "Company": "microsoft",
+   "Company Score": 4,
+   "Job Title": "software engineer",
+   "Location": "redmond, wa",
+   "Date": "5d",
+   "Salary": "$70k - $95k (employer est.)"
+ },
+ {
+   "Company": "new river systems corporation",
+   "Company Score": 4.4,
+   "Job Title": "sharepoint software systems engineer",
+   "Location": "remote",
+   "Date": "17d",
+   "Salary": "$100k - $140k (employer est.)"
+ },
+ {
+   "Company": "modern technology solutions, inc.",
+   "Company Score": 4.6,
+   "Job Title": "software engineer - associate",
+   "Location": "chantilly, va",
+   "Date": "11d",
+   "Salary": "$124k - $234k (employer est.)"
+ },
+ {
+   "Company": "pqsecure technologies",
+   "Company Score": 3.7,
+   "Job Title": "hardware/software engineer",
+   "Location": "boca raton, fl",
+   "Date": "30d+",
+   "Salary": "$88k - $119k (glassdoor est.)"
+ },
+ {
+   "Company": "ispa technology",
+   "Company Score": 4.4,
+   "Job Title": "mid to senior level software engineer",
+   "Location": "san diego, ca",
+   "Date": "19d",
+   "Salary": "$123k - $198k (employer est.)"
+ },
+ {
+   "Company": "onmed",
+   "Company Score": 5,
+   "Job Title": "site reliability engineer",
+   "Location": "tampa, fl",
+   "Date": "23d",
+   "Salary": "$158k - $176k (employer est.)"
+ },
+ {
+   "Company": "grote industries",
+   "Company Score": 4.2,
+   "Job Title": "networks - embedded software engineer",
+   "Location": "madison, in",
+   "Date": "3d",
+   "Salary": "$160k - $180k (employer est.)"
+ },
+ {
+   "Company": "walgreens",
+   "Company Score": 3.9,
+   "Job Title": "devops engineer",
+   "Location": "deerfield, il",
+   "Date": "24h",
+   "Salary": "$87k - $119k (glassdoor est.)"
+ },
+ {
+   "Company": "cloud software group",
+   "Company Score": 4.5,
+   "Job Title": "software engineer",
+   "Location": "naperville, il",
+   "Date": "12d",
+   "Salary": "$97k - $145k (employer est.)"
+ },
+ {
+   "Company": "walgreens",
+   "Company Score": 4.6,
+   "Job Title": "senior software engineer (full-stack, java, javascript)",
+   "Location": "bellevue, wa",
+   "Date": "30d+",
+   "Salary": "$89k - $139k (glassdoor est.)"
+ },
+ {
+   "Company": "nationmind infoservices pvt ltd",
+   "Company Score": 3.6,
+   "Job Title": "software engineer",
+   "Location": "florida",
+   "Date": "16d",
+   "Salary": "$53k - $103k (employer est.)"
+ },
+ {
+   "Company": "arrowstreet capital",
+   "Company Score": 3.4,
+   "Job Title": "fullstack software engineer",
+   "Location": "boston, ma",
+   "Date": "30d+",
+   "Salary": "$129k - $228k (employer est.)"
+ },
+ {
+   "Company": "favorited",
+   "Company Score": 4.8,
+   "Job Title": "full stack engineer",
+   "Location": "santa monica, ca",
+   "Date": "2d",
+   "Salary": "$150k - $250k (employer est.)"
+ },
+ {
+   "Company": "strategic thermal labs",
+   "Company Score": 2.5,
+   "Job Title": "software engineer",
+   "Location": "georgetown, tx",
+   "Date": "11d",
+   "Salary": "$116k - $163k (glassdoor est.)"
+ },
+ {
+   "Company": "idolsoft",
+   "Company Score": 3.3,
+   "Job Title": "software developer",
+   "Location": "irving, tx",
+   "Date": "30d+",
+   "Salary": "$104k - $127k (glassdoor est.)"
+ },
+ {
+   "Company": "bi labs",
+   "Company Score": 3.1,
+   "Job Title": "software developers (834)",
+   "Location": "plainsboro, nj",
+   "Date": "30d+",
+   "Salary": "$53k - $96k (employer est.)"
+ },
+ {
+   "Company": "verily",
+   "Company Score": 3.5,
+   "Job Title": "software engineer, enterprise frontend",
+   "Location": "san bruno, ca",
+   "Date": "30d+",
+   "Salary": "$60k - $90k (employer est.)"
+ },
+ {
+   "Company": "colonial pipeline company",
+   "Company Score": 4.4,
+   "Job Title": "software engineer",
+   "Location": "alpharetta, ga",
+   "Date": "30d+",
+   "Salary": "$143k - $191k (employer est.)"
+ },
+ {
+   "Company": "leader communications inc",
+   "Company Score": 4.2,
+   "Job Title": "software engineer",
+   "Location": "hill afb, ut",
+   "Date": "26d",
+   "Salary": "$142k - $162k (employer est.)"
+ },
+ {
+   "Company": "ucare",
+   "Company Score": 3.3,
+   "Job Title": "software engineer sr. â€” net",
+   "Location": "minneapolis, mn",
+   "Date": "12d",
+   "Salary": "$89k - $129k (glassdoor est.)"
+ },
+ {
+   "Company": "cliftonlarsonallen",
+   "Company Score": 4.8,
+   "Job Title": "devops engineer",
+   "Location": "minneapolis, mn",
+   "Date": "11d",
+   "Salary": "$94k - $156k (employer est.)"
+ },
+ {
+   "Company": "two six technologies",
+   "Company Score": 3.9,
+   "Job Title": "software engineer associate manager - national general",
+   "Location": "remote",
+   "Date": "4d",
+   "Salary": "$80k - $148k (glassdoor est.)"
+ },
+ {
+   "Company": "bae systems",
+   "Company Score": 3.9,
+   "Job Title": "software engineer",
+   "Location": "herndon, va",
+   "Date": "30d+",
+   "Salary": "$62k - $105k (employer est.)"
+ },
+ {
+   "Company": "nodal exchange",
+   "Company Score": 3.5,
+   "Job Title": "software engineer (expert)",
+   "Location": "herndon, va",
+   "Date": "30d+",
+   "Salary": "$81k - $164k (employer est.)"
+ },
+ {
+   "Company": "gomez & companies",
+   "Company Score": 3.5,
+   "Job Title": "software engineer (mid-level)",
+   "Location": "united states",
+   "Date": "9d",
+   "Salary": "$98k - $145k (glassdoor est.)"
+ },
+ {
+   "Company": "t-mobile usa, inc.",
+   "Company Score": 3.7,
+   "Job Title": "full stack software engineer & api developer",
+   "Location": "canoga park, ca",
+   "Date": "1d",
+   "Salary": "$157k - $207k (employer est.)"
+ },
+ {
+   "Company": "m&t bank",
+   "Company Score": 3.5,
+   "Job Title": "sr software engineer - data",
+   "Location": "bellevue, wa",
+   "Date": "3d",
+   "Salary": "$133k - $143k (employer est.)"
+ },
+ {
+   "Company": "pressco technology",
+   "Company Score": 4.5,
+   "Job Title": "api services - senior software engineer - java, spring boot",
+   "Location": "buffalo, ny",
+   "Date": "10d",
+   "Salary": "$79k - $159k (employer est.)"
+ },
+ {
+   "Company": "youtube",
+   "Company Score": 3.8,
+   "Job Title": "software integration & test engineer",
+   "Location": "solon, oh",
+   "Date": "3d",
+   "Salary": "$132k - $190k (glassdoor est.)"
+ },
+ {
+   "Company": "ispa technology",
+   "Company Score": 4.2,
+   "Job Title": "staff software engineer, machine learning, youtube music",
+   "Location": "new york, ny",
+   "Date": "1d",
+   "Salary": "$90k - $143k (glassdoor est.)"
+ },
+ {
+   "Company": "scentsy inc",
+   "Company Score": 4,
+   "Job Title": "mid-level software systems engineer",
+   "Location": "united states",
+   "Date": "23d",
+   "Salary": "$101k - $187k (employer est.)"
+ },
+ {
+   "Company": "stratascorp",
+   "Company Score": 3.5,
+   "Job Title": "software engineer",
+   "Location": "meridian, id",
+   "Date": "5d",
+   "Salary": "$58k - $103k (glassdoor est.)"
+ },
+ {
+   "Company": "3r info",
+   "Company Score": 3.8,
+   "Job Title": "software engineer",
+   "Location": "arlington, va",
+   "Date": "4d",
+   "Salary": "$125k - $200k (employer est.)"
+ },
+ {
+   "Company": "toyota research institute",
+   "Company Score": 4.1,
+   "Job Title": "software engineer in testing",
+   "Location": "canton, mi",
+   "Date": "30d+",
+   "Salary": "$168k (employer est.)"
+ },
+ {
+   "Company": "gelber group",
+   "Company Score": 5,
+   "Job Title": "senior software engineer",
+   "Location": "los altos, ca",
+   "Date": "9d",
+   "Salary": "$110k - $143k (glassdoor est.)"
+ },
+ {
+   "Company": "peopletec, inc.",
+   "Company Score": 3.5,
+   "Job Title": "software engineer- executions team",
+   "Location": "chicago, il",
+   "Date": "20d",
+   "Salary": "$80.00 - $85.00 per hour (employer est.)"
+ },
+ {
+   "Company": "ingrain systems inc.",
+   "Company Score": 3.9,
+   "Job Title": "software engineer",
+   "Location": "jamesburg, nj",
+   "Date": "20d",
+   "Salary": "$95k - $125k (glassdoor est.)"
+ },
+ {
+   "Company": "carrier",
+   "Company Score": 4.7,
+   "Job Title": "software developers",
+   "Location": "sherman, tx",
+   "Date": "30d+",
+   "Salary": "$92k - $158k (employer est.)"
+ },
+ {
+   "Company": "ncr",
+   "Company Score": 4.2,
+   "Job Title": "software engineer",
+   "Location": "charlotte, nc",
+   "Date": "3d",
+   "Salary": "$147k - $180k (employer est.)"
+ },
+ {
+   "Company": "anavation",
+   "Company Score": 3.5,
+   "Job Title": "software engineer iv - java fullstack",
+   "Location": "indiana",
+   "Date": "30d+",
+   "Salary": "$75k - $102k (glassdoor est.)"
+ },
+ {
+   "Company": "soar technology",
+   "Company Score": 3.5,
+   "Job Title": "mid-level software engineer – hybrid!",
+   "Location": "quantico, va",
+   "Date": "30d+",
+   "Salary": "$60k - $112k (employer est.)"
+ },
+ {
+   "Company": "red ventures",
+   "Company Score": 3.1,
+   "Job Title": "autonomy software engineer",
+   "Location": "ann arbor, mi",
+   "Date": "2d",
+   "Salary": "$108k - $151k (glassdoor est.)"
+ },
+ {
+   "Company": "cvs health",
+   "Company Score": 4.1,
+   "Job Title": "software engineer | the points guy",
+   "Location": "san juan, pr",
+   "Date": "2d",
+   "Salary": "$123k - $196k (employer est.)"
+ },
+ {
+   "Company": "messenger, llc",
+   "Company Score": 4.4,
+   "Job Title": "software development itam engineer",
+   "Location": "lansing, mi",
+   "Date": "5d",
+   "Salary": "$116k - $166k (glassdoor est.)"
+ },
+ {
+   "Company": "nelnet",
+   "Company Score": 3.5,
+   "Job Title": "software developer",
+   "Location": "auburn, in",
+   "Date": "3d",
+   "Salary": "$59k - $107k (glassdoor est.)"
+ },
+ {
+   "Company": "slate magazine",
+   "Company Score": 4.8,
+   "Job Title": "it software engineer- nbs",
+   "Location": "lincoln, ne",
+   "Date": "24d",
+   "Salary": "$104k - $163k (glassdoor est.)"
+ },
+ {
+   "Company": "adobe",
+   "Company Score": 3.5,
+   "Job Title": "software engineer",
+   "Location": "washington, dc",
+   "Date": "30d+",
+   "Salary": "$68k - $80k (employer est.)"
+ },
+ {
+   "Company": "airgas",
+   "Company Score": 4.1,
+   "Job Title": "software engineer",
+   "Location": "lehi, ut",
+   "Date": "12d",
+   "Salary": "$83k - $107k (glassdoor est.)"
+ },
+ {
+   "Company": "umbra",
+   "Company Score": 3.9,
+   "Job Title": "firmware engineer",
+   "Location": "cheshire, ct",
+   "Date": "2d",
+   "Salary": "$109k - $209k (employer est.)"
+ },
+ {
+   "Company": "uber",
+   "Company Score": 3.8,
+   "Job Title": "senior software engineer",
+   "Location": "santa barbara, ca",
+   "Date": "5d",
+   "Salary": "$97k - $197k (employer est.)"
+ },
+ {
+   "Company": "collaborative robotics",
+   "Company Score": 3.7,
+   "Job Title": "software engineer ii - uber eats",
+   "Location": "san francisco, ca",
+   "Date": "27d",
+   "Salary": "$57k - $96k (glassdoor est.)"
+ },
+ {
+   "Company": "werfen",
+   "Company Score": 3.3,
+   "Job Title": "software engineer, robotics",
+   "Location": "santa clara, ca",
+   "Date": "8d",
+   "Salary": "$98k - $145k (glassdoor est.)"
+ },
+ {
+   "Company": "snapchat",
+   "Company Score": 4.3,
+   "Job Title": "software development engineer in test, digital solutions",
+   "Location": "bedford, ma",
+   "Date": "19d",
+   "Salary": "$66k - $90k (glassdoor est.)"
+ },
+ {
+   "Company": "canon medical research usa, inc",
+   "Company Score": 3.7,
+   "Job Title": "c++ graphics engineer, 1+ years of experience",
+   "Location": "new york, ny",
+   "Date": "2d",
+   "Salary": "$55.00 - $60.00 per hour (employer est.)"
+ },
+ {
+   "Company": "raytheon",
+   "Company Score": 4,
+   "Job Title": "software engineer",
+   "Location": "cambridge, ma",
+   "Date": "2d",
+   "Salary": "$79k - $168k (employer est.)"
+ },
+ {
+   "Company": "snapchat",
+   "Company Score": 3.8,
+   "Job Title": "junior software engineer",
+   "Location": "annapolis junction, md",
+   "Date": "6d",
+   "Salary": "$102k - $174k (employer est.)"
+ },
+ {
+   "Company": "hudson river trading",
+   "Company Score": 3.9,
+   "Job Title": "software engineer, c++, 3+ years of experience",
+   "Location": "los angeles, ca",
+   "Date": "4d",
+   "Salary": "$73k - $108k (glassdoor est.)"
+ },
+ {
+   "Company": "whisker",
+   "Company Score": 4.3,
+   "Job Title": "systems software engineer",
+   "Location": "new york, ny",
+   "Date": "30d+",
+   "Salary": "$110k - $190k (employer est.)"
+ },
+ {
+   "Company": "mastercard",
+   "Company Score": 3.1,
+   "Job Title": "senior software engineer",
+   "Location": "auburn hills, mi",
+   "Date": "30d+",
+   "Salary": "$94k - $137k (glassdoor est.)"
+ },
+ {
+   "Company": "savannah river mission completion",
+   "Company Score": 3.6,
+   "Job Title": "software engineer ii",
+   "Location": "o fallon, mo",
+   "Date": "8d",
+   "Salary": "$89k - $113k (glassdoor est.)"
+ },
+ {
+   "Company": "mill-max",
+   "Company Score": 3.8,
+   "Job Title": "associate software developer",
+   "Location": "aiken, sc",
+   "Date": "9d",
+   "Salary": "$80k - $100k (employer est.)"
+ },
+ {
+   "Company": "disney entertainment & espn technology",
+   "Company Score": 3.8,
+   "Job Title": "software engineer trainee",
+   "Location": "oyster bay, ny",
+   "Date": "24d",
+   "Salary": "$128k - $179k (glassdoor est.)"
+ },
+ {
+   "Company": "coca-cola",
+   "Company Score": 4.2,
+   "Job Title": "sr software engineer",
+   "Location": "seattle, wa",
+   "Date": "1d",
+   "Salary": "$74k - $125k (glassdoor est.)"
+ },
+ {
+   "Company": "kaleido",
+   "Company Score": 4.1,
+   "Job Title": "staff software engineer",
+   "Location": "atlanta, ga",
+   "Date": "4d",
+   "Salary": "$90k - $187k (employer est.)"
+ },
+ {
+   "Company": "m&t bank",
+   "Company Score": 3.7,
+   "Job Title": "full stack engineer",
+   "Location": "raleigh, nc",
+   "Date": "5d",
+   "Salary": "$143k - $256k (employer est.)"
+ },
+ {
+   "Company": "lufburrow & co",
+   "Company Score": 3.4,
+   "Job Title": "software engineer - api, java, spring boot",
+   "Location": "buffalo, ny",
+   "Date": "30d+",
+   "Salary": "$114k - $145k (glassdoor est.)"
+ },
+ {
+   "Company": "boost tech",
+   "Company Score": 4.1,
+   "Job Title": "software engineer - hybrid",
+   "Location": "havre de grace, md",
+   "Date": "30d+",
+   "Salary": "$101k - $155k (glassdoor est.)"
+ },
+ {
+   "Company": "bae systems",
+   "Company Score": 3.9,
+   "Job Title": "senior software engineer (crm)",
+   "Location": "remote",
+   "Date": "2d",
+   "Salary": "$84k - $128k (glassdoor est.)"
+ },
+ {
+   "Company": "vantaca",
+   "Company Score": 4.5,
+   "Job Title": "test software engineer",
+   "Location": "nashua, nh",
+   "Date": "4d",
+   "Salary": "$100.00 per hour (employer est.)"
+ },
+ {
+   "Company": "veracity engineering",
+   "Company Score": 4.6,
+   "Job Title": "software engineer (multiple openings)",
+   "Location": "fort collins, co",
+   "Date": "18d",
+   "Salary": "$99k - $137k (glassdoor est.)"
+ },
+ {
+   "Company": "applovin",
+   "Company Score": 4.7,
+   "Job Title": "software engineer",
+   "Location": "washington, dc",
+   "Date": "5d",
+   "Salary": "$15.69 per hour (employer est.)"
+ },
+ {
+   "Company": "m&t bank",
+   "Company Score": 4.1,
+   "Job Title": "software engineer ii, c++ backend",
+   "Location": "palo alto, ca",
+   "Date": "5d",
+   "Salary": "$141k - $211k (employer est.)"
+ },
+ {
+   "Company": "cvs health",
+   "Company Score": 4.2,
+   "Job Title": "software engineer ii",
+   "Location": "wilmington, de",
+   "Date": "30d+",
+   "Salary": "$76k - $128k (employer est.)"
+ },
+ {
+   "Company": "microsoft",
+   "Company Score": 4.1,
+   "Job Title": "junior software developer (java & azure cloud)",
+   "Location": "woonsocket, ri",
+   "Date": "2d",
+   "Salary": "$93k - $129k (glassdoor est.)"
+ },
+ {
+   "Company": "honda research institute usa",
+   "Company Score": 4.2,
+   "Job Title": "senior software engineer",
+   "Location": "boston, ma",
+   "Date": "30d+",
+   "Salary": "$86k - $145k (glassdoor est.)"
+ },
+ {
+   "Company": "activision",
+   "Company Score": 4,
+   "Job Title": "software engineer for mobile robots",
+   "Location": "san jose, ca",
+   "Date": "13d",
+   "Salary": "$67k - $112k (glassdoor est.)"
+ },
+ {
+   "Company": "thatgamecompany",
+   "Company Score": 3.6,
+   "Job Title": "senior software engineer",
+   "Location": "santa monica, ca",
+   "Date": "9d",
+   "Salary": "$116k - $150k (employer est.)"
+ },
+ {
+   "Company": "bny mellon",
+   "Company Score": 4,
+   "Job Title": "build engineer",
+   "Location": "california",
+   "Date": "4d",
+   "Salary": "$85k - $115k (employer est.)"
+ },
+ {
+   "Company": "recruiting from scratch",
+   "Company Score": 3.6,
+   "Job Title": "vice president, back-end engineer i",
+   "Location": "lake mary, fl",
+   "Date": "2d",
+   "Salary": "$90k - $115k (glassdoor est.)"
+ },
+ {
+   "Company": "akina, inc.",
+   "Company Score": 3.9,
+   "Job Title": "founding software engineer",
+   "Location": "san francisco, ca",
+   "Date": "3d",
+   "Salary": "$92k - $156k (employer est.)"
+ },
+ {
+   "Company": "vonnen",
+   "Company Score": 4.8,
+   "Job Title": "software engineer - 1 (kubernetes/python)",
+   "Location": "annapolis junction, md",
+   "Date": "18d",
+   "Salary": "$150k - $200k (employer est.)"
+ },
+ {
+   "Company": "capgemini",
+   "Company Score": 4.5,
+   "Job Title": "software engineer",
+   "Location": "santa clara, ca",
+   "Date": "9d",
+   "Salary": "$95k - $147k (glassdoor est.)"
+ },
+ {
+   "Company": "stefanini, inc",
+   "Company Score": 3.6,
+   "Job Title": "software engineer - redis",
+   "Location": "irving, tx",
+   "Date": "2d",
+   "Salary": "$102k - $148k (glassdoor est.)"
+ },
+ {
+   "Company": "infosys",
+   "Company Score": 4.7,
+   "Job Title": "software engineer",
+   "Location": "dearborn, mi",
+   "Date": "25d",
+   "Salary": "$40.00 - $60.00 per hour (employer est.)"
+ },
+ {
+   "Company": "link, llc",
+   "Company Score": 4.9,
+   "Job Title": "release engineer",
+   "Location": "chicago, il",
+   "Date": "9d",
+   "Salary": "$86k - $109k (glassdoor est.)"
+ },
+ {
+   "Company": "autodesk",
+   "Company Score": 3.9,
+   "Job Title": "golang software engineer (vista bighitter), bs+7, telework",
+   "Location": "annapolis junction, md",
+   "Date": "11d",
+   "Salary": "$87k - $125k (glassdoor est.)"
+ },
+ {
+   "Company": "bct llc",
+   "Company Score": 3.9,
+   "Job Title": "software development engineer, platform services",
+   "Location": "oregon",
+   "Date": "6d",
+   "Salary": "$75.00 - $80.00 per hour (employer est.)"
+ },
+ {
+   "Company": "jpmorgan chase & co",
+   "Company Score": 4.8,
+   "Job Title": "software engineer (id)",
+   "Location": "united states",
+   "Date": "4d",
+   "Salary": "$142k - $183k (employer est.)"
+ },
+ {
+   "Company": "wr systems",
+   "Company Score": 4.2,
+   "Job Title": "software engineer",
+   "Location": "jersey city, nj",
+   "Date": "2d",
+   "Salary": "$77k - $125k (glassdoor est.)"
+ },
+ {
+   "Company": "acuity brands",
+   "Company Score": 3.5,
+   "Job Title": "software engineer",
+   "Location": "dahlgren, va",
+   "Date": "3d",
+   "Salary": "$162k - $244k (employer est.)"
+ },
+ {
+   "Company": "cisco systems",
+   "Company Score": 4.1,
+   "Job Title": "software engineer",
+   "Location": "conyers, ga",
+   "Date": "3d",
+   "Salary": "$85k - $104k (glassdoor est.)"
+ },
+ {
+   "Company": "walgreens",
+   "Company Score": 3.3,
+   "Job Title": "software qa engineer",
+   "Location": "san jose, ca",
+   "Date": "12d",
+   "Salary": "$140k - $145k (employer est.)"
+ },
+ {
+   "Company": "vivint, inc.",
+   "Company Score": 3.8,
+   "Job Title": "senior software engineer",
+   "Location": "deerfield, il",
+   "Date": "2d",
+   "Salary": "$95k - $130k (glassdoor est.)"
+ },
+ {
+   "Company": "caelum research corporation",
+   "Company Score": 4.1,
+   "Job Title": "sr. software engineer",
+   "Location": "lehi, ut",
+   "Date": "4d",
+   "Salary": "$90k - $150k (employer est.)"
+ },
+ {
+   "Company": "oracle",
+   "Company Score": 4.5,
+   "Job Title": "software engineer",
+   "Location": "carlisle, pa",
+   "Date": "22d",
+   "Salary": "$140k - $150k (employer est.)"
+ },
+ {
+   "Company": "fidelity investments",
+   "Company Score": 3.8,
+   "Job Title": "software developer",
+   "Location": "redwood city, ca",
+   "Date": "24h",
+   "Salary": "$183k - $297k (employer est.)"
+ },
+ {
+   "Company": "colorado state university",
+   "Company Score": 4.5,
+   "Job Title": "cloud engineer",
+   "Location": "westlake, tx",
+   "Date": "9d",
+   "Salary": "$120k - $140k (employer est.)"
+ },
+ {
+   "Company": "bayer",
+   "Company Score": 2.3,
+   "Job Title": "application programmer analyst/developer i",
+   "Location": "fort collins, co",
+   "Date": "5d",
+   "Salary": "$97k - $129k (glassdoor est.)"
+ },
+ {
+   "Company": "usaa",
+   "Company Score": 3.9,
+   "Job Title": "software engineer ii",
+   "Location": "indianola, pa",
+   "Date": "12d",
+   "Salary": "$50k - $90k (employer est.)"
+ },
+ {
+   "Company": "accenture federal services",
+   "Company Score": 3.1,
+   "Job Title": "senior react/javascript software engineer",
+   "Location": "san antonio, tx",
+   "Date": "1d",
+   "Salary": "$74k - $122k (employer est.)"
+ },
+ {
+   "Company": "gundersen health system",
+   "Company Score": 5,
+   "Job Title": "software engineer",
+   "Location": "lorton, va",
+   "Date": "13d",
+   "Salary": "$85k - $150k (employer est.)"
+ },
+ {
+   "Company": "jrc integrated systems, llc",
+   "Company Score": 3.9,
+   "Job Title": "software engineer | front end developer",
+   "Location": "onalaska, wi",
+   "Date": "30d+",
+   "Salary": "$82k - $114k (glassdoor est.)"
+ },
+ {
+   "Company": "xl softek",
+   "Company Score": 3.9,
+   "Job Title": "software engineer",
+   "Location": "washington, dc",
+   "Date": "11d",
+   "Salary": "$107k - $150k (employer est.)"
+ },
+ {
+   "Company": "kasmo cloud solutions",
+   "Company Score": 4,
+   "Job Title": "software engineers",
+   "Location": "suwanee, ga",
+   "Date": "30d+",
+   "Salary": "$215k - $220k (employer est.)"
+ },
+ {
+   "Company": "icr, inc.",
+   "Company Score": 4.2,
+   "Job Title": "software engineer",
+   "Location": "carol stream, il",
+   "Date": "5d",
+   "Salary": "$90k - $180k (employer est.)"
+ },
+ {
+   "Company": "workday",
+   "Company Score": 4,
+   "Job Title": "software engineer - front end (dashboard) - aurora, co",
+   "Location": "aurora, co",
+   "Date": "30d+",
+   "Salary": "$130k - $160k (employer est.)"
+ },
+ {
+   "Company": "360care",
+   "Company Score": 3,
+   "Job Title": "sr associate software engineer, database as a service",
+   "Location": "atlanta, ga",
+   "Date": "5d",
+   "Salary": "$75k - $126k (glassdoor est.)"
+ },
+ {
+   "Company": "amex",
+   "Company Score": 3.5,
+   "Job Title": "software engineer",
+   "Location": "louisville, ky",
+   "Date": "30d+",
+   "Salary": "$79k - $119k (glassdoor est.)"
+ },
+ {
+   "Company": "dkw communications",
+   "Company Score": 3.5,
+   "Job Title": "senior engineer - java - go2 unify",
+   "Location": "sunrise, fl",
+   "Date": "30d+",
+   "Salary": "$125k - $150k (employer est.)"
+ },
+ {
+   "Company": "sick, inc.",
+   "Company Score": 4.1,
+   "Job Title": "senior software engineer",
+   "Location": "point mugu nawc, ca",
+   "Date": "4d",
+   "Salary": "$77k - $102k (glassdoor est.)"
+ },
+ {
+   "Company": "antithesis",
+   "Company Score": 3.2,
+   "Job Title": "software engineer ii",
+   "Location": "minneapolis, mn",
+   "Date": "3d",
+   "Salary": "$102k - $138k (glassdoor est.)"
+ },
+ {
+   "Company": "rekuten global",
+   "Company Score": 3.9,
+   "Job Title": "junior ruby on rails engineer",
+   "Location": "remote",
+   "Date": "3d",
+   "Salary": "$115k - $155k (glassdoor est.)"
+ },
+ {
+   "Company": "tencent",
+   "Company Score": 4,
+   "Job Title": "senior software engineer",
+   "Location": "vienna, va",
+   "Date": "2d",
+   "Salary": "$84k - $132k (glassdoor est.)"
+ },
+ {
+   "Company": "realmone",
+   "Company Score": 4.1,
+   "Job Title": "software engineer",
+   "Location": "beloit, wi",
+   "Date": "30d+",
+   "Salary": "$80.00 per hour (employer est.)"
+ },
+ {
+   "Company": "zoox",
+   "Company Score": 4.1,
+   "Job Title": "security software engineer i",
+   "Location": "palo alto, ca",
+   "Date": "6d",
+   "Salary": "$80k - $108k (glassdoor est.)"
+ },
+ {
+   "Company": "cybercore technologies",
+   "Company Score": 4.3,
+   "Job Title": "software engineer 1",
+   "Location": "maryland",
+   "Date": "30d+",
+   "Salary": "$148k - $230k (employer est.)"
+ },
+ {
+   "Company": "synergy ecp",
+   "Company Score": 4.1,
+   "Job Title": "software engineer, workflow orchestration",
+   "Location": "foster city, ca",
+   "Date": "30d+",
+   "Salary": "$81k - $101k (glassdoor est.)"
+ },
+ {
+   "Company": "innovative defense technologies (idt)",
+   "Company Score": 3.9,
+   "Job Title": "software engineer 3",
+   "Location": "annapolis junction, md",
+   "Date": "19d",
+   "Salary": "$65k - $112k (glassdoor est.)"
+ },
+ {
+   "Company": "veterans engineering incorporated",
+   "Company Score": 4.1,
+   "Job Title": "backend python software engineer",
+   "Location": "annapolis junction, md",
+   "Date": "30d+",
+   "Salary": "$88k - $117k (glassdoor est.)"
+ },
+ {
+   "Company": "solvere technical group",
+   "Company Score": 3.6,
+   "Job Title": "software engineer",
+   "Location": "fall river, ma",
+   "Date": "30d+",
+   "Salary": "$10k - $20k (employer est.)"
+ },
+ {
+   "Company": "iralogix,inc",
+   "Company Score": 3.9,
+   "Job Title": "cloud engineer",
+   "Location": "united states",
+   "Date": "10d",
+   "Salary": "$111k - $153k (glassdoor est.)"
+ },
+ {
+   "Company": "nava",
+   "Company Score": 3.8,
+   "Job Title": "software engineer",
+   "Location": "indian head, md",
+   "Date": "2d",
+   "Salary": "$91k - $126k (glassdoor est.)"
+ },
+ {
+   "Company": "f5",
+   "Company Score": 3.6,
+   "Job Title": "senior software engineer",
+   "Location": "pittsburgh, pa",
+   "Date": "4d",
+   "Salary": "$125k - $140k (employer est.)"
+ },
+ {
+   "Company": "bae systems",
+   "Company Score": 4.5,
+   "Job Title": "sr. software engineer",
+   "Location": "remote",
+   "Date": "2d",
+   "Salary": "$66k - $116k (glassdoor est.)"
+ },
+ {
+   "Company": "synergy ecp",
+   "Company Score": 3.4,
+   "Job Title": "software engineer iii",
+   "Location": "san jose, ca",
+   "Date": "19d",
+   "Salary": "$108k - $146k (glassdoor est.)"
+ },
+ {
+   "Company": "ge healthcare",
+   "Company Score": 4,
+   "Job Title": "engineer, junior software",
+   "Location": "lexington park, md",
+   "Date": "30d+",
+   "Salary": "$90k - $130k (employer est.)"
+ },
+ {
+   "Company": "tc energy",
+   "Company Score": 2.4,
+   "Job Title": "software engineer",
+   "Location": "annapolis junction, md",
+   "Date": "30d+",
+   "Salary": "$80k - $90k (employer est.)"
+ },
+ {
+   "Company": "principal financial group",
+   "Company Score": 4.3,
+   "Job Title": "senior software engineer (hybrid, onsite)",
+   "Location": "milwaukee, wi",
+   "Date": "3d",
+   "Salary": "$86k - $119k (glassdoor est.)"
+ },
+ {
+   "Company": "schlumberger",
+   "Company Score": 3.4,
+   "Job Title": "new engineer-in-training (net) rotational program",
+   "Location": "houston, tx",
+   "Date": "6d",
+   "Salary": "$120k - $250k (employer est.)"
+ },
+ {
+   "Company": "jbt corporation",
+   "Company Score": 4.6,
+   "Job Title": "back end software engineer",
+   "Location": "houston, tx",
+   "Date": "9d",
+   "Salary": "$55k - $90k (employer est.)"
+ },
+ {
+   "Company": "flash technology group",
+   "Company Score": 4.2,
+   "Job Title": "software engineer",
+   "Location": "san mateo, ca",
+   "Date": "30d+",
+   "Salary": "$84k - $157k (employer est.)"
+ },
+ {
+   "Company": "innovative defense technologies (idt)",
+   "Company Score": 3.7,
+   "Job Title": "devops engineer",
+   "Location": "chalfont, pa",
+   "Date": "30d+",
+   "Salary": "$96k - $128k (glassdoor est.)"
+ },
+ {
+   "Company": "fairfax county public schools",
+   "Company Score": 4.2,
+   "Job Title": "software engineer i",
+   "Location": "laurel, md",
+   "Date": "30d+",
+   "Salary": "$106k - $125k (employer est.)"
+ },
+ {
+   "Company": "scholarly",
+   "Company Score": 4.5,
+   "Job Title": "software engineer",
+   "Location": "united states",
+   "Date": "5d",
+   "Salary": "$81k - $123k (glassdoor est.)"
+ },
+ {
+   "Company": "innovative defense technologies (idt)",
+   "Company Score": 3,
+   "Job Title": "software engineer (one year only)",
+   "Location": "wilton woods, va",
+   "Date": "30d+",
+   "Salary": "$92k - $131k (glassdoor est.)"
+ },
+ {
+   "Company": "burst inc.",
+   "Company Score": 2,
+   "Job Title": "software engineer",
+   "Location": "seattle, wa",
+   "Date": "9d",
+   "Salary": "$115k - $166k (glassdoor est.)"
+ },
+ {
+   "Company": "usn technical associates",
+   "Company Score": 3.9,
+   "Job Title": "devsecops software engineer",
+   "Location": "fall river, ma",
+   "Date": "5d",
+   "Salary": "$113k - $161k (glassdoor est.)"
+ },
+ {
+   "Company": "snc",
+   "Company Score": 2.8,
+   "Job Title": "video software engineer",
+   "Location": "lexington, ma",
+   "Date": "11d",
+   "Salary": "$160k - $385k (employer est.)"
+ },
+ {
+   "Company": "decision six",
+   "Company Score": 4.1,
+   "Job Title": "contract software engineer",
+   "Location": "los angeles, ca",
+   "Date": "5d",
+   "Salary": "$62k - $102k (glassdoor est.)"
+ },
+ {
+   "Company": "laiba technologies",
+   "Company Score": 4.4,
+   "Job Title": "software engineer ii",
+   "Location": "southern pines, nc",
+   "Date": "1d",
+   "Salary": "$73k - $110k (glassdoor est.)"
+ },
+ {
+   "Company": "teamups",
+   "Company Score": 4.4,
+   "Job Title": "devops engineer",
+   "Location": "newtown square, pa",
+   "Date": "5d",
+   "Salary": "$200k - $370k (employer est.)"
+ },
+ {
+   "Company": "delta dental ins.",
+   "Company Score": 4,
+   "Job Title": "do178c software engineer",
+   "Location": "everett, wa",
+   "Date": "30d+",
+   "Salary": "$93k - $147k (glassdoor est.)"
+ },
+ {
+   "Company": "valkyrie enterprises",
+   "Company Score": 4.1,
+   "Job Title": "senior software engineer",
+   "Location": "seattle, wa",
+   "Date": "30d+",
+   "Salary": "$69k - $107k (glassdoor est.)"
+ },
+ {
+   "Company": "uipath",
+   "Company Score": 3.7,
+   "Job Title": "expert software engineer",
+   "Location": "alpharetta, ga",
+   "Date": "1d",
+   "Salary": "$50k - $60k (employer est.)"
+ },
+ {
+   "Company": "atlas copco tools & assembly systems llc",
+   "Company Score": 3.7,
+   "Job Title": "software engineer (job id:3425)",
+   "Location": "huntsville, al",
+   "Date": "27d",
+   "Salary": "$70k - $108k (glassdoor est.)"
+ },
+ {
+   "Company": "anb sourcing llc",
+   "Company Score": 3.8,
+   "Job Title": "senior software engineer",
+   "Location": "bellevue, wa",
+   "Date": "9d",
+   "Salary": "$102k - $134k (glassdoor est.)"
+ },
+ {
+   "Company": "mcintire solutions",
+   "Company Score": 4.5,
+   "Job Title": "software engineer",
+   "Location": "auburn hills, mi",
+   "Date": "13d",
+   "Salary": "$103k - $133k (glassdoor est.)"
+ },
+ {
+   "Company": "pennymac",
+   "Company Score": 4.6,
+   "Job Title": "azure devops engineer || full time job.",
+   "Location": "remote",
+   "Date": "2d",
+   "Salary": "$50.00 per hour (employer est.)"
+ },
+ {
+   "Company": "literati",
+   "Company Score": 3.7,
+   "Job Title": "software systems engineer/devops engineer",
+   "Location": "chantilly, va",
+   "Date": "18d",
+   "Salary": "$84k - $110k (glassdoor est.)"
+ },
+ {
+   "Company": "rochester software associates, inc.",
+   "Company Score": 4.1,
+   "Job Title": "clojure software engineer",
+   "Location": "agoura hills, ca",
+   "Date": "4d",
+   "Salary": "$66k - $94k (glassdoor est.)"
+ },
+ {
+   "Company": "plaid",
+   "Company Score": 3.7,
+   "Job Title": "wordpress full stack engineer (react)",
+   "Location": "texas",
+   "Date": "1d",
+   "Salary": "$102k - $149k (glassdoor est.)"
+ },
+ {
+   "Company": "tigergraph",
+   "Company Score": 3.9,
+   "Job Title": "c# software developer",
+   "Location": "united states",
+   "Date": "10d",
+   "Salary": "$187k - $197k (employer est.)"
+ },
+ {
+   "Company": "garmin international, inc.",
+   "Company Score": 3.7,
+   "Job Title": "experienced software engineer - scaled access",
+   "Location": "new york, ny",
+   "Date": "30d+",
+   "Salary": "$70k - $96k (glassdoor est.)"
+ },
+ {
+   "Company": "resilio inc.",
+   "Company Score": 4.4,
+   "Job Title": "software engineer",
+   "Location": "redwood city, ca",
+   "Date": "5d",
+   "Salary": "$100k - $110k (employer est.)"
+ },
+ {
+   "Company": "candid",
+   "Company Score": 3.7,
+   "Job Title": "software certification engineer 1 - software quality",
+   "Location": "salem, or",
+   "Date": "25d",
+   "Salary": "$83k - $116k (glassdoor est.)"
+ },
+ {
+   "Company": "amex",
+   "Company Score": 4.3,
+   "Job Title": "technical support engineer (endpoint software)",
+   "Location": "virginia",
+   "Date": "9d",
+   "Salary": "$100k - $250k (employer est.)"
+ },
+ {
+   "Company": "radiance technologies",
+   "Company Score": 4.4,
+   "Job Title": "ecosystems software engineer",
+   "Location": "united states",
+   "Date": "17d",
+   "Salary": "$100k - $115k (employer est.)"
+ },
+ {
+   "Company": "fabletics",
+   "Company Score": 3.6,
+   "Job Title": "engineer",
+   "Location": "phoenix, az",
+   "Date": "2d",
+   "Salary": "$64k - $101k (glassdoor est.)"
+ },
+ {
+   "Company": "delta dental ins.",
+   "Company Score": 3.7,
+   "Job Title": "r&d software engineer",
+   "Location": "stennis space center, ms",
+   "Date": "30d+",
+   "Salary": "$66k - $68k (employer est.)"
+ },
+ {
+   "Company": "fractal analytics",
+   "Company Score": 4.1,
+   "Job Title": "sr. software engineer",
+   "Location": "california",
+   "Date": "24d",
+   "Salary": "$79k - $117k (glassdoor est.)"
+ },
+ {
+   "Company": "microchip technology",
+   "Company Score": 2.4,
+   "Job Title": "expert software engineer",
+   "Location": "oakland, ca",
+   "Date": "1d",
+   "Salary": "$140k (employer est.)"
+ },
+ {
+   "Company": "york space systems",
+   "Company Score": 4.2,
+   "Job Title": "software development engineer",
+   "Location": "california",
+   "Date": "30d+",
+   "Salary": "$118k - $169k (glassdoor est.)"
+ },
+ {
+   "Company": "software productivity strategists",
+   "Company Score": 3.3,
+   "Job Title": "sr. full stack software engineer",
+   "Location": "greenwood village, co",
+   "Date": "3d",
+   "Salary": "$130k - $270k (employer est.)"
+ },
+ {
+   "Company": "neuropace",
+   "Company Score": 4.2,
+   "Job Title": "software engineer",
+   "Location": "lincoln, ne",
+   "Date": "30d+",
+   "Salary": "$110k - $157k (employer est.)"
+ },
+ {
+   "Company": "oceanfrogs",
+   "Company Score": 2.5,
+   "Job Title": "software engineer",
+   "Location": "rockville, md",
+   "Date": "30d+",
+   "Salary": "$93k - $130k (glassdoor est.)"
+ },
+ {
+   "Company": "iconectiv, llc.",
+   "Company Score": 3.5,
+   "Job Title": "full stack software engineer",
+   "Location": "mountain view, ca",
+   "Date": "7d",
+   "Salary": "$120k - $140k (employer est.)"
+ },
+ {
+   "Company": "the aerospace corporation",
+   "Company Score": 3.9,
+   "Job Title": "full stack software developer",
+   "Location": "duluth, ga",
+   "Date": "30d+",
+   "Salary": "$94k - $160k (employer est.)"
+ },
+ {
+   "Company": "fetch package",
+   "Company Score": 4.8,
+   "Job Title": "software engineer (oracle database expertise)",
+   "Location": "bridgewater, nj",
+   "Date": "4d",
+   "Salary": "$101k - $144k (glassdoor est.)"
+ },
+ {
+   "Company": "zenith services",
+   "Company Score": 4.7,
+   "Job Title": "data engineer / software engineer",
+   "Location": "chantilly, va",
+   "Date": "30d+",
+   "Salary": "$108k - $156k (glassdoor est.)"
+ },
+ {
+   "Company": "matthews international corporation",
+   "Company Score": 3.9,
+   "Job Title": "lead front-end software engineer",
+   "Location": "austin, tx",
+   "Date": "4d",
+   "Salary": "$74k - $100k (glassdoor est.)"
+ },
+ {
+   "Company": "oracle",
+   "Company Score": 2.9,
+   "Job Title": "react native engineer",
+   "Location": "bentonville, ar",
+   "Date": "30d+",
+   "Salary": "$73k - $100k (glassdoor est.)"
+ },
+ {
+   "Company": "nvidia",
+   "Company Score": 4,
+   "Job Title": "software engineer",
+   "Location": "apopka, fl",
+   "Date": "3d",
+   "Salary": "$112k - $196k (employer est.)"
+ },
+ {
+   "Company": "pingwind",
+   "Company Score": 4,
+   "Job Title": "software developer",
+   "Location": "united states",
+   "Date": "1d",
+   "Salary": "$98k - $137k (glassdoor est.)"
+ },
+ {
+   "Company": "versaterm",
+   "Company Score": 3.5,
+   "Job Title": "senior full-stack web applications software engineer",
+   "Location": "santa clara, ca",
+   "Date": "1d",
+   "Salary": "$80k - $94k (employer est.)"
+ },
+ {
+   "Company": "apollo technology solutions llc",
+   "Company Score": 4.3,
+   "Job Title": "software developer*",
+   "Location": "scott air force base, il",
+   "Date": "9d",
+   "Salary": "$89k - $130k (glassdoor est.)"
+ },
+ {
+   "Company": "navrit creation",
+   "Company Score": 3.6,
+   "Job Title": "software engineer",
+   "Location": "lexington, sc",
+   "Date": "16d",
+   "Salary": "$78k - $131k (glassdoor est.)"
+ },
+ {
+   "Company": "amazon.com services llc",
+   "Company Score": 5,
+   "Job Title": "sr. front end engineer (react)",
+   "Location": "charlotte, nc",
+   "Date": "2d",
+   "Salary": "$65k - $107k (glassdoor est.)"
+ },
+ {
+   "Company": "schneider electric",
+   "Company Score": 3.6,
+   "Job Title": "freelance web developer",
+   "Location": "colony, al",
+   "Date": "1d",
+   "Salary": "$130k - $300k (employer est.)"
+ },
+ {
+   "Company": "akira technologies inc.",
+   "Company Score": 3.7,
+   "Job Title": "software dev engineer, modeling software",
+   "Location": "boston, ma",
+   "Date": "10d",
+   "Salary": "$66k - $98k (employer est.)"
+ },
+ {
+   "Company": "ctc group",
+   "Company Score": 4.2,
+   "Job Title": "systems application engineer ii - software",
+   "Location": "secaucus, nj",
+   "Date": "1d",
+   "Salary": "$153k - $225k (employer est.)"
+ },
+ {
+   "Company": "space coast intelligent solutions",
+   "Company Score": 3.9,
+   "Job Title": "servicenow software engineer",
+   "Location": "washington, dc",
+   "Date": "9d",
+   "Salary": "$69k - $103k (employer est.)"
+ },
+ {
+   "Company": "credo",
+   "Company Score": 3.9,
+   "Job Title": "python developer",
+   "Location": "fort meade, md",
+   "Date": "6d",
+   "Salary": "$83k - $114k (glassdoor est.)"
+ },
+ {
+   "Company": "9th networks inc",
+   "Company Score": 4.4,
+   "Job Title": "software engineer iv",
+   "Location": "melbourne, fl",
+   "Date": "30d+",
+   "Salary": "$107k - $174k (employer est.)"
+ },
+ {
+   "Company": "tuvoli",
+   "Company Score": 3.1,
+   "Job Title": "system software engineer",
+   "Location": "san jose, ca",
+   "Date": "3d",
+   "Salary": "$78k (employer est.)"
+ },
+ {
+   "Company": "walter p moore",
+   "Company Score": 4.1,
+   "Job Title": "go lang/platform engineer",
+   "Location": "jersey city, nj",
+   "Date": "3d",
+   "Salary": "$175k - $265k (employer est.)"
+ },
+ {
+   "Company": "linquest corporation",
+   "Company Score": 3.9,
+   "Job Title": "senior software engineer",
+   "Location": "massachusetts",
+   "Date": "16d",
+   "Salary": "$53k - $107k (employer est.)"
+ },
+ {
+   "Company": "codesignal",
+   "Company Score": 3.8,
+   "Job Title": "front-end software developer",
+   "Location": "washington, dc",
+   "Date": "17d",
+   "Salary": "$60.00 - $80.00 per hour (employer est.)"
+ },
+ {
+   "Company": "hewlett packard",
+   "Company Score": 5,
+   "Job Title": "software engineer",
+   "Location": "beavercreek, oh",
+   "Date": "30d+",
+   "Salary": "$86k - $128k (glassdoor est.)"
+ },
+ {
+   "Company": "dupli envelope & graphics",
+   "Company Score": 4.8,
+   "Job Title": "software engineer, innovation lab",
+   "Location": "san francisco, ca",
+   "Date": "18d",
+   "Salary": "$165k - $215k (employer est.)"
+ },
+ {
+   "Company": "coinbase",
+   "Company Score": 4.2,
+   "Job Title": "software quality engineer",
+   "Location": "fort collins, co",
+   "Date": "10d",
+   "Salary": "$165k - $215k (employer est.)"
+ },
+ {
+   "Company": "lseg (london stock exchange group)",
+   "Company Score": 4,
+   "Job Title": "software support engineer",
+   "Location": "syracuse, ny",
+   "Date": "3d",
+   "Salary": "$102k - $138k (glassdoor est.)"
+ },
+ {
+   "Company": "inabia software & consulting inc.",
+   "Company Score": 3.8,
+   "Job Title": "software engineer",
+   "Location": "remote",
+   "Date": "12d",
+   "Salary": "$76k - $175k (employer est.)"
+ },
+ {
+   "Company": "pmall",
+   "Company Score": 4.5,
+   "Job Title": "full stack engineer",
+   "Location": "washington, dc",
+   "Date": "30d+",
+   "Salary": "$96k - $118k (employer est.)"
+ },
+ {
+   "Company": "alloy",
+   "Company Score": 4,
+   "Job Title": "software developer",
+   "Location": "bellevue, wa",
+   "Date": "30d+",
+   "Salary": "$86k - $129k (employer est.)"
+ },
+ {
+   "Company": "qinetiq us",
+   "Company Score": 3.9,
+   "Job Title": "front-end developer",
+   "Location": "burr ridge, il",
+   "Date": "10d",
+   "Salary": "$160k - $385k (employer est.)"
+ },
+ {
+   "Company": "caterpillar",
+   "Company Score": 4,
+   "Job Title": "solutions engineer",
+   "Location": "united states",
+   "Date": "3d",
+   "Salary": "$184k - $337k (employer est.)"
+ },
+ {
+   "Company": "jason pharmaceuticals, inc.",
+   "Company Score": 4,
+   "Job Title": "software engineer",
+   "Location": "mclean, va",
+   "Date": "9d",
+   "Salary": "$127k - $184k (employer est.)"
+ },
+ {
+   "Company": "intellibridge llc",
+   "Company Score": 3.6,
+   "Job Title": "software engineer",
+   "Location": "peoria, il",
+   "Date": "2d",
+   "Salary": "$79k - $130k (glassdoor est.)"
+ },
+ {
+   "Company": "snyk",
+   "Company Score": 3.4,
+   "Job Title": "sr software engineer",
+   "Location": "lehi, ut",
+   "Date": "10d",
+   "Salary": "$120k - $207k (employer est.)"
+ },
+ {
+   "Company": "openai",
+   "Company Score": 4.2,
+   "Job Title": "software engineer",
+   "Location": "washington, dc",
+   "Date": "10d",
+   "Salary": "$112k - $152k (employer est.)"
+ },
+ {
+   "Company": "vertex professional service llc",
+   "Company Score": 2.7,
+   "Job Title": "senior software engineer (typescript/go)",
+   "Location": "boston, ma",
+   "Date": "2d",
+   "Salary": "$130k - $158k (glassdoor est.)"
+ },
+ {
+   "Company": "decibel research, inc.",
+   "Company Score": 2.7,
+   "Job Title": "software engineer, backend",
+   "Location": "san francisco, ca",
+   "Date": "5d",
+   "Salary": "$103k - $172k (employer est.)"
+ },
+ {
+   "Company": "openai",
+   "Company Score": 4.4,
+   "Job Title": "software engineer ii (insite) - \"w-trs\"",
+   "Location": "orlando, fl",
+   "Date": "2d",
+   "Salary": "$82k - $209k (employer est.)"
+ },
+ {
+   "Company": "comsol inc.",
+   "Company Score": 3.1,
+   "Job Title": "mid-level software engineer",
+   "Location": "huntsville, al",
+   "Date": "25d",
+   "Salary": "$116k - $174k (employer est.)"
+ },
+ {
+   "Company": "infosys",
+   "Company Score": 3.8,
+   "Job Title": "full stack engineer, leverage engineering",
+   "Location": "san francisco, ca",
+   "Date": "6d",
+   "Salary": "$130k - $165k (employer est.)"
+ },
+ {
+   "Company": "hero facility services",
+   "Company Score": 3.8,
+   "Job Title": "software developer – ray optics",
+   "Location": "burlington, ma",
+   "Date": "4d",
+   "Salary": "$150k - $185k (employer est.)"
+ },
+ {
+   "Company": "qed systems llc",
+   "Company Score": 3.9,
+   "Job Title": "junior python developer",
+   "Location": "charlotte, nc",
+   "Date": "2d",
+   "Salary": "$98k - $209k (employer est.)"
+ },
+ {
+   "Company": "kasasa",
+   "Company Score": 4.4,
+   "Job Title": "entry level developer",
+   "Location": "melbourne, fl",
+   "Date": "3d",
+   "Salary": "$102k - $204k (employer est.)"
+ },
+ {
+   "Company": "delta air lines, inc.",
+   "Company Score": 3.7,
+   "Job Title": "software engineer",
+   "Location": "aberdeen proving ground, md",
+   "Date": "30d+",
+   "Salary": "$125k - $140k (employer est.)"
+ },
+ {
+   "Company": "han it",
+   "Company Score": 3.6,
+   "Job Title": "senior software engineer (hybrid)",
+   "Location": "austin, tx",
+   "Date": "11d",
+   "Salary": "$108k - $216k (employer est.)"
+ },
+ {
+   "Company": "innovative solutions and support",
+   "Company Score": 3.9,
+   "Job Title": "software development engineer",
+   "Location": "atlanta, ga",
+   "Date": "3d",
+   "Salary": "$79k - $116k (glassdoor est.)"
+ },
+ {
+   "Company": "promega",
+   "Company Score": 4.8,
+   "Job Title": "python developer",
+   "Location": "morris plains, nj",
+   "Date": "3d",
+   "Salary": "$67k - $128k (employer est.)"
+ },
+ {
+   "Company": "revenue management solutions llc",
+   "Company Score": 3.7,
+   "Job Title": "software verification engineer",
+   "Location": "exton, pa",
+   "Date": "12d",
+   "Salary": "$129k - $162k (employer est.)"
+ },
+ {
+   "Company": "cityblock health",
+   "Company Score": 3.8,
+   "Job Title": "software engineer, instrumentation",
+   "Location": "madison, wi",
+   "Date": "16d",
+   "Salary": "$90k - $110k (employer est.)"
+ },
+ {
+   "Company": "astrion",
+   "Company Score": 3.7,
+   "Job Title": "devops engineer",
+   "Location": "oklahoma city, ok",
+   "Date": "12d",
+   "Salary": "$117k - $306k (employer est.)"
+ },
+ {
+   "Company": "diverse career solutions",
+   "Company Score": 3.4,
+   "Job Title": "staff software engineer",
+   "Location": "new york state",
+   "Date": "9d",
+   "Salary": "$100k - $115k (employer est.)"
+ },
+ {
+   "Company": "synergy ecp",
+   "Company Score": 4.2,
+   "Job Title": "software developer",
+   "Location": "eglin afb, fl",
+   "Date": "17d",
+   "Salary": "$87k - $142k (glassdoor est.)"
+ },
+ {
+   "Company": "icr, inc.",
+   "Company Score": 4,
+   "Job Title": "sr. software engineer",
+   "Location": "remote",
+   "Date": "3d",
+   "Salary": "$92k - $132k (glassdoor est.)"
+ },
+ {
+   "Company": "broadridge",
+   "Company Score": 3.8,
+   "Job Title": "software engineer",
+   "Location": "columbia, md",
+   "Date": "30d+",
+   "Salary": "$105k - $160k (employer est.)"
+ },
+ {
+   "Company": "zurn elkay water solutions",
+   "Company Score": 5,
+   "Job Title": "software systems engineer - mason, oh",
+   "Location": "mason, oh",
+   "Date": "30d+",
+   "Salary": "$144k - $196k (glassdoor est.)"
+ },
+ {
+   "Company": "florida state college at jacksonville",
+   "Company Score": 4.2,
+   "Job Title": "deployment engineer (hybrid)",
+   "Location": "newark, nj",
+   "Date": "9d",
+   "Salary": "$69k - $91k (glassdoor est.)"
+ },
+ {
+   "Company": "q9software",
+   "Company Score": 3.1,
+   "Job Title": "iot engineer",
+   "Location": "milwaukee, wi",
+   "Date": "27d",
+   "Salary": "$80k - $110k (employer est.)"
+ },
+ {
+   "Company": "jpmorgan chase & co",
+   "Company Score": 3.8,
+   "Job Title": "engineer iv software",
+   "Location": "jacksonville, fl",
+   "Date": "27d",
+   "Salary": "$100k - $153k (glassdoor est.)"
+ },
+ {
+   "Company": "the bank of new york mellon corporation",
+   "Company Score": 3.4,
+   "Job Title": "entry level to senior level software developers",
+   "Location": "germantown, md",
+   "Date": "30d+",
+   "Salary": "$170k - $200k (employer est.)"
+ },
+ {
+   "Company": "cisco systems",
+   "Company Score": 4.5,
+   "Job Title": "software engineer",
+   "Location": "jersey city, nj",
+   "Date": "4d",
+   "Salary": "$87k - $124k (glassdoor est.)"
+ },
+ {
+   "Company": "grand canyon education",
+   "Company Score": 4,
+   "Job Title": "2025 bny summer internship program - engineering (developer)",
+   "Location": "pittsburgh, pa",
+   "Date": "6d",
+   "Salary": "$185k - $206k (employer est.)"
+ },
+ {
+   "Company": "captivation software",
+   "Company Score": 3.3,
+   "Job Title": "software engineer",
+   "Location": "san jose, ca",
+   "Date": "30d+",
+   "Salary": "$80k - $133k (employer est.)"
+ },
+ {
+   "Company": "docusign",
+   "Company Score": 4.6,
+   "Job Title": "jr. developer",
+   "Location": "phoenix, az",
+   "Date": "3d",
+   "Salary": "$90k - $127k (glassdoor est.)"
+ },
+ {
+   "Company": "canon medical research usa, inc.",
+   "Company Score": 3.6,
+   "Job Title": "software engineer 0 - java/react/docker/aws",
+   "Location": "annapolis junction, md",
+   "Date": "30d",
+   "Salary": "$108k - $199k (employer est.)"
+ },
+ {
+   "Company": "standard bots",
+   "Company Score": 2.5,
+   "Job Title": "ai saas engineer",
+   "Location": "san francisco, ca",
+   "Date": "1d",
+   "Salary": "$62k - $102k (glassdoor est.)"
+ },
+ {
+   "Company": "american agcredit",
+   "Company Score": 4.1,
+   "Job Title": "software engineer",
+   "Location": "boston, ma",
+   "Date": "1d",
+   "Salary": "$85k - $104k (glassdoor est.)"
+ },
+ {
+   "Company": "kapsch",
+   "Company Score": 4,
+   "Job Title": "software quality engineer",
+   "Location": "glen cove, ny",
+   "Date": "11d",
+   "Salary": "$73k - $127k (employer est.)"
+ },
+ {
+   "Company": "prevail",
+   "Company Score": 3.9,
+   "Job Title": "devops engineer",
+   "Location": "remote",
+   "Date": "2d",
+   "Salary": "$100k - $140k (glassdoor est.)"
+ },
+ {
+   "Company": "dcs corp",
+   "Company Score": 4.8,
+   "Job Title": "software engineer",
+   "Location": "chantilly, va",
+   "Date": "30d+",
+   "Salary": "$160k - $194k (employer est.)"
+ },
+ {
+   "Company": "consensus health",
+   "Company Score": 3.9,
+   "Job Title": "software engineer video",
+   "Location": "san francisco, ca",
+   "Date": "5d",
+   "Salary": "$107k - $145k (glassdoor est.)"
+ },
+ {
+   "Company": "rippling",
+   "Company Score": 4.2,
+   "Job Title": "software engineer",
+   "Location": "dayton, oh",
+   "Date": "3d",
+   "Salary": "$74k - $131k (glassdoor est.)"
+ },
+ {
+   "Company": "aci worldwide",
+   "Company Score": 4,
+   "Job Title": "associate software engineer",
+   "Location": "lenexa, ks",
+   "Date": "5d",
+   "Salary": "$240k (employer est.)"
+ },
+ {
+   "Company": "engineering technology associates, inc.",
+   "Company Score": 5,
+   "Job Title": "full stack engineer ii (frontend) - benefits",
+   "Location": "san francisco, ca",
+   "Date": "2d",
+   "Salary": "$16.00 - $46.00 per hour (employer est.)"
+ },
+ {
+   "Company": "fusion innovation",
+   "Company Score": 5,
+   "Job Title": "software engineer - hybrid",
+   "Location": "norcross, ga",
+   "Date": "3d",
+   "Salary": "$70k - $120k (employer est.)"
+ },
+ {
+   "Company": "clarity innovations, llc",
+   "Company Score": 4.1,
+   "Job Title": "software test engineer",
+   "Location": "dearborn, mi",
+   "Date": "1d",
+   "Salary": "$160k - $225k (employer est.)"
+ },
+ {
+   "Company": "ripplematch opportunities",
+   "Company Score": 3.9,
+   "Job Title": "software engineer",
+   "Location": "herndon, va",
+   "Date": "30d+",
+   "Salary": "$99k - $134k (glassdoor est.)"
+ },
+ {
+   "Company": "power3 solutions and partnering companies",
+   "Company Score": 3.5,
+   "Job Title": "jr. java software engineer (swe1) (pp) 228",
+   "Location": "annapolis junction, md",
+   "Date": "30d+",
+   "Salary": "$102k - $143k (glassdoor est.)"
+ },
+ {
+   "Company": "datadog",
+   "Company Score": 3.9,
+   "Job Title": "imc - software engineer, application via ripplematch",
+   "Location": "chicago, il",
+   "Date": "4d",
+   "Salary": "$150k - $240k (employer est.)"
+ },
+ {
+   "Company": "paccar",
+   "Company Score": 4.2,
+   "Job Title": "python engineer",
+   "Location": "annapolis junction, md",
+   "Date": "10d",
+   "Salary": "$160k - $170k (employer est.)"
+ },
+ {
+   "Company": "front",
+   "Company Score": 4.1,
+   "Job Title": "senior software engineer - frontend - sheets",
+   "Location": "united states",
+   "Date": "11d",
+   "Salary": "$144k - $200k (employer est.)"
+ },
+ {
+   "Company": "northrop grumman",
+   "Company Score": 4.1,
+   "Job Title": "vehicle software and diagnostics tool test engineer",
+   "Location": "mount vernon, wa",
+   "Date": "4d",
+   "Salary": "$110k - $120k (employer est.)"
+ },
+ {
+   "Company": "pegasystems",
+   "Company Score": 4.1,
+   "Job Title": "backend software engineer, deliverability",
+   "Location": "san francisco, ca",
+   "Date": "4d",
+   "Salary": "$165k - $211k (employer est.)"
+ },
+ {
+   "Company": "lawrence berkeley national laboratory",
+   "Company Score": 3.6,
+   "Job Title": "2024 associate software engineer - linthicum md",
+   "Location": "linthicum, md",
+   "Date": "1d",
+   "Salary": "$92k - $116k (glassdoor est.)"
+ },
+ {
+   "Company": "cargill",
+   "Company Score": 3.5,
+   "Job Title": "associate software engineer, services engineering",
+   "Location": "waltham, ma",
+   "Date": "3d",
+   "Salary": "$65.00 per hour (employer est.)"
+ },
+ {
+   "Company": "zoox",
+   "Company Score": 3.9,
+   "Job Title": "optimization software engineer",
+   "Location": "san francisco, ca",
+   "Date": "30d+",
+   "Salary": "$66k - $132k (employer est.)"
+ },
+ {
+   "Company": "globalfoundries",
+   "Company Score": 3.7,
+   "Job Title": "associate software engineer - technology development program, summer 2025 - atlanta, ga",
+   "Location": "atlanta, ga",
+   "Date": "1d",
+   "Salary": "$140k - $175k (employer est.)"
+ },
+ {
+   "Company": "tru47",
+   "Company Score": 4.8,
+   "Job Title": "software engineer - perception ml ops",
+   "Location": "boston, ma",
+   "Date": "30d+",
+   "Salary": "$169k - $225k (employer est.)"
+ },
+ {
+   "Company": "schneider electric",
+   "Company Score": 4.1,
+   "Job Title": "design enablement engineer, software engineering ai/machine learning (2024 new college graduate)",
+   "Location": "malta, ny",
+   "Date": "23d",
+   "Salary": "$61k - $95k (employer est.)"
+ },
+ {
+   "Company": "gopuff",
+   "Company Score": 3.2,
+   "Job Title": "shopify webmaster",
+   "Location": "remote",
+   "Date": "3d",
+   "Salary": "$90k - $125k (employer est.)"
+ },
+ {
+   "Company": "gopuff",
+   "Company Score": 3.6,
+   "Job Title": "software development test engineer - electrical iot devices",
+   "Location": "foxborough, ma",
+   "Date": "1d",
+   "Salary": "$162k - $284k (employer est.)"
+ },
+ {
+   "Company": "camelot integrated solutions inc.",
+   "Company Score": 3.9,
+   "Job Title": "senior software engineer - delivery tech",
+   "Location": "miami, fl",
+   "Date": "17d",
+   "Salary": "$91k - $137k (employer est.)"
+ },
+ {
+   "Company": "cvs health",
+   "Company Score": 5,
+   "Job Title": "senior software engineer - warehouse",
+   "Location": "miami, fl",
+   "Date": "17d",
+   "Salary": "$160k - $175k (employer est.)"
+ },
+ {
+   "Company": "boeing",
+   "Company Score": 4.6,
+   "Job Title": "senior software engineer i",
+   "Location": "houston, tx",
+   "Date": "30d+",
+   "Salary": "$177k - $323k (employer est.)"
+ },
+ {
+   "Company": "publix",
+   "Company Score": 3.4,
+   "Job Title": "software engineer - enterprise identity services",
+   "Location": "hartford, ct",
+   "Date": "11d",
+   "Salary": "$133k - $193k (employer est.)"
+ },
+ {
+   "Company": "experian",
+   "Company Score": 4.9,
+   "Job Title": "software engineer - junior level",
+   "Location": "annapolis junction, md",
+   "Date": "11d",
+   "Salary": "$81k - $99k (glassdoor est.)"
+ },
+ {
+   "Company": "openai",
+   "Company Score": 4.3,
+   "Job Title": "software engineer – customer payments support",
+   "Location": "lakeland, fl",
+   "Date": "20d",
+   "Salary": "$85k - $95k (employer est.)"
+ },
+ {
+   "Company": "bytedance",
+   "Company Score": 3.6,
+   "Job Title": "staff software engineer (remote)",
+   "Location": "texas",
+   "Date": "3d",
+   "Salary": "$180k - $339k (employer est.)"
+ },
+ {
+   "Company": "alterra mountain company",
+   "Company Score": 4.2,
+   "Job Title": "software engineer, full stack",
+   "Location": "san francisco, ca",
+   "Date": "6d",
+   "Salary": "$163k - $200k (employer est.)"
+ },
+ {
+   "Company": "experian",
+   "Company Score": 3.8,
+   "Job Title": "senior frontend software engineer - customer service plateform - seattle",
+   "Location": "seattle, wa",
+   "Date": "30d+",
+   "Salary": "$85k - $150k (employer est.)"
+ },
+ {
+   "Company": "clarity innovations, llc",
+   "Company Score": 3.4,
+   "Job Title": "software engineer, mobile (react native)",
+   "Location": "denver, co",
+   "Date": "13d",
+   "Salary": "$80k - $110k (employer est.)"
+ },
+ {
+   "Company": "amazon advertising llc",
+   "Company Score": 3.4,
+   "Job Title": "senior software engineer (remote)",
+   "Location": "california",
+   "Date": "3d",
+   "Salary": "$93k - $128k (glassdoor est.)"
+ },
+ {
+   "Company": "boeing",
+   "Company Score": 4.1,
+   "Job Title": "junior software engineer (swe1) (qc) tto16-022",
+   "Location": "annapolis junction, md",
+   "Date": "30d+",
+   "Salary": "$112k - $154k (employer est.)"
+ },
+ {
+   "Company": "bose",
+   "Company Score": 4.1,
+   "Job Title": "software quality assurance engineer (level 6), automotive",
+   "Location": "united states",
+   "Date": "11d",
+   "Salary": "$155k - $221k (employer est.)"
+ },
+ {
+   "Company": "macy’s",
+   "Company Score": 4.1,
+   "Job Title": "front end/ui mid-level software engineer",
+   "Location": "annapolis junction, md",
+   "Date": "16d",
+   "Salary": "$102k - $132k (employer est.)"
+ },
+ {
+   "Company": "microsoft",
+   "Company Score": 5,
+   "Job Title": "dsp software engineer",
+   "Location": "framingham, ma",
+   "Date": "30d+",
+   "Salary": "$80k - $111k (glassdoor est.)"
+ },
+ {
+   "Company": "draftkings",
+   "Company Score": 4.1,
+   "Job Title": "lead software engineer - supply chain",
+   "Location": "johns creek, ga",
+   "Date": "2d",
+   "Salary": "$187k - $280k (employer est.)"
+ },
+ {
+   "Company": "ge appliances",
+   "Company Score": 4,
+   "Job Title": "software engineer",
+   "Location": "redmond, wa",
+   "Date": "30d+",
+   "Salary": "$105k - $155k (glassdoor est.)"
+ },
+ {
+   "Company": "quantum systems inc",
+   "Company Score": 4.1,
+   "Job Title": "senior software engineer, ios",
+   "Location": "remote",
+   "Date": "18d",
+   "Salary": "$92k - $120k (glassdoor est.)"
+ },
+ {
+   "Company": "kaseware, inc.",
+   "Company Score": 4.1,
+   "Job Title": "software engineering co-op_summer 2025",
+   "Location": "louisville, ky",
+   "Date": "30d+",
+   "Salary": "$230k - $280k (employer est.)"
+ },
+ {
+   "Company": "microsoft",
+   "Company Score": 4.1,
+   "Job Title": "software engineer",
+   "Location": "moorpark, ca",
+   "Date": "19d",
+   "Salary": "$94k - $128k (glassdoor est.)"
+ },
+ {
+   "Company": "cvs health",
+   "Company Score": 4.2,
+   "Job Title": "software engineer",
+   "Location": "denver, co",
+   "Date": "27d",
+   "Salary": "$129k (employer est.)"
+ },
+ {
+   "Company": "jbt corporation",
+   "Company Score": 4.6,
+   "Job Title": "software engineer ii - automated reasoning and testing",
+   "Location": "redmond, wa",
+   "Date": "5d",
+   "Salary": "$80k - $180k (employer est.)"
+ },
+ {
+   "Company": "fanatics inc.",
+   "Company Score": 3.9,
+   "Job Title": "sr software development engineer",
+   "Location": "buffalo grove, il",
+   "Date": "3d",
+   "Salary": "$93k - $129k (glassdoor est.)"
+ },
+ {
+   "Company": "innovative defense technologies (idt)",
+   "Company Score": 4.1,
+   "Job Title": "senior software engineer c++",
+   "Location": "chalfont, pa",
+   "Date": "30d+",
+   "Salary": "$105k - $190k (employer est.)"
+ },
+ {
+   "Company": "microchip technology",
+   "Company Score": 4,
+   "Job Title": "software engineer ii, (java/aws)",
+   "Location": "united states",
+   "Date": "12d",
+   "Salary": "$139k - $169k (employer est.)"
+ },
+ {
+   "Company": "crunchyroll, llc",
+   "Company Score": 4.2,
+   "Job Title": "frontend software engineer",
+   "Location": "mount laurel, nj",
+   "Date": "5d",
+   "Salary": "$54k - $98k (employer est.)"
+ },
+ {
+   "Company": "accrete.ai",
+   "Company Score": 3.7,
+   "Job Title": "engineer i-software",
+   "Location": "san jose, ca",
+   "Date": "23d",
+   "Salary": "$55k - $186k (employer est.)"
+ },
+ {
+   "Company": "roku",
+   "Company Score": 3.8,
+   "Job Title": "software engineer iii, android",
+   "Location": "culver city, ca",
+   "Date": "30d+",
+   "Salary": "$101k - $139k (glassdoor est.)"
+ },
+ {
+   "Company": "early warning services",
+   "Company Score": 3.6,
+   "Job Title": "machine learning engineer (early career)",
+   "Location": "new york, ny",
+   "Date": "19d",
+   "Salary": "$88k - $120k (glassdoor est.)"
+ },
+ {
+   "Company": "workday",
+   "Company Score": 5,
+   "Job Title": "senior software engineer, service mesh",
+   "Location": "boston, ma",
+   "Date": "5d",
+   "Salary": "$129k - $202k (employer est.)"
+ },
+ {
+   "Company": "grainger",
+   "Company Score": 4.1,
+   "Job Title": "software engineer - java, zelle",
+   "Location": "scottsdale, az",
+   "Date": "1d",
+   "Salary": "$70k - $115k (employer est.)"
+ },
+ {
+   "Company": "costco wholesale",
+   "Company Score": 4.7,
+   "Job Title": "front-end engineer - content platform",
+   "Location": "boulder, co",
+   "Date": "30d+",
+   "Salary": "$91k - $134k (glassdoor est.)"
+ },
+ {
+   "Company": "mochi health",
+   "Company Score": 3.5,
+   "Job Title": "software engineer iv (success factors - employee central payroll)",
+   "Location": "lake forest, il",
+   "Date": "1d",
+   "Salary": "$92k - $124k (glassdoor est.)"
+ },
+ {
+   "Company": "jacobs",
+   "Company Score": 4.2,
+   "Job Title": "software engineer - digital data products",
+   "Location": "seattle, wa",
+   "Date": "10d",
+   "Salary": "$115k - $190k (employer est.)"
+ },
+ {
+   "Company": "boeing intelligence & analytics",
+   "Company Score": 4.2,
+   "Job Title": "senior software engineer, frontend",
+   "Location": "san francisco, ca",
+   "Date": "7d",
+   "Salary": "$94k - $139k (glassdoor est.)"
+ },
+ {
+   "Company": "netapp",
+   "Company Score": 4,
+   "Job Title": "software test engineer",
+   "Location": "kennedy space center, fl",
+   "Date": "30d+",
+   "Salary": "$140k - $216k (glassdoor est.)"
+ },
+ {
+   "Company": "alphataraxia",
+   "Company Score": 3.9,
+   "Job Title": "entry level software engineer",
+   "Location": "annapolis junction, md",
+   "Date": "4d",
+   "Salary": "$90k - $103k (employer est.)"
+ },
+ {
+   "Company": "daqscribe solutions",
+   "Company Score": 4.7,
+   "Job Title": "software engineer - c/c++",
+   "Location": "san jose, ca",
+   "Date": "10d",
+   "Salary": "$95k - $170k (employer est.)"
+ },
+ {
+   "Company": "boeing",
+   "Company Score": 4,
+   "Job Title": "senior software engineer",
+   "Location": "washington, dc",
+   "Date": "30d+",
+   "Salary": "$343k - $637k (employer est.)"
+ },
+ {
+   "Company": "honeywell",
+   "Company Score": 4.8,
+   "Job Title": "software engineer",
+   "Location": "united states",
+   "Date": "10d",
+   "Salary": "$172k - $223k (employer est.)"
+ },
+ {
+   "Company": "state street",
+   "Company Score": 3.4,
+   "Job Title": "software engineer ii - .net, c#, azure",
+   "Location": "phoenix, az",
+   "Date": "13d",
+   "Salary": "$93k - $186k (employer est.)"
+ },
+ {
+   "Company": "garmin international, inc.",
+   "Company Score": 3.9,
+   "Job Title": "senior software engineer - courier pricing",
+   "Location": "new york, ny",
+   "Date": "1d",
+   "Salary": "$83k - $110k (glassdoor est.)"
+ },
+ {
+   "Company": "adobe",
+   "Company Score": 4.5,
+   "Job Title": "software quality assurance engineer, assistance vice president",
+   "Location": "quincy, ma",
+   "Date": "30d+",
+   "Salary": "$120k (employer est.)"
+ },
+ {
+   "Company": "honeywell",
+   "Company Score": 5,
+   "Job Title": "embedded software engineer",
+   "Location": "salem, or",
+   "Date": "11d",
+   "Salary": "$88k - $140k (employer est.)"
+ },
+ {
+   "Company": "honeywell",
+   "Company Score": 4.3,
+   "Job Title": "software development engineer",
+   "Location": "lehi, ut",
+   "Date": "20d",
+   "Salary": "$95k - $136k (glassdoor est.)"
+ },
+ {
+   "Company": "johns hopkins university",
+   "Company Score": 4.8,
+   "Job Title": "software engineering/electrical engineering co-op - fall 2024 (us persons)",
+   "Location": "mason, oh",
+   "Date": "27d",
+   "Salary": "$100k - $130k (employer est.)"
+ },
+ {
+   "Company": "university of vermont",
+   "Company Score": 4.1,
+   "Job Title": "software engineer ii",
+   "Location": "mason, oh",
+   "Date": "5d",
+   "Salary": "$159k - $175k (employer est.)"
+ },
+ {
+   "Company": "federal reserve bank of dallas",
+   "Company Score": 3.5,
+   "Job Title": "software engineer",
+   "Location": "baltimore, md",
+   "Date": "30d+",
+   "Salary": "$104k - $348k (employer est.)"
+ },
+ {
+   "Company": "grammarly, inc.",
+   "Company Score": 4,
+   "Job Title": "research software engineer",
+   "Location": "burlington, vt",
+   "Date": "4d",
+   "Salary": "$98k - $209k (employer est.)"
+ },
+ {
+   "Company": "scd information technology",
+   "Company Score": 3.9,
+   "Job Title": "software engineer",
+   "Location": "dallas, tx",
+   "Date": "23d",
+   "Salary": "$78k - $104k (employer est.)"
+ },
+ {
+   "Company": "clarity innovations",
+   "Company Score": 4,
+   "Job Title": "software engineer, data engineering",
+   "Location": "united states",
+   "Date": "4d",
+   "Salary": "$100k (employer est.)"
+ },
+ {
+   "Company": "akina, inc.",
+   "Company Score": 4,
+   "Job Title": "sr. software engineer",
+   "Location": "columbia, md",
+   "Date": "1d",
+   "Salary": "$64k - $128k (employer est.)"
+ },
+ {
+   "Company": "volvo group",
+   "Company Score": 3.9,
+   "Job Title": "software engineer - level 1 (rr) rrtn-8319",
+   "Location": "annapolis junction, md",
+   "Date": "30d+",
+   "Salary": "$117k - $216k (employer est.)"
+ },
+ {
+   "Company": "calspan corporation",
+   "Company Score": 3.7,
+   "Job Title": "software engineer - 3 (javascript/go/python)",
+   "Location": "annapolis junction, md",
+   "Date": "3d",
+   "Salary": "$135k - $247k (employer est.)"
+ },
+ {
+   "Company": "zoox",
+   "Company Score": 4.2,
+   "Job Title": "co-op: software (spring 2025)",
+   "Location": "shippensburg, pa",
+   "Date": "11d",
+   "Salary": "$83k - $136k (glassdoor est.)"
+ },
+ {
+   "Company": "garmin international, inc.",
+   "Company Score": 3.8,
+   "Job Title": "associate software engineer, edwards air force base",
+   "Location": "edwards afb, ca",
+   "Date": "26d",
+   "Salary": "$85k - $130k (glassdoor est.)"
+ },
+ {
+   "Company": "root//source",
+   "Company Score": 3.5,
+   "Job Title": "software engineer - rider support tools",
+   "Location": "foster city, ca",
+   "Date": "30d+",
+   "Salary": "$99.00 per hour (employer est.)"
+ },
+ {
+   "Company": "hireio, inc.",
+   "Company Score": 3.6,
+   "Job Title": "senior software engineer - aviation databases",
+   "Location": "olathe, ks",
+   "Date": "30d",
+   "Salary": "$73k - $88k (employer est.)"
+ },
+ {
+   "Company": "pac group llc",
+   "Company Score": 3.5,
+   "Job Title": "full stack java software engineer (hybrid)",
+   "Location": "annapolis junction, md",
+   "Date": "12d",
+   "Salary": "$59k - $88k (employer est.)"
+ },
+ {
+   "Company": "fanatics inc.",
+   "Company Score": 3,
+   "Job Title": "software engineer",
+   "Location": "san jose, ca",
+   "Date": "12d",
+   "Salary": "$105k - $146k (glassdoor est.)"
+ },
+ {
+   "Company": "emergent software",
+   "Company Score": 4.1,
+   "Job Title": "software and systems engineer",
+   "Location": "suffolk, va",
+   "Date": "30d+",
+   "Salary": "$70k - $125k (employer est.)"
+ },
+ {
+   "Company": "harvard university",
+   "Company Score": 4.1,
+   "Job Title": "sr software engineer (back-end)",
+   "Location": "new york, ny",
+   "Date": "18d",
+   "Salary": "$62k - $98k (glassdoor est.)"
+ },
+ {
+   "Company": "zoox",
+   "Company Score": 4.9,
+   "Job Title": "software engineer (python)",
+   "Location": "united states",
+   "Date": "4d",
+   "Salary": "$82k - $119k (glassdoor est.)"
+ },
+ {
+   "Company": "intone networks",
+   "Company Score": 3.8,
+   "Job Title": "sr. software engineer, hbs online",
+   "Location": "boston, ma",
+   "Date": "30d+",
+   "Salary": "$80k - $113k (glassdoor est.)"
+ },
+ {
+   "Company": "cartiktech llc",
+   "Company Score": 4.1,
+   "Job Title": "software development engineer in test",
+   "Location": "foster city, ca",
+   "Date": "6d",
+   "Salary": "$67k - $106k (glassdoor est.)"
+ },
+ {
+   "Company": "abbott laboratories",
+   "Company Score": 3.9,
+   "Job Title": "software engineer",
+   "Location": "austin, tx",
+   "Date": "19d",
+   "Salary": "$144k - $200k (employer est.)"
+ },
+ {
+   "Company": "prove",
+   "Company Score": 3.4,
+   "Job Title": "senior software engineer",
+   "Location": "chicago, il",
+   "Date": "4d",
+   "Salary": "$129k - $224k (employer est.)"
+ },
+ {
+   "Company": "fanatics inc.",
+   "Company Score": 3.5,
+   "Job Title": "software engineer ii",
+   "Location": "sylmar, ca",
+   "Date": "30d+",
+   "Salary": "$169k (employer est.)"
+ },
+ {
+   "Company": "schweitzer engineering laboratories",
+   "Company Score": 4.2,
+   "Job Title": "senior software engineer, orchestration team",
+   "Location": "chicago, il",
+   "Date": "6d",
+   "Salary": "$45.66 - $54.99 per hour (employer est.)"
+ },
+ {
+   "Company": "themis insight",
+   "Company Score": 3.9,
+   "Job Title": "software engineer iii",
+   "Location": "new york, ny",
+   "Date": "30d+",
+   "Salary": "$130k - $270k (employer est.)"
+ },
+ {
+   "Company": "world vision usa",
+   "Company Score": 4.9,
+   "Job Title": "associate software engineer - c# emphasis",
+   "Location": "pullman, wa",
+   "Date": "30d+",
+   "Salary": "$140k - $180k (employer est.)"
+ },
+ {
+   "Company": "rippling",
+   "Company Score": 3.7,
+   "Job Title": "jr. software engineer - hybrid/remote",
+   "Location": "remote",
+   "Date": "2d",
+   "Salary": "$69k - $98k (glassdoor est.)"
+ },
+ {
+   "Company": "hop labs",
+   "Company Score": 4.2,
+   "Job Title": "software development engineer iii",
+   "Location": "united states",
+   "Date": "16d",
+   "Salary": "$59k - $86k (glassdoor est.)"
+ },
+ {
+   "Company": "hawaiian airlines, inc.",
+   "Company Score": 3.2,
+   "Job Title": "staff software engineer - documents",
+   "Location": "united states",
+   "Date": "2d",
+   "Salary": "$80k - $123k (glassdoor est.)"
+ },
+ {
+   "Company": "netapp",
+   "Company Score": 3.9,
+   "Job Title": "ml software engineer",
+   "Location": "remote",
+   "Date": "30d+",
+   "Salary": "$105k - $152k (glassdoor est.)"
+ },
+ {
+   "Company": "quantum systems inc",
+   "Company Score": 4.1,
+   "Job Title": "software developer engineer, it technical operations",
+   "Location": "honolulu, hi",
+   "Date": "10d",
+   "Salary": "$135k - $175k (employer est.)"
+ },
+ {
+   "Company": "salesforce",
+   "Company Score": 3.9,
+   "Job Title": "software engineer",
+   "Location": "remote",
+   "Date": "10d",
+   "Salary": "$154k - $279k (employer est.)"
+ },
+ {
+   "Company": "visa",
+   "Company Score": 3.7,
+   "Job Title": "software engineer lead",
+   "Location": "moorpark, ca",
+   "Date": "12d",
+   "Salary": "$86k - $145k (glassdoor est.)"
+ },
+ {
+   "Company": "honeywell",
+   "Company Score": 3.6,
+   "Job Title": "full-stack software engineer – lmts / pmts",
+   "Location": "san francisco, ca",
+   "Date": "30d+",
+   "Salary": "$104k - $348k (employer est.)"
+ },
+ {
+   "Company": "oliver wyman group",
+   "Company Score": 3.4,
+   "Job Title": "software engineer – senior consultant level - tink",
+   "Location": "austin, tx",
+   "Date": "4d",
+   "Salary": "$76k - $155k (employer est.)"
+ },
+ {
+   "Company": "nvidia",
+   "Company Score": 2.5,
+   "Job Title": "software engineer i",
+   "Location": "richardson, tx",
+   "Date": "30d+",
+   "Salary": "$83k - $114k (glassdoor est.)"
+ },
+ {
+   "Company": "morgan stanley",
+   "Company Score": 4.4,
+   "Job Title": "nera associate software engineer",
+   "Location": "white plains, ny",
+   "Date": "30d+",
+   "Salary": "$155k - $221k (employer est.)"
+ },
+ {
+   "Company": "amex",
+   "Company Score": 4.5,
+   "Job Title": "system software engineer – autonomous vehicles platform",
+   "Location": "santa clara, ca",
+   "Date": "30d+",
+   "Salary": "$100k - $200k (employer est.)"
+ },
+ {
+   "Company": "multi state lottery association",
+   "Company Score": 4,
+   "Job Title": "associate, python / perl dev",
+   "Location": "alpharetta, ga",
+   "Date": "10d",
+   "Salary": "$83k - $110k (glassdoor est.)"
+ },
+ {
+   "Company": "eog resources",
+   "Company Score": 3.4,
+   "Job Title": "backend software engineer, digital banking-payments",
+   "Location": "phoenix, az",
+   "Date": "6d",
+   "Salary": "$99k (employer est.)"
+ },
+ {
+   "Company": "baxter",
+   "Company Score": 3.7,
+   "Job Title": "senior software engineer",
+   "Location": "johnston, ia",
+   "Date": "11d",
+   "Salary": "$129k - $207k (employer est.)"
+ },
+ {
+   "Company": "afterpay",
+   "Company Score": 3.7,
+   "Job Title": "software engineer i",
+   "Location": "houston, tx",
+   "Date": "30d+",
+   "Salary": "$161k - $215k (glassdoor est.)"
+ },
+ {
+   "Company": "u.s. bank national association",
+   "Company Score": 4,
+   "Job Title": "senior backend software engineer (hybrid)",
+   "Location": "bellevue, wa",
+   "Date": "30d+",
+   "Salary": "$93k - $132k (glassdoor est.)"
+ },
+ {
+   "Company": "geon technologies",
+   "Company Score": 3.8,
+   "Job Title": "software engineer - pubsub, cash app",
+   "Location": "san francisco, ca",
+   "Date": "1d",
+   "Salary": "$95k - $115k (employer est.)"
+ },
+ {
+   "Company": "intel",
+   "Company Score": 5,
+   "Job Title": "software engineer 2 - mainframe (cobol, jcl, vsam)",
+   "Location": "brookfield, wi",
+   "Date": "12d",
+   "Salary": "$310k - $465k (employer est.)"
+ },
+ {
+   "Company": "tdi technologies",
+   "Company Score": 4.1,
+   "Job Title": "software engineer",
+   "Location": "annapolis junction, md",
+   "Date": "30d+",
+   "Salary": "$117k - $160k (glassdoor est.)"
+ },
+ {
+   "Company": "daikin comfort technologies mfg lp",
+   "Company Score": 4.3,
+   "Job Title": "software engineer / simulation - virtual prototyping",
+   "Location": "san jose, ca",
+   "Date": "21d",
+   "Salary": "$213k - $293k (employer est.)"
+ },
+ {
+   "Company": "intone networks",
+   "Company Score": 4.4,
+   "Job Title": "c# software engineer",
+   "Location": "pennsylvania",
+   "Date": "6d",
+   "Salary": "$87k - $124k (glassdoor est.)"
+ },
+ {
+   "Company": "intone networks",
+   "Company Score": 3.6,
+   "Job Title": "software engineer 3",
+   "Location": "chatsworth, ca",
+   "Date": "4d",
+   "Salary": "$163k - $294k (employer est.)"
+ },
+ {
+   "Company": "wise",
+   "Company Score": 3.6,
+   "Job Title": "software engineer in test",
+   "Location": "westlake, tx",
+   "Date": "25d",
+   "Salary": "$195k - $230k (employer est.)"
+ },
+ {
+   "Company": "garmin international, inc.",
+   "Company Score": 3.1,
+   "Job Title": "jr cloud engineer",
+   "Location": "phoenix, az",
+   "Date": "9d",
+   "Salary": "$70k - $90k (employer est.)"
+ },
+ {
+   "Company": "nyla technology solutions",
+   "Company Score": 4.2,
+   "Job Title": "senior software engineer ii, wise account",
+   "Location": "austin, tx",
+   "Date": "19d",
+   "Salary": "$86k - $109k (employer est.)"
+ },
+ {
+   "Company": "wellington management",
+   "Company Score": 3,
+   "Job Title": "senior .net software engineer",
+   "Location": "cary, nc",
+   "Date": "4d",
+   "Salary": "$79k - $124k (glassdoor est.)"
+ },
+ {
+   "Company": "synergy ecp",
+   "Company Score": 3.5,
+   "Job Title": "software engineer",
+   "Location": "annapolis junction, md",
+   "Date": "30d+",
+   "Salary": "$122k - $147k (employer est.)"
+ },
+ {
+   "Company": "costco wholesale",
+   "Company Score": 3.1,
+   "Job Title": "senior software engineer",
+   "Location": "boston, ma",
+   "Date": "30d+",
+   "Salary": "$110k - $154k (employer est.)"
+ },
+ {
+   "Company": "vizient, inc.",
+   "Company Score": 4.5,
+   "Job Title": "software engineer",
+   "Location": "annapolis junction, md",
+   "Date": "30d+",
+   "Salary": "$119k - $142k (employer est.)"
+ },
+ {
+   "Company": "leidos",
+   "Company Score": 3.7,
+   "Job Title": "software engineer - it sustainability",
+   "Location": "seattle, wa",
+   "Date": "17d",
+   "Salary": "$120k - $150k (employer est.)"
+ },
+ {
+   "Company": "noblis",
+   "Company Score": 3.7,
+   "Job Title": "senior software engineer",
+   "Location": "irving, tx",
+   "Date": "30d+",
+   "Salary": "$85k - $131k (glassdoor est.)"
+ },
+ {
+   "Company": "elevi associates",
+   "Company Score": 4.7,
+   "Job Title": "junior software engineer - panama shift!",
+   "Location": "annapolis junction, md",
+   "Date": "30d+",
+   "Salary": "$60k - $80k (employer est.)"
+ },
+ {
+   "Company": "ascending",
+   "Company Score": 4,
+   "Job Title": "software solutions engineer – multiple levels",
+   "Location": "oklahoma city, ok",
+   "Date": "30d+",
+   "Salary": "$112k - $177k (employer est.)"
+ },
+ {
+   "Company": "trellint",
+   "Company Score": 4,
+   "Job Title": "sr software engineer",
+   "Location": "annapolis junction, md",
+   "Date": "4d",
+   "Salary": "$90k - $104k (employer est.)"
+ },
+ {
+   "Company": "synergy ecp",
+   "Company Score": 4.1,
+   "Job Title": "cloud software engineer",
+   "Location": "fairfax, va",
+   "Date": "30d+",
+   "Salary": "$79k - $159k (employer est.)"
+ },
+ {
+   "Company": "lockheed martin",
+   "Company Score": 3.6,
+   "Job Title": "r&d software engineer ii",
+   "Location": "maryland",
+   "Date": "11d",
+   "Salary": "$195k - $245k (employer est.)"
+ },
+ {
+   "Company": "trusted space, inc.",
+   "Company Score": 4.4,
+   "Job Title": "software engineer 1",
+   "Location": "columbia, md",
+   "Date": "30d+",
+   "Salary": "$66k - $112k (glassdoor est.)"
+ },
+ {
+   "Company": "state street",
+   "Company Score": 4.2,
+   "Job Title": "software engineer",
+   "Location": "highlands ranch, co",
+   "Date": "2d",
+   "Salary": "$145k - $190k (employer est.)"
+ },
+ {
+   "Company": "availity, llc.",
+   "Company Score": 4,
+   "Job Title": "software engineer",
+   "Location": "colorado",
+   "Date": "16d",
+   "Salary": "$86k - $127k (glassdoor est.)"
+ },
+ {
+   "Company": "borgwarner",
+   "Company Score": 1,
+   "Job Title": "software development engineer, officer, onsite",
+   "Location": "quincy, ma",
+   "Date": "3d",
+   "Salary": "$120k - $140k (employer est.)"
+ },
+ {
+   "Company": "ford motor company",
+   "Company Score": 4.1,
+   "Job Title": "node.js/kotlin software engineer iv",
+   "Location": "jacksonville, fl",
+   "Date": "24d",
+   "Salary": "$61k - $89k (glassdoor est.)"
+ },
+ {
+   "Company": "forterra",
+   "Company Score": 3.9,
+   "Job Title": "software resident engineer",
+   "Location": "auburn hills, mi",
+   "Date": "6d",
+   "Salary": "$68k - $102k (glassdoor est.)"
+ },
+ {
+   "Company": "epsilon",
+   "Company Score": 3.1,
+   "Job Title": "software engineer",
+   "Location": "dearborn, mi",
+   "Date": "5d",
+   "Salary": "$79k - $125k (glassdoor est.)"
+ },
+ {
+   "Company": "bytedance",
+   "Company Score": 3.3,
+   "Job Title": "perception software engineer - ml ops",
+   "Location": "remote",
+   "Date": "30d+",
+   "Salary": "$100k - $155k (glassdoor est.)"
+ },
+ {
+   "Company": "logistics management institute",
+   "Company Score": 3.7,
+   "Job Title": "senior front end software engineer",
+   "Location": "chicago, il",
+   "Date": "10d",
+   "Salary": "$94k - $122k (glassdoor est.)"
+ },
+ {
+   "Company": "hottinger, bruel & kjaer",
+   "Company Score": 3.9,
+   "Job Title": "software engineer (data security-us) - 2025 start (bs/ms)",
+   "Location": "san jose, ca",
+   "Date": "6d",
+   "Salary": "$60.00 - $72.00 per hour (employer est.)"
+ },
+ {
+   "Company": "sirius xm",
+   "Company Score": 3.6,
+   "Job Title": "cloud engineer",
+   "Location": "remote",
+   "Date": "3d",
+   "Salary": "$105k - $125k (employer est.)"
+ },
+ {
+   "Company": "warner bros. discovery",
+   "Company Score": 3.8,
+   "Job Title": "custom software engineer",
+   "Location": "pompano beach, fl",
+   "Date": "30d+",
+   "Salary": "$103k - $147k (glassdoor est.)"
+ },
+ {
+   "Company": "peloton",
+   "Company Score": 3.3,
+   "Job Title": "senior software engineer - python, celery, redis",
+   "Location": "oakland, ca",
+   "Date": "3d",
+   "Salary": "$81k - $118k (glassdoor est.)"
+ },
+ {
+   "Company": "movius interactive corporation",
+   "Company Score": 3.4,
+   "Job Title": "vp, software engineering",
+   "Location": "united states",
+   "Date": "6d",
+   "Salary": "$122k - $172k (glassdoor est.)"
+ },
+ {
+   "Company": "accenture federal services",
+   "Company Score": 4,
+   "Job Title": "site reliability engineer",
+   "Location": "united states",
+   "Date": "6d",
+   "Salary": "$108k - $216k (employer est.)"
+ },
+ {
+   "Company": "corteva",
+   "Company Score": 3.9,
+   "Job Title": "software engineer- backend",
+   "Location": "fremont, ca",
+   "Date": "19d",
+   "Salary": "$122k - $184k (employer est.)"
+ },
+ {
+   "Company": "intrafi network",
+   "Company Score": 3.3,
+   "Job Title": "software engineer",
+   "Location": "elkridge, md",
+   "Date": "3d",
+   "Salary": "$121k - $181k (employer est.)"
+ },
+ {
+   "Company": "pseg",
+   "Company Score": 3.9,
+   "Job Title": "software engineer ii",
+   "Location": "johnston, ia",
+   "Date": "9d",
+   "Salary": "$78k - $133k (employer est.)"
+ },
+ {
+   "Company": "ryzlink dba chuwa america",
+   "Company Score": 3.1,
+   "Job Title": "senior software engineer",
+   "Location": "arlington, va",
+   "Date": "13d",
+   "Salary": "$75k (employer est.)"
+ },
+ {
+   "Company": "trane technologies",
+   "Company Score": 3.6,
+   "Job Title": "software engineer",
+   "Location": "bethpage, ny",
+   "Date": "10d",
+   "Salary": "$86k - $139k (glassdoor est.)"
+ },
+ {
+   "Company": "discord",
+   "Company Score": 4.3,
+   "Job Title": "software programmer",
+   "Location": "santa clara, ca",
+   "Date": "5d",
+   "Salary": "$88k - $173k (employer est.)"
+ },
+ {
+   "Company": "tesla",
+   "Company Score": 4.2,
+   "Job Title": "software engineer - innovation",
+   "Location": "saint paul, mn",
+   "Date": "10d",
+   "Salary": "$182k - $244k (glassdoor est.)"
+ },
+ {
+   "Company": "microsoft",
+   "Company Score": 4,
+   "Job Title": "software engineer, ads (quests)",
+   "Location": "san francisco, ca",
+   "Date": "18d",
+   "Salary": "$124k - $155k (employer est.)"
+ },
+ {
+   "Company": "first american financial corporation",
+   "Company Score": 3.7,
+   "Job Title": "staff software engineer, backend, factory software",
+   "Location": "fremont, ca",
+   "Date": "4d",
+   "Salary": "$94k - $129k (glassdoor est.)"
+ },
+ {
+   "Company": "intrafi network",
+   "Company Score": 3.6,
+   "Job Title": "software engineer 2",
+   "Location": "redmond, wa",
+   "Date": "2d",
+   "Salary": "$72.84 - $80.93 per hour (employer est.)"
+ },
+ {
+   "Company": "collins aerospace",
+   "Company Score": 3.5,
+   "Job Title": "software engineer ii (hybrid or remote possible)",
+   "Location": "idaho falls, id",
+   "Date": "1d",
+   "Salary": "$130k - $165k (employer est.)"
+ },
+ {
+   "Company": "roche",
+   "Company Score": 4.3,
+   "Job Title": "software engineer (customer-facing applications)",
+   "Location": "arlington, va",
+   "Date": "10d",
+   "Salary": "$65k - $101k (glassdoor est.)"
+ },
+ {
+   "Company": "qualtrics",
+   "Company Score": 3,
+   "Job Title": "software engineer",
+   "Location": "lenexa, ks",
+   "Date": "15d",
+   "Salary": "$129k - $224k (employer est.)"
+ },
+ {
+   "Company": "edward rose & sons",
+   "Company Score": 4.4,
+   "Job Title": "senior software engineer - digital pathology",
+   "Location": "santa clara, ca",
+   "Date": "2d",
+   "Salary": "$161k - $243k (employer est.)"
+ },
+ {
+   "Company": "michelin",
+   "Company Score": 5,
+   "Job Title": "senior software development engineer - data engineering team",
+   "Location": "seattle, wa",
+   "Date": "8d",
+   "Salary": "$76k - $107k (glassdoor est.)"
+ },
+ {
+   "Company": "garmin international, inc.",
+   "Company Score": 4.7,
+   "Job Title": "yardi enterprise software support engineer - hybrid remote",
+   "Location": "bloomfield hills, mi",
+   "Date": "11d",
+   "Salary": "$70k - $85k (employer est.)"
+ },
+ {
+   "Company": "smart ims",
+   "Company Score": 4.3,
+   "Job Title": "software engineer(entry/experienced) spa",
+   "Location": "spartanburg, sc",
+   "Date": "26d",
+   "Salary": "$75k - $150k (employer est.)"
+ },
+ {
+   "Company": "wipro",
+   "Company Score": 3.9,
+   "Job Title": "embedded c / linux software engineer - marine",
+   "Location": "olathe, ks",
+   "Date": "23d",
+   "Salary": "$110k - $150k (employer est.)"
+ },
+ {
+   "Company": "harley-davidson",
+   "Company Score": 3.8,
+   "Job Title": "software engineer 2",
+   "Location": "united states",
+   "Date": "30d+",
+   "Salary": "$98k - $147k (glassdoor est.)"
+ },
+ {
+   "Company": "vizio, inc.",
+   "Company Score": 3.4,
+   "Job Title": "php engineer",
+   "Location": "tampa, fl",
+   "Date": "30d+",
+   "Salary": "$74k - $92k (employer est.)"
+ },
+ {
+   "Company": "geneva technologies inc.",
+   "Company Score": 3.4,
+   "Job Title": "associate design engineer - software v&v",
+   "Location": "wauwatosa, wi",
+   "Date": "30d+",
+   "Salary": "$8k - $12k (employer est.)"
+ },
+ {
+   "Company": "electronx",
+   "Company Score": 4.2,
+   "Job Title": "senior software engineer",
+   "Location": "dallas, tx",
+   "Date": "5d",
+   "Salary": "$90k - $131k (employer est.)"
+ },
+ {
+   "Company": "camelot integrated solutions inc.",
+   "Company Score": 3.7,
+   "Job Title": "software engineer",
+   "Location": "monument, co",
+   "Date": "4d",
+   "Salary": "$120k - $150k (employer est.)"
+ },
+ {
+   "Company": "jrc integrated systems, llc",
+   "Company Score": 3.7,
+   "Job Title": "experienced: core infrastructure software engineer",
+   "Location": "remote",
+   "Date": "3d",
+   "Salary": "$126k - $237k (employer est.)"
+ },
+ {
+   "Company": "sabre engineering",
+   "Company Score": 3.5,
+   "Job Title": "software developer (job code 001)",
+   "Location": "houston, tx",
+   "Date": "30d+",
+   "Salary": "$50k - $78k (glassdoor est.)"
+ },
+ {
+   "Company": "thermoflow",
+   "Company Score": 4.2,
+   "Job Title": "software engineer",
+   "Location": "dahlgren, va",
+   "Date": "30d+",
+   "Salary": "$94k - $117k (glassdoor est.)"
+ },
+ {
+   "Company": "fanatics inc.",
+   "Company Score": 3.5,
+   "Job Title": "jr. software engineer",
+   "Location": "columbia, md",
+   "Date": "2d",
+   "Salary": "$185k - $200k (employer est.)"
+ },
+ {
+   "Company": "twitch interactive, inc.",
+   "Company Score": 3.5,
+   "Job Title": "computer science, software engineers, programmers",
+   "Location": "jacksonville, fl",
+   "Date": "30d+",
+   "Salary": "$103k - $149k (employer est.)"
+ },
+ {
+   "Company": "adtran",
+   "Company Score": 3.4,
+   "Job Title": "sr software engineer",
+   "Location": "new york, ny",
+   "Date": "30d+",
+   "Salary": "$109k - $141k (glassdoor est.)"
+ },
+ {
+   "Company": "oncorre",
+   "Company Score": 3.8,
+   "Job Title": "software development engineer",
+   "Location": "seattle, wa",
+   "Date": "5d",
+   "Salary": "$76k - $116k (glassdoor est.)"
+ },
+ {
+   "Company": "nmg technology services",
+   "Company Score": 3.8,
+   "Job Title": "senior software engineer",
+   "Location": "oregon",
+   "Date": "5d",
+   "Salary": "$37k - $82k (employer est.)"
+ },
+ {
+   "Company": "captivation software",
+   "Company Score": 3.7,
+   "Job Title": "software engineer",
+   "Location": "bridgewater, nj",
+   "Date": "30d+",
+   "Salary": "$129k - $159k (glassdoor est.)"
+ },
+ {
+   "Company": "invisible technologies",
+   "Company Score": 3.7,
+   "Job Title": "software engineer",
+   "Location": "brooklyn, ny",
+   "Date": "30d+",
+   "Salary": "$80k - $111k (glassdoor est.)"
+ },
+ {
+   "Company": "metas solutions",
+   "Company Score": 4.1,
+   "Job Title": "software engineer 2 - devops",
+   "Location": "annapolis junction, md",
+   "Date": "30d+",
+   "Salary": "$95k - $133k (glassdoor est.)"
+ },
+ {
+   "Company": "gap solutions, inc.",
+   "Company Score": 4,
+   "Job Title": "senior software engineer - platform",
+   "Location": "remote",
+   "Date": "16d",
+   "Salary": "$130k - $140k (employer est.)"
+ },
+ {
+   "Company": "independent software",
+   "Company Score": 4.2,
+   "Job Title": "software quality assurance engineer & tester",
+   "Location": "atlanta, ga",
+   "Date": "2d",
+   "Salary": "$81k - $118k (glassdoor est.)"
+ },
+ {
+   "Company": "interimage",
+   "Company Score": 4.1,
+   "Job Title": "software qa engineer and tester",
+   "Location": "atlanta, ga",
+   "Date": "24h",
+   "Salary": "$120k - $150k (employer est.)"
+ },
+ {
+   "Company": "tickets.com",
+   "Company Score": 5,
+   "Job Title": "software integration engineer, junior",
+   "Location": "fort meade, md",
+   "Date": "30d+",
+   "Salary": "$180k - $260k (employer est.)"
+ },
+ {
+   "Company": "adobe",
+   "Company Score": 4.9,
+   "Job Title": "2251 java & nifi software engineer",
+   "Location": "annapolis junction, md",
+   "Date": "18d",
+   "Salary": "$86k - $111k (glassdoor est.)"
+ },
+ {
+   "Company": "embecta",
+   "Company Score": 3.3,
+   "Job Title": "senior software engineer",
+   "Location": "boulder, co",
+   "Date": "6d",
+   "Salary": "$40.00 - $45.00 per hour (employer est.)"
+ },
+ {
+   "Company": "tesla",
+   "Company Score": 4.2,
+   "Job Title": "senior software development engineer",
+   "Location": "san jose, ca",
+   "Date": "11d",
+   "Salary": "$74k - $109k (glassdoor est.)"
+ },
+ {
+   "Company": "cvs health",
+   "Company Score": 4.1,
+   "Job Title": "senior fullstack software engineer (hybrid - andover, ma)",
+   "Location": "andover, ma",
+   "Date": "6d",
+   "Salary": "$108k - $116k (employer est.)"
+ },
+ {
+   "Company": "space systems integration",
+   "Company Score": 3,
+   "Job Title": "sr. software engineer, backend, factory software",
+   "Location": "fremont, ca",
+   "Date": "4d",
+   "Salary": "$103k - $146k (glassdoor est.)"
+ },
+ {
+   "Company": "cash app",
+   "Company Score": 4.5,
+   "Job Title": "full-stack software developer",
+   "Location": "hartford, ct",
+   "Date": "17d",
+   "Salary": "$89k - $128k (glassdoor est.)"
+ },
+ {
+   "Company": "annapurna labs (u.s.) inc.",
+   "Company Score": 5,
+   "Job Title": "software engineer",
+   "Location": "albuquerque, nm",
+   "Date": "30d+",
+   "Salary": "$84k (employer est.)"
+ },
+ {
+   "Company": "index engines inc.",
+   "Company Score": 3.9,
+   "Job Title": "software engineer, incentive",
+   "Location": "seattle, wa",
+   "Date": "3d",
+   "Salary": "$144k - $198k (employer est.)"
+ },
+ {
+   "Company": "ford motor company",
+   "Company Score": 4.4,
+   "Job Title": "software dev engineer - machine learning apps, accelerator",
+   "Location": "cupertino, ca",
+   "Date": "3d",
+   "Salary": "$160k - $321k (employer est.)"
+ },
+ {
+   "Company": "q9software",
+   "Company Score": 4.1,
+   "Job Title": "react software engineer",
+   "Location": "colorado",
+   "Date": "30d+",
+   "Salary": "$97k - $155k (glassdoor est.)"
+ },
+ {
+   "Company": "squarespace",
+   "Company Score": 3.8,
+   "Job Title": "software engineer",
+   "Location": "dearborn, mi",
+   "Date": "30d+",
+   "Salary": "$120k - $290k (employer est.)"
+ },
+ {
+   "Company": "advanced micro devices, inc",
+   "Company Score": 3.4,
+   "Job Title": "software developer",
+   "Location": "germantown, md",
+   "Date": "30d+",
+   "Salary": "$87k - $126k (glassdoor est.)"
+ },
+ {
+   "Company": "interimage",
+   "Company Score": 3.7,
+   "Job Title": "senior software engineer, user platform (java)",
+   "Location": "united states",
+   "Date": "5d",
+   "Salary": "$129k - $224k (employer est.)"
+ },
+ {
+   "Company": "flow systems, inc",
+   "Company Score": 3.4,
+   "Job Title": "software development engineer - ai/ml",
+   "Location": "san jose, ca",
+   "Date": "30d+",
+   "Salary": "$103k - $141k (employer est.)"
+ },
+ {
+   "Company": "openai",
+   "Company Score": 4.6,
+   "Job Title": "2128 software engineer 1 (java focused)",
+   "Location": "annapolis junction, md",
+   "Date": "18d",
+   "Salary": "$135k - $155k (employer est.)"
+ },
+ {
+   "Company": "teradyne",
+   "Company Score": 3.8,
+   "Job Title": "software engineer",
+   "Location": "berthoud, co",
+   "Date": "3d",
+   "Salary": "$65k - $118k (employer est.)"
+ },
+ {
+   "Company": "meta",
+   "Company Score": 2.9,
+   "Job Title": "senior software engineer, search evaluations",
+   "Location": "san francisco, ca",
+   "Date": "6d",
+   "Salary": "$80k - $94k (employer est.)"
+ },
+ {
+   "Company": "yellow duck technologies inc.",
+   "Company Score": 4.3,
+   "Job Title": "software performance engineer",
+   "Location": "north reading, ma",
+   "Date": "18d",
+   "Salary": "$104k - $348k (employer est.)"
+ },
+ {
+   "Company": "workday",
+   "Company Score": 4,
+   "Job Title": "software engineer - camera (technical leadership)",
+   "Location": "redmond, wa",
+   "Date": "3d",
+   "Salary": "$300k - $450k (employer est.)"
+ },
+ {
+   "Company": "ops tech alliance",
+   "Company Score": 4.2,
+   "Job Title": "cleared junior software engineer",
+   "Location": "annapolis junction, md",
+   "Date": "15d",
+   "Salary": "$90k - $126k (glassdoor est.)"
+ },
+ {
+   "Company": "cdk global",
+   "Company Score": 3.7,
+   "Job Title": "principal software engineer",
+   "Location": "seattle, wa",
+   "Date": "30d+",
+   "Salary": "$78k - $102k (glassdoor est.)"
+ },
+ {
+   "Company": "iab solutions llc",
+   "Company Score": 3.7,
+   "Job Title": "software engineer level 3",
+   "Location": "fort meade, md",
+   "Date": "30d+",
+   "Salary": "$110k - $154k (employer est.)"
+ },
+ {
+   "Company": "general assembly",
+   "Company Score": 4.2,
+   "Job Title": "associate software engineer",
+   "Location": "austin, tx",
+   "Date": "5d",
+   "Salary": "$87k - $171k (employer est.)"
+ },
+ {
+   "Company": "delta dental ins.",
+   "Company Score": 4.3,
+   "Job Title": "senior software engineer",
+   "Location": "whitehall township",
+   "Date": "11d",
+   "Salary": "$125k - $160k (employer est.)"
+ },
+ {
+   "Company": "cotiviti",
+   "Company Score": 4.4,
+   "Job Title": "software engineer instructor",
+   "Location": "denver, co",
+   "Date": "30d+",
+   "Salary": "$83k - $124k (employer est.)"
+ },
+ {
+   "Company": "boeing",
+   "Company Score": 4.1,
+   "Job Title": "senior software engineer",
+   "Location": "alpharetta, ga",
+   "Date": "1d",
+   "Salary": "$74k - $98k (glassdoor est.)"
+ },
+ {
+   "Company": "braum's",
+   "Company Score": 3.9,
+   "Job Title": "sr. devops engineer",
+   "Location": "remote",
+   "Date": "2d",
+   "Salary": "$102k - $159k (employer est.)"
+ },
+ {
+   "Company": "cummings aerospace inc",
+   "Company Score": 2.5,
+   "Job Title": "software engineer - mid level",
+   "Location": "annapolis junction, md",
+   "Date": "17d",
+   "Salary": "$115k - $165k (employer est.)"
+ },
+ {
+   "Company": "t.m. bier & associates",
+   "Company Score": 4.4,
+   "Job Title": "senior software engineer",
+   "Location": "oklahoma city, ok",
+   "Date": "6d",
+   "Salary": "$108k - $216k (employer est.)"
+ },
+ {
+   "Company": "zelis",
+   "Company Score": 3.9,
+   "Job Title": "software engineer-mid level",
+   "Location": "largo, fl",
+   "Date": "3d",
+   "Salary": "$90k - $145k (employer est.)"
+ },
+ {
+   "Company": "tiktok",
+   "Company Score": 3.7,
+   "Job Title": "software engineer (bms)",
+   "Location": "united states",
+   "Date": "9d",
+   "Salary": "$68k - $104k (glassdoor est.)"
+ },
+ {
+   "Company": "eaton",
+   "Company Score": 3.5,
+   "Job Title": "senior software engineer - c# & rust",
+   "Location": "new jersey",
+   "Date": "3d",
+   "Salary": "$72k - $108k (employer est.)"
+ },
+ {
+   "Company": "cvs health",
+   "Company Score": 3,
+   "Job Title": "frontend software engineer graduate, tiktok infrastructure - 2025 start (bs/ms)",
+   "Location": "san jose, ca",
+   "Date": "10d",
+   "Salary": "$69k - $120k (glassdoor est.)"
+ },
+ {
+   "Company": "zoox",
+   "Company Score": 3.7,
+   "Job Title": "eaton development program: engineering technology - software",
+   "Location": "peachtree city, ga",
+   "Date": "5d",
+   "Salary": "$72k - $127k (glassdoor est.)"
+ },
+ {
+   "Company": "radiance technologies",
+   "Company Score": 3.9,
+   "Job Title": "software development engineer",
+   "Location": "hartford, ct",
+   "Date": "30d+",
+   "Salary": "$158k - $205k (employer est.)"
+ },
+ {
+   "Company": "boston consulting group",
+   "Company Score": 4.2,
+   "Job Title": "senior fullstack software engineer - perception metrics platform",
+   "Location": "san francisco, ca",
+   "Date": "19d",
+   "Salary": "$100k - $160k (employer est.)"
+ },
+ {
+   "Company": "sage",
+   "Company Score": 3.5,
+   "Job Title": "full stack software engineer",
+   "Location": "beavercreek, oh",
+   "Date": "13d",
+   "Salary": "$50.00 - $54.00 per hour (employer est.)"
+ },
+ {
+   "Company": "neurable",
+   "Company Score": 4.4,
+   "Job Title": "ai software engineer, campus, united states - bcg x",
+   "Location": "los angeles, ca",
+   "Date": "4d",
+   "Salary": "$130k - $210k (employer est.)"
+ },
+ {
+   "Company": "asm international",
+   "Company Score": 3.4,
+   "Job Title": "software engineer - c#, c++",
+   "Location": "lawrenceville, ga",
+   "Date": "30d+",
+   "Salary": "$115k - $159k (glassdoor est.)"
+ },
+ {
+   "Company": "galvion",
+   "Company Score": 4,
+   "Job Title": "senior software engineer",
+   "Location": "boston, ma",
+   "Date": "9d",
+   "Salary": "$138k - $192k (glassdoor est.)"
+ },
+ {
+   "Company": "prophet software",
+   "Company Score": 3.6,
+   "Job Title": "field software support engineer",
+   "Location": "hillsboro, or",
+   "Date": "30d+",
+   "Salary": "$89k - $129k (glassdoor est.)"
+ },
+ {
+   "Company": "ansira",
+   "Company Score": 4.1,
+   "Job Title": "associate software engineer (on-site)",
+   "Location": "portsmouth, nh",
+   "Date": "1d",
+   "Salary": "$130k - $150k (employer est.)"
+ },
+ {
+   "Company": "elder research",
+   "Company Score": 4.7,
+   "Job Title": "software developer",
+   "Location": "westlake village, ca",
+   "Date": "16d",
+   "Salary": "$177k - $251k (employer est.)"
+ },
+ {
+   "Company": "3 reasons consulting",
+   "Company Score": 3.9,
+   "Job Title": "full stack software engineer",
+   "Location": "washington state",
+   "Date": "11d",
+   "Salary": "$100k - $158k (glassdoor est.)"
+ },
+ {
+   "Company": "ab2 consulting, inc.",
+   "Company Score": 3.2,
+   "Job Title": "backend software engineer",
+   "Location": "fort george g meade, md",
+   "Date": "30d+",
+   "Salary": "$168k - $253k (employer est.)"
+ },
+ {
+   "Company": "university of maryland",
+   "Company Score": 4.1,
+   "Job Title": "software engineer ii",
+   "Location": "san diego, ca",
+   "Date": "30d+",
+   "Salary": "$167k - $296k (employer est.)"
+ },
+ {
+   "Company": "cpi card group",
+   "Company Score": 3.6,
+   "Job Title": "software development engineer in test (sdet) / okemos, mi (hybrid)",
+   "Location": "okemos, mi",
+   "Date": "10d",
+   "Salary": "$136k - $200k (employer est.)"
+ },
+ {
+   "Company": "simplot",
+   "Company Score": 3.8,
+   "Job Title": "research software and data engineer",
+   "Location": "college park, md",
+   "Date": "5d",
+   "Salary": "$35.00 - $50.00 per hour (employer est.)"
+ },
+ {
+   "Company": "walmart advanced systems and robotics",
+   "Company Score": 4.1,
+   "Job Title": "software process engineer",
+   "Location": "fort wayne, in",
+   "Date": "30d+",
+   "Salary": "$118k - $142k (employer est.)"
+ },
+ {
+   "Company": "fanatics inc.",
+   "Company Score": 3.5,
+   "Job Title": "software engineer",
+   "Location": "boise, id",
+   "Date": "12d",
+   "Salary": "$109k - $219k (employer est.)"
+ },
+ {
+   "Company": "ge healthcare",
+   "Company Score": 4,
+   "Job Title": "senior software engineer – emulation",
+   "Location": "andover, ma",
+   "Date": "25d",
+   "Salary": "$64k - $113k (glassdoor est.)"
+ },
+ {
+   "Company": "norc at the university of chicago",
+   "Company Score": 4.1,
+   "Job Title": "software engineer ii, android",
+   "Location": "united states",
+   "Date": "30d+",
+   "Salary": "$104k - $166k (employer est.)"
+ },
+ {
+   "Company": "wssc water",
+   "Company Score": 5,
+   "Job Title": "software engineer",
+   "Location": "washington, dc",
+   "Date": "30d+",
+   "Salary": "$181k - $212k (employer est.)"
+ },
+ {
+   "Company": "rvo health",
+   "Company Score": 4,
+   "Job Title": "cloud engineer",
+   "Location": "chicago, il",
+   "Date": "5d",
+   "Salary": "$91k - $119k (glassdoor est.)"
+ },
+ {
+   "Company": "wisenbaker builder services",
+   "Company Score": 3.8,
+   "Job Title": "engineering software administrator (e-builder, primavera p6)",
+   "Location": "laurel, md",
+   "Date": "2d",
+   "Salary": "$70k - $115k (employer est.)"
+ },
+ {
+   "Company": "optum",
+   "Company Score": 3,
+   "Job Title": "2025 early career program: software engineering",
+   "Location": "charlotte, nc",
+   "Date": "4d",
+   "Salary": "$124k - $211k (employer est.)"
+ },
+ {
+   "Company": "sofi",
+   "Company Score": 3.9,
+   "Job Title": "cad software engineer (cabinets)",
+   "Location": "hillsboro, tx",
+   "Date": "12d",
+   "Salary": "$161k - $253k (employer est.)"
+ },
+ {
+   "Company": "fanatics inc.",
+   "Company Score": 4.1,
+   "Job Title": "senior ai/ml software engineer, java - remote",
+   "Location": "eden prairie, mn",
+   "Date": "3d",
+   "Salary": "$90k - $140k (employer est.)"
+ },
+ {
+   "Company": "micron",
+   "Company Score": 3.4,
+   "Job Title": "staff software engineer, at work",
+   "Location": "seattle, wa",
+   "Date": "2d",
+   "Salary": "$123k - $175k (employer est.)"
+ },
+ {
+   "Company": "boeing",
+   "Company Score": 3.5,
+   "Job Title": "software engineer ii",
+   "Location": "new york, ny",
+   "Date": "18d",
+   "Salary": "$81k - $131k (glassdoor est.)"
+ },
+ {
+   "Company": "bellelynn",
+   "Company Score": 3.6,
+   "Job Title": "it software engineer",
+   "Location": "boise, id",
+   "Date": "30d+",
+   "Salary": "$77k - $104k (glassdoor est.)"
+ },
+ {
+   "Company": "bertrandt",
+   "Company Score": 3.8,
+   "Job Title": "software engineer 3 - front end (contract)",
+   "Location": "el segundo, ca",
+   "Date": "3d",
+   "Salary": "$125k - $208k (employer est.)"
+ },
+ {
+   "Company": "amazon.com services llc",
+   "Company Score": 3.7,
+   "Job Title": "sr software engineer",
+   "Location": "columbia, md",
+   "Date": "3d",
+   "Salary": "$80k - $113k (glassdoor est.)"
+ },
+ {
+   "Company": "salesforce",
+   "Company Score": 4,
+   "Job Title": "automotive software engineer",
+   "Location": "sterling heights, mi",
+   "Date": "30d+",
+   "Salary": "$129k - $224k (employer est.)"
+ },
+ {
+   "Company": "ford motor company",
+   "Company Score": 4.2,
+   "Job Title": "front end engineer, sponsored brands - fixed",
+   "Location": "new york, ny",
+   "Date": "4d",
+   "Salary": "$92k - $133k (glassdoor est.)"
+ },
+ {
+   "Company": "eai technologies",
+   "Company Score": 3.8,
+   "Job Title": "software engineering lmts",
+   "Location": "bellevue, wa",
+   "Date": "4d",
+   "Salary": "$105k - $130k (glassdoor est.)"
+ },
+ {
+   "Company": "mahlet",
+   "Company Score": 4.1,
+   "Job Title": "software engineer - global order bank",
+   "Location": "dearborn, mi",
+   "Date": "16d",
+   "Salary": "$62k - $89k (glassdoor est.)"
+ },
+ {
+   "Company": "new river systems corporation",
+   "Company Score": 4.4,
+   "Job Title": "physics/math graduate - entry level software developer",
+   "Location": "vienna, va",
+   "Date": "30d+",
+   "Salary": "$110k - $145k (employer est.)"
+ },
+ {
+   "Company": "rev robotics",
+   "Company Score": 4.6,
+   "Job Title": "software engineer",
+   "Location": "burtonsville, md",
+   "Date": "16d",
+   "Salary": "$116k - $128k (employer est.)"
+ },
+ {
+   "Company": "intelligenesis, llc",
+   "Company Score": 4.1,
+   "Job Title": "onestream software systems engineer",
+   "Location": "united states",
+   "Date": "17d",
+   "Salary": "$111k - $184k (employer est.)"
+ },
+ {
+   "Company": "enersys",
+   "Company Score": 3.6,
+   "Job Title": "senior software engineer",
+   "Location": "carrollton, tx",
+   "Date": "5d",
+   "Salary": "$138k - $297k (employer est.)"
+ },
+ {
+   "Company": "university of washington",
+   "Company Score": 4.7,
+   "Job Title": "full stack software engineer level 1",
+   "Location": "arlington, va",
+   "Date": "30d+",
+   "Salary": "$109k - $145k (glassdoor est.)"
+ },
+ {
+   "Company": "hewlett packard",
+   "Company Score": 3.8,
+   "Job Title": "product engineer i",
+   "Location": "longmont, co",
+   "Date": "24h",
+   "Salary": "$97k - $133k (glassdoor est.)"
+ },
+ {
+   "Company": "movius interactive corporation",
+   "Company Score": 3.4,
+   "Job Title": "software engineer",
+   "Location": "seattle, wa",
+   "Date": "30d+",
+   "Salary": "$100k - $145k (employer est.)"
+ },
+ {
+   "Company": "noblis",
+   "Company Score": 4.1,
+   "Job Title": "cloud software development engineer",
+   "Location": "fort collins, co",
+   "Date": "11d",
+   "Salary": "$86k - $129k (glassdoor est.)"
+ },
+ {
+   "Company": "cedent",
+   "Company Score": 3.7,
+   "Job Title": "software engineer - backend voice",
+   "Location": "fremont, ca",
+   "Date": "1d",
+   "Salary": "$53k - $96k (glassdoor est.)"
+ },
+ {
+   "Company": "bank of america",
+   "Company Score": 3.5,
+   "Job Title": "software engineer (all levels)",
+   "Location": "mclean, va",
+   "Date": "30d+",
+   "Salary": "$75k - $131k (employer est.)"
+ },
+ {
+   "Company": "linquest corporation",
+   "Company Score": 4.3,
+   "Job Title": "software system engineer (c++, java background)",
+   "Location": "warren, mi",
+   "Date": "30d+",
+   "Salary": "$119k - $173k (glassdoor est.)"
+ },
+ {
+   "Company": "hewlett packard",
+   "Company Score": 3.5,
+   "Job Title": "software engineer ii",
+   "Location": "charlotte, nc",
+   "Date": "3d",
+   "Salary": "$97k - $126k (glassdoor est.)"
+ },
+ {
+   "Company": "oracle",
+   "Company Score": 4,
+   "Job Title": "ground software engineer",
+   "Location": "virginia",
+   "Date": "11d",
+   "Salary": "$84k - $106k (glassdoor est.)"
+ },
+ {
+   "Company": "federal reserve bank of boston",
+   "Company Score": 4.1,
+   "Job Title": "experienced front-end engineer",
+   "Location": "fort collins, co",
+   "Date": "14d",
+   "Salary": "$81k - $109k (glassdoor est.)"
+ },
+ {
+   "Company": "collins aerospace",
+   "Company Score": 3.5,
+   "Job Title": "software developer",
+   "Location": "austin, tx",
+   "Date": "2d",
+   "Salary": "$166k - $228k (employer est.)"
+ },
+ {
+   "Company": "apriva",
+   "Company Score": 3.9,
+   "Job Title": "full-stack software engineer – digital money and payments research & development",
+   "Location": "boston, ma",
+   "Date": "30d+",
+   "Salary": "$154k - $279k (employer est.)"
+ },
+ {
+   "Company": "asec",
+   "Company Score": 3.9,
+   "Job Title": "software engineering co-op (summer/fall 2025) (onsite)",
+   "Location": "cedar rapids, ia",
+   "Date": "2d",
+   "Salary": "$115k - $154k (employer est.)"
+ },
+ {
+   "Company": "t. rowe price",
+   "Company Score": 4.6,
+   "Job Title": "software engineer iv",
+   "Location": "phoenix, az",
+   "Date": "27d",
+   "Salary": "$66k - $109k (glassdoor est.)"
+ },
+ {
+   "Company": "s&s activewear llc",
+   "Company Score": 3.8,
+   "Job Title": "software engineer",
+   "Location": "patuxent river, md",
+   "Date": "16d",
+   "Salary": "$116k - $204k (employer est.)"
+ },
+ {
+   "Company": "peterson technologies",
+   "Company Score": 4,
+   "Job Title": "software engineer",
+   "Location": "owings mills, md",
+   "Date": "23d",
+   "Salary": "$102k - $150k (glassdoor est.)"
+ },
+ {
+   "Company": "longpath technologies, inc.",
+   "Company Score": 3.7,
+   "Job Title": "senior software engineer (hybrid available)",
+   "Location": "bolingbrook, il",
+   "Date": "22d",
+   "Salary": "$139k - $184k (glassdoor est.)"
+ },
+ {
+   "Company": "gradient",
+   "Company Score": 4,
+   "Job Title": "mid level software engineer",
+   "Location": "hanover, md",
+   "Date": "30d+",
+   "Salary": "$94k - $118k (glassdoor est.)"
+ },
+ {
+   "Company": "amazon.com services llc",
+   "Company Score": 4.2,
+   "Job Title": "senior software engineer",
+   "Location": "boulder, co",
+   "Date": "18d",
+   "Salary": "$94k - $136k (glassdoor est.)"
+ },
+ {
+   "Company": "envisn incorporated",
+   "Company Score": 3.7,
+   "Job Title": "senior software engineer",
+   "Location": "burlingame, ca",
+   "Date": "2d",
+   "Salary": "$126k - $265k (employer est.)"
+ },
+ {
+   "Company": "intersoft data labs",
+   "Company Score": 3.5,
+   "Job Title": "software development engineer ii, sort tech",
+   "Location": "tempe, az",
+   "Date": "3d",
+   "Salary": "$100k - $135k (glassdoor est.)"
+ },
+ {
+   "Company": "digital insight printing",
+   "Company Score": 4.1,
+   "Job Title": "software quality assurance (tester) engineer",
+   "Location": "indianola, pa",
+   "Date": "9d",
+   "Salary": "$175k - $209k (employer est.)"
+ },
+ {
+   "Company": "teradyne",
+   "Company Score": 3.6,
+   "Job Title": "software engineer (onsite)",
+   "Location": "columbia, md",
+   "Date": "25d",
+   "Salary": "$248k - $385k (employer est.)"
+ },
+ {
+   "Company": "beshenich muir & associates llc",
+   "Company Score": 4.6,
+   "Job Title": "magento developer",
+   "Location": "remote",
+   "Date": "24h",
+   "Salary": "$91k - $152k (employer est.)"
+ },
+ {
+   "Company": "powermind solutions",
+   "Company Score": 4.6,
+   "Job Title": "software machine learning engineer",
+   "Location": "north reading, ma",
+   "Date": "3d",
+   "Salary": "$129k - $193k (employer est.)"
+ },
+ {
+   "Company": "plaid",
+   "Company Score": 3.7,
+   "Job Title": "software systems engineer",
+   "Location": "fort belvoir, va",
+   "Date": "30d+",
+   "Salary": "$98k - $135k (glassdoor est.)"
+ },
+ {
+   "Company": "grammarly, inc.",
+   "Company Score": 3.2,
+   "Job Title": "software developer",
+   "Location": "georgia",
+   "Date": "4d",
+   "Salary": "$114k - $149k (glassdoor est.)"
+ },
+ {
+   "Company": "shipperhq",
+   "Company Score": 4,
+   "Job Title": "software engineer - credit",
+   "Location": "san francisco, ca",
+   "Date": "30d+",
+   "Salary": "$130k - $236k (employer est.)"
+ },
+ {
+   "Company": "bryn neil",
+   "Company Score": 3.6,
+   "Job Title": "software engineer, back-end",
+   "Location": "united states",
+   "Date": "30d+",
+   "Salary": "$144k - $288k (employer est.)"
+ },
+ {
+   "Company": "dcs corp",
+   "Company Score": 3.9,
+   "Job Title": "sr. software engineer - site reliability",
+   "Location": "austin, tx",
+   "Date": "16d",
+   "Salary": "$49k - $84k (glassdoor est.)"
+ },
+ {
+   "Company": "bank of america",
+   "Company Score": 3.4,
+   "Job Title": "cleared software engineer",
+   "Location": "denver, co",
+   "Date": "3d",
+   "Salary": "$129k - $224k (employer est.)"
+ },
+ {
+   "Company": "amazon web services, inc.",
+   "Company Score": 3.8,
+   "Job Title": "software developer",
+   "Location": "maryland",
+   "Date": "3d",
+   "Salary": "$118k - $184k (glassdoor est.)"
+ },
+ {
+   "Company": "bio-rad laboratories, inc.",
+   "Company Score": 4.1,
+   "Job Title": "data center services - software engineer",
+   "Location": "plano, tx",
+   "Date": "8d",
+   "Salary": "$86k - $116k (glassdoor est.)"
+ },
+ {
+   "Company": "audacy, inc.",
+   "Company Score": 4.8,
+   "Job Title": "software dev engineer, l5 , sfsc integrations",
+   "Location": "seattle, wa",
+   "Date": "23d",
+   "Salary": "$124k - $234k (employer est.)"
+ },
+ {
+   "Company": "cyberkorp",
+   "Company Score": 4.2,
+   "Job Title": "software developer in test",
+   "Location": "hercules, ca",
+   "Date": "10d",
+   "Salary": "$80k - $119k (employer est.)"
+ },
+ {
+   "Company": "leidos",
+   "Company Score": 3.5,
+   "Job Title": "senior software engineer",
+   "Location": "denver, co",
+   "Date": "4d",
+   "Salary": "$88k (employer est.)"
+ },
+ {
+   "Company": "boeing intelligence & analytics",
+   "Company Score": 3.4,
+   "Job Title": "software developers – multiple openings – bloomingdale, il",
+   "Location": "united states",
+   "Date": "30d+",
+   "Salary": "$55k (employer est.)"
+ },
+ {
+   "Company": "tesla",
+   "Company Score": 4.1,
+   "Job Title": "junior java software engineer",
+   "Location": "fort meade, md",
+   "Date": "30d+",
+   "Salary": "$234k - $284k (employer est.)"
+ },
+ {
+   "Company": "openai",
+   "Company Score": 3.1,
+   "Job Title": "apprentice etl software engineer",
+   "Location": "elkridge, md",
+   "Date": "30d+",
+   "Salary": "$160k - $385k (employer est.)"
+ },
+ {
+   "Company": "ncr atleos",
+   "Company Score": 3.9,
+   "Job Title": "software engineer, tool & infrastructure, reliability & test",
+   "Location": "palo alto, ca",
+   "Date": "1d",
+   "Salary": "$222k (employer est.)"
+ },
+ {
+   "Company": "electronic warfare associates",
+   "Company Score": 3.8,
+   "Job Title": "software engineer, engineering acceleration",
+   "Location": "san francisco, ca",
+   "Date": "5d",
+   "Salary": "$82k - $118k (glassdoor est.)"
+ },
+ {
+   "Company": "billgo, inc.",
+   "Company Score": 3.3,
+   "Job Title": "atm software engineer (level iii)",
+   "Location": "frisco, tx",
+   "Date": "30d+",
+   "Salary": "$69k - $107k (glassdoor est.)"
+ },
+ {
+   "Company": "genesys",
+   "Company Score": 3.6,
+   "Job Title": "software engineer",
+   "Location": "mount laurel, nj",
+   "Date": "30d+",
+   "Salary": "$95k - $143k (employer est.)"
+ }
+]

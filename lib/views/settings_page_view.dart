@@ -15,12 +15,12 @@ class SettingsPageView extends StatefulWidget {
 class _SettingsPageViewState extends State<SettingsPageView> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
-  // Logout function
+  // logout function
   void _logout() async {
     await FirebaseAuth.instance.signOut();
     Navigator.pushAndRemoveUntil(
       context,
-      MaterialPageRoute(builder: (context) => const AuthPage()),
+      MaterialPageRoute(builder: (context) => const AuthPage()), // Navigate to AuthPage
           (route) => false,
     );
   }
@@ -35,7 +35,7 @@ class _SettingsPageViewState extends State<SettingsPageView> {
           IconButton(
             icon: const Icon(Icons.settings, size: 30),
             onPressed: () {
-              _scaffoldKey.currentState?.openEndDrawer(); // Open the drawer
+              _scaffoldKey.currentState?.openEndDrawer(); // Use the key to open the drawer
             },
           ),
         ],
@@ -72,6 +72,39 @@ class _SettingsPageViewState extends State<SettingsPageView> {
               title: const Text('Logout'),
               leading: const Icon(Icons.logout, color: Colors.red),
               onTap: _logout, // Call logout function
+            ),
+            const Divider(), // Adds a divider for clarity
+            ListTile(
+              title: const Text('Credits'),
+              onTap: () {
+                // You can show a dialog or navigate to a new screen for credits
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      title: const Text('Data Sources & Credits'),
+                      content: const Text(
+                        'This app uses the following data sets:\n\n'
+                            '1. Software Engineer Jobs & Salaries 2024 by Emre Öksüz, on Kaggle\n'
+                            '\n'
+                            '2. Jobs and Salaries in Data Science by Hummaam Qaasim on Kaggle\n'
+                            '\n'
+                            '\n'
+                            'Thank you to all the contributors!',
+                        style: TextStyle(fontSize: 14),
+                      ),
+                      actions: <Widget>[
+                        TextButton(
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                          child: const Text('Close'),
+                        ),
+                      ],
+                    );
+                  },
+                );
+              },
             ),
           ],
         ),
