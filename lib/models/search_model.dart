@@ -7,6 +7,7 @@ class Job {
   Job({required this.jobName, required this.publishedDate});
 }
 
+//needs implementation from database instead of just strings
 class SearchModel {
   final List<Job> peopleList = [
     Job(jobName: 'Software Engineering', publishedDate: '1/1/1'),
