@@ -76,8 +76,13 @@ class _MyAppState extends State<MyApp> {
               '/home': (context) => NavBar(
                 themePresenter: _themePresenter,
                 searchPresenter: _searchPresenter, // Pass ThemePresenter and SearchPresenter to NavBar
+                jobSearchPresenter: _jobSearchPresenter, // Pass JobSearchPresenter
               ),
-              '/jobSearch': (context) => JobSearchView(presenter: _jobSearchPresenter), // Route for Job Search
+              '/jobSearch': (context) => JobSearchView(presenter: _jobSearchPresenter),
+              '/search': (context) => SearchView(
+                searchPresenter: _searchPresenter,
+                jobSearchPresenter: _jobSearchPresenter, // Pass JobSearchPresenter
+              ), // Route for Job Search
             },
           );
         }

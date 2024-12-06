@@ -9,13 +9,16 @@ import '../presenters/theme_presenter.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'auth_page_view.dart';
 import '../presenters/search_presenter.dart';
+import '../presenters/job_search_presenter.dart';
 
 
 class NavBar extends StatefulWidget {
   final ThemePresenter themePresenter;
   // final SearchPresenter searchPresenter;
   final SearchPresenter searchPresenter;
-  const NavBar({super.key, required this.themePresenter, required this.searchPresenter });
+  final JobSearchPresenter jobSearchPresenter;
+
+  const NavBar({super.key, required this.themePresenter, required this.searchPresenter,required this.jobSearchPresenter, });
 
   @override
   _NavBarState createState() => _NavBarState();
@@ -27,7 +30,10 @@ class _NavBarState extends State<NavBar> {
   // Define the pages for each tab
   List<Widget> _buildPages() {
     return [
-      SearchView(searchPresenter: widget.searchPresenter),
+      SearchView(
+        searchPresenter: widget.searchPresenter,
+        jobSearchPresenter: widget.jobSearchPresenter,
+      ),
       //Center(child: Text('Search Page', style: TextStyle(fontSize: 24))),
       Center(child: Text('Business Page', style: TextStyle(fontSize: 24))),
       Center(child: Text('Alerts Page', style: TextStyle(fontSize: 24))),
