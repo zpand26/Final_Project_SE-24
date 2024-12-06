@@ -73,7 +73,7 @@ flutter:
   assets:
       - lib/assets/images/gray-north-star1.png
       - lib/assets/images/google_logo.jpg
-      - assets/cleaned_software_jobs_test.csv
+      - assets/cleaned_data_jobs_test.csv
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

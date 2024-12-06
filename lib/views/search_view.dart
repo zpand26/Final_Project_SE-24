@@ -16,7 +16,7 @@ class _SearchViewState extends State<SearchView> {
   void initState() {
     super.initState();
     // Load jobs from the CSV file
-    widget.searchPresenter.loadJobs('assets/cleaned_software_jobs_test.csv').then((_) {
+    widget.searchPresenter.loadJobs('assets/cleaned_data_jobs_test.csv').then((_) {
       setState(() {}); // Refresh the UI after loading jobs
     });
   }
@@ -58,20 +58,20 @@ class _SearchViewState extends State<SearchView> {
                       ),
                     ),
                     const SizedBox(height: 4),
-                    // Company Name
+                    // Job Category
                     Text(
-                      'Company: ${job['company']}',
-                      style: const TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                      ),
+                      'Category: ${job['jobCategory']}',
+                      style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                     ),
                     const SizedBox(height: 8),
                     // Remaining fields
-                    Text('Score: ${job['companyScore']}', style: const TextStyle(fontSize: 14)),
-                    Text('Location: ${job['location']}', style: const TextStyle(fontSize: 14)),
-                    Text('Date: ${job['date']}', style: const TextStyle(fontSize: 14)),
-                    Text('Salary: ${job['salary']}', style: const TextStyle(fontSize: 14)),
+                    Text('Work Year: ${job['workYear']}', style: const TextStyle(fontSize: 14)),
+                    Text('Salary: ${job['salary']} ${job['salaryCurrency']} (${job['salaryInUsd']} USD)', style: const TextStyle(fontSize: 14)),
+                    Text('Experience: ${job['experienceLevel']}', style: const TextStyle(fontSize: 14)),
+                    Text('Employment Type: ${job['employmentType']}', style: const TextStyle(fontSize: 14)),
+                    Text('Work Setting: ${job['workSetting']}', style: const TextStyle(fontSize: 14)),
+                    Text('Company Location: ${job['companyLocation']}', style: const TextStyle(fontSize: 14)),
+                    Text('Company Size: ${job['companySize']}', style: const TextStyle(fontSize: 14)),
                   ],
                 ),
               ),
