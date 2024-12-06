@@ -55,6 +55,7 @@ dev_dependencies:
   firebase_core_platform_interface: 5.3.1
   firebase_auth: ^5.3.4
   google_sign_in: ^6.2.2
+  csv: ^5.0.0
 
 
 # For information on the generic Dart part of this file, see the
@@ -72,6 +73,8 @@ flutter:
   assets:
       - lib/assets/images/gray-north-star1.png
       - lib/assets/images/google_logo.jpg
+      - assets/cleaned_software_jobs_test.csv
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

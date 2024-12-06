@@ -1,17 +1,25 @@
-class Job {
-  final String jobName;
-  final String publishedDate;
-  // add more functions if needed like location and salary too
-  //int or string for date?
+import 'dart:convert';
+import 'package:flutter/services.dart'; // For loading assets
+import 'package:csv/csv.dart'; // CSV parser
 
-  Job({required this.jobName, required this.publishedDate});
-}
-
-//needs implementation from database instead of just strings
 class SearchModel {
-  final List<Job> peopleList = [
-    Job(jobName: 'Software Engineering', publishedDate: '1/1/1'),
-    Job(jobName: 'Software', publishedDate: '1/1/1'),
+  List<Map<String, dynamic>> peopleList = [];
 
-  ];
+  // Load CSV data from assets
+  Future<void> loadJobsFromCsv(String assetPath) async {
+    final csvString = await rootBundle.loadString(assetPath);
+    final List<List<dynamic>> csvRows = const CsvToListConverter().convert(csvString);
+
+    // Skip the header row and map each row into a job structure
+    peopleList = csvRows.skip(1).map((row) {
+      return {
+        'company': row[0],
+        'companyScore': double.tryParse(row[1].toString()) ?? 0.0,
+        'jobTitle': row[2],
+        'location': row[3],
+        'date': row[4],
+        'salary': row[5],
+      };
+    }).toList();
+  }
 }
