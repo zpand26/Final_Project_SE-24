@@ -1,6 +1,8 @@
 // auth_page.dart
 
 import 'package:flutter/material.dart';
+import 'package:northstars_final/models/search_model.dart';
+import 'package:northstars_final/presenters/search_presenter.dart';
 import 'package:northstars_final/views/nav_bar.dart';
 import 'package:northstars_final/presenters/auth_page_presenter.dart';
 import 'package:northstars_final/presenters/theme_presenter.dart';
@@ -166,10 +168,13 @@ class _AuthPageState extends State<AuthPage> implements AuthViewContract {
   @override
   void navigateToHome() {
     final themeModel = ThemeModel();
+    final searchModel = SearchModel();
     final themePresenter = ThemePresenter(themeModel);
+    final searchPresenter = SearchPresenter(searchModel);
+
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (context) => NavBar(themePresenter: themePresenter),
+        builder: (context) => NavBar(themePresenter: themePresenter, searchPresenter: searchPresenter,),
       ),
     );
   }

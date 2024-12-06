@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:northstars_final/views/search_view.dart';
 import 'settings_page_view.dart';
 import '../presenters/theme_presenter.dart';
 //import '../presenters/search_presenter.dart';
 //import 'search_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'auth_page_view.dart';
+import '../presenters/search_presenter.dart';
+
 
 class NavBar extends StatefulWidget {
   final ThemePresenter themePresenter;
   // final SearchPresenter searchPresenter;
+  final SearchPresenter searchPresenter;
+  const NavBar({super.key, required this.themePresenter, required this.searchPresenter });
 
-  const NavBar({super.key, required this.themePresenter});
-//, required this.searchPresenter
   @override
   _NavBarState createState() => _NavBarState();
 }
@@ -24,12 +27,12 @@ class _NavBarState extends State<NavBar> {
   // Define the pages for each tab
   List<Widget> _buildPages() {
     return [
-      //  SearchView(searchPresenter: widget.searchPresenter), // Search Page
-      Center(child: Text('Search Page', style: TextStyle(fontSize: 24))),
+      SearchView(searchPresenter: widget.searchPresenter),
+      //Center(child: Text('Search Page', style: TextStyle(fontSize: 24))),
       Center(child: Text('Business Page', style: TextStyle(fontSize: 24))),
       Center(child: Text('Alerts Page', style: TextStyle(fontSize: 24))),
       Center(child: Text('Music Page', style: TextStyle(fontSize: 24))),
-      SettingsPageView(themePresenter: widget.themePresenter), // Settings Page
+      SettingsPageView(themePresenter: widget.themePresenter),
     ];
   }
 
@@ -46,22 +49,7 @@ class _NavBarState extends State<NavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          // Display the current page
-          _buildPages()[_selectedIndex],
-          // Optional old Logout Button
-    //      Positioned(
-    //        top: 53,
-    //        right: 40,
-    //        child: FloatingActionButton.small(
-    //          onPressed: _logout,
-    //          backgroundColor: Colors.tealAccent,
-    //          child: const Icon(Icons.logout),
-    //        ),
-    //      ),
-        ],
-      ),
+      body: _buildPages()[_selectedIndex],
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
         child: GNav(

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:northstars_final/models/search_model.dart';
 import 'views/auth_page_view.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'models/search_model.dart';
+import 'presenters/search_presenter.dart';
+import 'views/search_view.dart';
 import 'models/theme_model.dart';
 import 'presenters/theme_presenter.dart';
 import 'views/nav_bar.dart';
@@ -19,17 +23,21 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  final ThemeModel _themeModel = ThemeModel(); // Theme model instance
-  late final ThemePresenter _themePresenter; // ThemePresenter instance
+  final ThemeModel _themeModel = ThemeModel();
+  final SearchModel _searchModel = SearchModel();
+  late final ThemePresenter _themePresenter;
+  late final SearchPresenter _searchPresenter;
 
   @override
   void initState() {
     super.initState();
-
-    // Initialize ThemePresenter
     _themePresenter = ThemePresenter(_themeModel);
 
-    // Listen to theme changes and rebuild the app
+    // Initialize search presenter
+    final searchModel = SearchModel();
+    _searchPresenter = SearchPresenter(searchModel);
+
+    // Update UI on theme changes
     _themeModel.addListener(() {
       setState(() {}); // Rebuild the MaterialApp when the theme changes
     });
@@ -58,7 +66,8 @@ class _MyAppState extends State<MyApp> {
             home: AuthPage(), // Start with AuthPage
             routes: {
               '/home': (context) => NavBar(
-                themePresenter: _themePresenter, // Pass ThemePresenter to NavBar
+                themePresenter: _themePresenter,
+                searchPresenter: _searchPresenter, // Pass ThemePresenter and SearchPresenter to NavBar
               ),
             },
           );
