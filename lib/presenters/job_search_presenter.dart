@@ -1,12 +1,14 @@
 import '../models/job_repository_model.dart';
 import '../models/job_model.dart';
 import '../views/job_search_view_contract.dart';
+import '../presenters/search_presenter.dart';
 
 class JobSearchPresenter {
   final JobRepository repository;
+  final SearchPresenter searchPresenter;
   JobSearchViewContract? view;
 
-  JobSearchPresenter(this.repository);
+  JobSearchPresenter(this.repository, this.searchPresenter);
 
   Future<void> loadJobs() async {
     try {

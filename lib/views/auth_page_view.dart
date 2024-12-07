@@ -165,7 +165,7 @@ class _AuthPageState extends State<AuthPage> implements AuthViewContract {
     final themePresenter = ThemePresenter(themeModel);
     final searchPresenter = SearchPresenter(searchModel);
     final jobRepository = JobRepository(); // Add this
-    final jobSearchPresenter = JobSearchPresenter(jobRepository); // Add this
+    final jobSearchPresenter = JobSearchPresenter(jobRepository,searchPresenter); // Add this
 
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(

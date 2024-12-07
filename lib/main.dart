@@ -43,7 +43,7 @@ class _MyAppState extends State<MyApp> {
 
     // Initialize job search presenter
     _jobRepository = JobRepository();
-    _jobSearchPresenter = JobSearchPresenter(_jobRepository);
+    _jobSearchPresenter = JobSearchPresenter(_jobRepository, _searchPresenter);
 
     // Update UI on theme changes
     _themeModel.addListener(() {
@@ -75,14 +75,22 @@ class _MyAppState extends State<MyApp> {
             routes: {
               '/home': (context) => NavBar(
                 themePresenter: _themePresenter,
-                searchPresenter: _searchPresenter, // Pass ThemePresenter and SearchPresenter to NavBar
-                jobSearchPresenter: _jobSearchPresenter, // Pass JobSearchPresenter
+                searchPresenter: _searchPresenter,
+                jobSearchPresenter: _jobSearchPresenter,
               ),
-              '/jobSearch': (context) => JobSearchView(presenter: _jobSearchPresenter),
+              '/jobSearch': (context) => JobSearchView(
+                presenter: _jobSearchPresenter,
+                onNavigate: (index) {
+                  Navigator.pushReplacementNamed(context, '/home'); // Navigate to NavBar with selected index
+                },
+              ),
               '/search': (context) => SearchView(
                 searchPresenter: _searchPresenter,
-                jobSearchPresenter: _jobSearchPresenter, // Pass JobSearchPresenter
-              ), // Route for Job Search
+                jobSearchPresenter: _jobSearchPresenter,
+                onNavigate: (index) {
+                  Navigator.pushReplacementNamed(context, '/home'); // Navigate to NavBar with selected index
+                },
+              ),
             },
           );
         }
