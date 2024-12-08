@@ -11,6 +11,9 @@ import 'views/nav_bar.dart';
 import 'models/job_repository_model.dart';
 import 'presenters/job_search_presenter.dart';
 import 'views/job_search_view.dart';
+import 'models/settings_page_model.dart';
+import 'presenters/settings_page_presenter.dart';
+import 'views/settings_page_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -75,14 +78,14 @@ class _MyAppState extends State<MyApp> {
             routes: {
               '/home': (context) => NavBar(
                 themePresenter: _themePresenter,
-                searchPresenter: _searchPresenter, // Pass ThemePresenter and SearchPresenter to NavBar
-                jobSearchPresenter: _jobSearchPresenter, // Pass JobSearchPresenter
+                searchPresenter: _searchPresenter,
+                jobSearchPresenter: _jobSearchPresenter,
               ),
               '/jobSearch': (context) => JobSearchView(presenter: _jobSearchPresenter),
               '/search': (context) => SearchView(
                 searchPresenter: _searchPresenter,
-                jobSearchPresenter: _jobSearchPresenter, // Pass JobSearchPresenter
-              ), // Route for Job Search
+                jobSearchPresenter: _jobSearchPresenter,
+              ),
             },
           );
         }

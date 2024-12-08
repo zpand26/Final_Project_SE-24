@@ -1,24 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:northstars_final/views/search_view.dart';
-import 'settings_page_view.dart';
+import '../views/search_view.dart';
+import '../views/settings_page_view.dart';
+import '../models/settings_page_model.dart';
+import '../presenters/settings_page_presenter.dart';
 import '../presenters/theme_presenter.dart';
-//import '../presenters/search_presenter.dart';
-//import 'search_view.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'auth_page_view.dart';
 import '../presenters/search_presenter.dart';
 import '../presenters/job_search_presenter.dart';
-
+import 'package:firebase_auth/firebase_auth.dart';
+import 'auth_page_view.dart';
 
 class NavBar extends StatefulWidget {
   final ThemePresenter themePresenter;
-  // final SearchPresenter searchPresenter;
   final SearchPresenter searchPresenter;
   final JobSearchPresenter jobSearchPresenter;
 
-  const NavBar({super.key, required this.themePresenter, required this.searchPresenter,required this.jobSearchPresenter, });
+  const NavBar({
+    super.key,
+    required this.themePresenter,
+    required this.searchPresenter,
+    required this.jobSearchPresenter,
+  });
 
   @override
   _NavBarState createState() => _NavBarState();
@@ -27,6 +30,10 @@ class NavBar extends StatefulWidget {
 class _NavBarState extends State<NavBar> {
   int _selectedIndex = 0;
 
+  // Initialize the SettingsPagePresenter
+  final SettingsPagePresenter _settingsPagePresenter =
+  SettingsPagePresenter(SettingsPageModel());
+
   // Define the pages for each tab
   List<Widget> _buildPages() {
     return [
@@ -34,11 +41,10 @@ class _NavBarState extends State<NavBar> {
         searchPresenter: widget.searchPresenter,
         jobSearchPresenter: widget.jobSearchPresenter,
       ),
-      //Center(child: Text('Search Page', style: TextStyle(fontSize: 24))),
       Center(child: Text('Business Page', style: TextStyle(fontSize: 24))),
       Center(child: Text('Alerts Page', style: TextStyle(fontSize: 24))),
       Center(child: Text('Music Page', style: TextStyle(fontSize: 24))),
-      SettingsPageView(themePresenter: widget.themePresenter),
+      SettingsPageView(presenter: _settingsPagePresenter,), // Pass SettingsPagePresenter here
     ];
   }
 
