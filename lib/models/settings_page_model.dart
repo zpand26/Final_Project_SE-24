@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class SettingsPageModel {
   String? username;
   DateTime? birthday;
@@ -9,8 +11,8 @@ class SettingsPageModel {
     this.profilePictureUrl,
   });
 
-  // Method to save user data (could be connected to Firebase Firestore in the future)
-  Map<String, dynamic> toMap() {
+  // Convert model to Firestore document format
+  Map<String, dynamic> toFirestore() {
     return {
       'username': username,
       'birthday': birthday?.toIso8601String(),
@@ -18,14 +20,12 @@ class SettingsPageModel {
     };
   }
 
-  // Method to load user data from a map (useful for Firebase integration)
-  factory SettingsPageModel.fromMap(Map<String, dynamic> map) {
+  // Create model from Firestore document
+  factory SettingsPageModel.fromFirestore(Map<String, dynamic> data) {
     return SettingsPageModel(
-      username: map['username'] as String?,
-      birthday: map['birthday'] != null
-          ? DateTime.parse(map['birthday'])
-          : null,
-      profilePictureUrl: map['profilePictureUrl'] as String?,
+      username: data['username'] as String?,
+      birthday: data['birthday'] != null ? DateTime.parse(data['birthday']) : null,
+      profilePictureUrl: data['profilePictureUrl'] as String?,
     );
   }
 }
