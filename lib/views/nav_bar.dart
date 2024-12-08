@@ -9,6 +9,7 @@ import '../presenters/search_presenter.dart';
 import '../presenters/job_search_presenter.dart';
 import 'auth_page_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:northstars_final/views/alerts_page_container_view.dart';
 
 class NavBar extends StatefulWidget {
   final ThemePresenter themePresenter;
@@ -38,7 +39,7 @@ class _NavBarState extends State<NavBar> {
     _pages = [
       _buildSearchTab(), // Index 0: Search Tab
       Center(child: Text('Business Page', style: TextStyle(fontSize: 24))), // Index 1
-      Center(child: Text('Alerts Page', style: TextStyle(fontSize: 24))), // Index 2
+      AlertsPageContainer(), // Index 2
       Center(child: Text('Music Page', style: TextStyle(fontSize: 24))), // Index 3
       SettingsPageView(themePresenter: widget.themePresenter), // Index 4
     ];

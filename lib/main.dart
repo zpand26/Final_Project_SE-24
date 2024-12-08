@@ -1,20 +1,53 @@
 import 'package:flutter/material.dart';
-import 'package:northstars_final/models/search_model.dart';
-import 'views/auth_page_view.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:timezone/data/latest.dart' as tz;
+import 'package:timezone/timezone.dart' as tz;
 import 'package:firebase_core/firebase_core.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'views/auth_page_view.dart';
+import 'views/nav_bar.dart';
+import 'views/alerts_page_container_view.dart';
 import 'models/search_model.dart';
 import 'presenters/search_presenter.dart';
 import 'views/search_view.dart';
 import 'models/theme_model.dart';
 import 'presenters/theme_presenter.dart';
-import 'views/nav_bar.dart';
 import 'models/job_repository_model.dart';
 import 'presenters/job_search_presenter.dart';
 import 'views/job_search_view.dart';
 
+// Initialize the notifications plugin globally
+final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
+FlutterLocalNotificationsPlugin();
+
+// Request notification permissions
+Future<void> requestNotificationPermissions() async {
+  final androidPlugin = flutterLocalNotificationsPlugin
+      .resolvePlatformSpecificImplementation<
+      AndroidFlutterLocalNotificationsPlugin>();
+}
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Initialize Firebase
   await Firebase.initializeApp();
+
+  // Initialize notifications
+  const AndroidInitializationSettings initializationSettingsAndroid =
+  AndroidInitializationSettings('@mipmap/ic_launcher');
+  const InitializationSettings initializationSettings =
+  InitializationSettings(android: initializationSettingsAndroid);
+
+  await flutterLocalNotificationsPlugin.initialize(initializationSettings);
+
+  // Initialize timezone data
+  tz.initializeTimeZones();
+  tz.setLocalLocation(tz.getLocation('America/Chicago')); // Set your local timezone
+
+  // Request notification permissions
+  await requestNotificationPermissions();
+
   runApp(MyApp());
 }
 
@@ -68,9 +101,11 @@ class _MyAppState extends State<MyApp> {
         if (snapshot.connectionState == ConnectionState.done) {
           // Once Firebase is initialized, show the app with the theme
           return MaterialApp(
+            title: 'Job App',
             theme: ThemeData.light().copyWith(primaryColor: Colors.blue), // Light theme
             darkTheme: ThemeData.dark(), // Dark theme
-            themeMode: _themeModel.isDarkMode ? ThemeMode.dark : ThemeMode.light, // ThemeMode from ThemeModel
+            themeMode:
+            _themeModel.isDarkMode ? ThemeMode.dark : ThemeMode.light, // ThemeMode from ThemeModel
             home: AuthPage(), // Start with AuthPage
             routes: {
               '/home': (context) => NavBar(
@@ -78,6 +113,7 @@ class _MyAppState extends State<MyApp> {
                 searchPresenter: _searchPresenter,
                 jobSearchPresenter: _jobSearchPresenter,
               ),
+              '/alerts': (context) => AlertsPageContainer(), // Add AlertsPage route
               '/jobSearch': (context) => JobSearchView(
                 presenter: _jobSearchPresenter,
                 onNavigate: (index) {
