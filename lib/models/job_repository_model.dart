@@ -3,30 +3,36 @@ import 'package:flutter/services.dart';
 import 'job_model.dart';
 
 class JobRepository {
-  late List<Job> _jobs;
+  List<Job> _jobs = []; // Initialize as an empty list
 
-  // Load jobs from a JSON file
   Future<void> loadJobsFromJson() async {
-    final String response = await rootBundle.loadString('lib/assets/cleaned-data/cleaned_software_jobs.json');
-    final List<dynamic> data = jsonDecode(response);
-    _jobs = data.map((job) => Job.fromMap(job)).toList();
-  }
-
-  // Get all jobs
-  List<Job> getAllJobs() {
-    return _jobs;
-  }
-
-  // Get jobs filtered by work setting (e.g., "Remote", "Hybrid")
-  List<Job> getJobsByWorkSetting(String workSetting) {
-    if (workSetting.toLowerCase() == 'hybrid') {
-      return _jobs.where((job) =>
-      job.jobTitle.toLowerCase().contains('hybrid') ||
-          (job.location.toLowerCase().contains(workSetting.toLowerCase()))
-      ).toList();
+    if (_jobs.isEmpty) {
+      final String response = await rootBundle.loadString('lib/assets/cleaned-data/cleaned_software_jobs.json');
+      final List<dynamic> data = jsonDecode(response);
+      _jobs = data.map((job) => Job.fromMap(job)).toList();
+      print("Jobs loaded successfully: ${_jobs.length}");
     }
-    return _jobs
-        .where((job) => job.location.toLowerCase().contains(workSetting.toLowerCase()))
-        .toList();
+  }
+
+  List<Job> getAllJobs() {
+    print("Fetching all jobs: ${_jobs.length}");
+    return List.from(_jobs); // Return a copy to prevent accidental modification
+  }
+
+  List<Job> getJobsByWorkSetting(String workSetting) {
+    if (_jobs.isEmpty) {
+      throw Exception("No jobs loaded. Please call loadJobsFromJson first.");
+    }
+
+    final setting = workSetting.toLowerCase();
+    if (setting == "all") {
+      return List.from(_jobs);
+    }
+
+    return _jobs.where((job) {
+      final location = job.location.toLowerCase();
+      final title = job.jobTitle.toLowerCase();
+      return location.contains(setting) || title.contains(setting);
+    }).toList();
   }
 }

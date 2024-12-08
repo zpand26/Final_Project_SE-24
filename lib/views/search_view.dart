@@ -33,25 +33,23 @@ class _SearchViewState extends State<SearchView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Search View'),
+        title: const Text('Data Job Search'),
         actions: [
           PopupMenuButton<String>(
             onSelected: (value) {
               if (value == 'Go to Job Search') {
                 widget.onNavigate(2); // Navigate to Job Search Tab
-              } else if (value == 'Go to Search View') {
+              } else if (value == '') {
                 widget.onNavigate(0); // Navigate to Search Tab
               }
             },
             itemBuilder: (context) => [
               const PopupMenuItem(
                 value: 'Go to Job Search',
-                child: Text('Go to Job Search'),
+                child: Text('Go to Software Job Search'),
               ),
-              const PopupMenuItem(
-                value: 'Go to Search View',
-                child: Text('Go to Search View'),
-              ),
+
+
             ],
           ),
         ],

@@ -60,7 +60,7 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Job Search'),
+        title: const Text('Software Job Search'),
         actions: [
           PopupMenuButton<String>(
             onSelected: (value) {
@@ -71,7 +71,7 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
             itemBuilder: (context) => const [
               PopupMenuItem(
                 value: 'search_view',
-                child: Text('Go to Search View'),
+                child: Text('Go to Data Job Search'),
               ),
             ],
           ),
@@ -94,12 +94,20 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
               child: Text(setting),
             ))
                 .toList(),
-            onChanged: (value) {
+            onChanged: (value) async {
               if (value != null) {
                 setState(() {
-                  _selectedFilter = value; // Track the selected filter
+                  _selectedFilter = value; // Update the selected filter
+                  isLoading = true; // Show the loading spinner
+                  jobs = []; // Clear the jobs list
                 });
-                widget.presenter.filterJobsByWorkSetting(value);
+
+                // Ensure asynchronous completion of filtering logic
+                 widget.presenter.filterJobsByWorkSetting(value);
+
+                setState(() {
+                  isLoading = false; // Hide loading spinner after filter application
+                });
               }
             },
           ),

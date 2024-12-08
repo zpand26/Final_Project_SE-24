@@ -21,13 +21,20 @@ class JobSearchPresenter {
     }
   }
 
-  void filterJobsByWorkSetting(String workSetting) {
+  Future<void> filterJobsByWorkSetting(String workSetting) async {
     try {
-      List<Job> jobs;
+      view?.showLoading();
+
+      // Reload jobs if the main list is empty
+      if (repository.getAllJobs().isEmpty) {
+        await repository.loadJobsFromJson();
+      }
+
+      List<Job> jobs = [];
       if (workSetting.toLowerCase() == "all") {
-        jobs = repository.getAllJobs(); // Show all jobs for "All"
+        jobs = repository.getAllJobs();
       } else {
-        jobs = repository.getJobsByWorkSetting(workSetting); // Filter by specific work setting
+        jobs = repository.getJobsByWorkSetting(workSetting);
       }
 
       if (jobs.isEmpty) {
@@ -36,8 +43,12 @@ class JobSearchPresenter {
         view?.showJobs(jobs);
       }
     } catch (e) {
-      view?.showError("An error occurred while filtering jobs.");
+      view?.showError("Error occurred while filtering jobs: $e");
     }
   }
+
+
+
+
 }
 
