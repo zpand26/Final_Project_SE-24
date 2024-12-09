@@ -7,7 +7,11 @@ class ThemePresenter {
 
   bool get isDarkMode => _themeModel.isDarkMode;
 
-  void toggleTheme(bool isDark) {
-    _themeModel.toggleTheme(isDark);
+  Future<void> toggleTheme() async {
+    await _themeModel.toggleTheme(); // No argument needed
+  }
+
+  Future<void> loadThemePreference() async {
+    await _themeModel.loadThemePreference();
   }
 }

@@ -1,10 +1,13 @@
-// auth_page.dart
-
 import 'package:flutter/material.dart';
+import 'package:northstars_final/models/software_job_model.dart';
+import 'package:northstars_final/presenters/search_presenter.dart';
 import 'package:northstars_final/views/nav_bar.dart';
 import 'package:northstars_final/presenters/auth_page_presenter.dart';
 import 'package:northstars_final/presenters/theme_presenter.dart';
 import 'package:northstars_final/models/theme_model.dart';
+import 'package:northstars_final/models/data_job_repository_model.dart'; // Add this import
+import 'package:northstars_final/presenters/job_search_presenter.dart'; // Add this import
+import 'package:northstars_final/models/software_job_repository_model.dart'; // Add this import
 
 class AuthPage extends StatefulWidget {
   const AuthPage({super.key});
@@ -40,29 +43,25 @@ class _AuthPageState extends State<AuthPage> implements AuthViewContract {
     return Scaffold(
       body: Stack(
         children: [
-          // Background image
           Positioned.fill(
             child: Image.asset(
-              'lib/assets/images/gray-north-star1.png',
+              'lib/assets/images/guiding_hand_logo.png',
               fit: BoxFit.cover,
             ),
           ),
-          // Dark overlay for contrast
           Positioned.fill(
             child: Container(
               color: Colors.black.withOpacity(0.6),
             ),
           ),
-          // Login form
           Center(
             child: SingleChildScrollView(
               padding: const EdgeInsets.all(16.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // App Logo (or title)
                   const Text(
-                    'Welcome to Guding Hand',
+                    'Welcome to Guiding Hand',
                     style: TextStyle(
                       fontSize: 32,
                       color: Colors.white,
@@ -70,7 +69,6 @@ class _AuthPageState extends State<AuthPage> implements AuthViewContract {
                     ),
                   ),
                   const SizedBox(height: 40),
-                  // Email TextField
                   TextField(
                     controller: _emailController,
                     decoration: InputDecoration(
@@ -85,7 +83,6 @@ class _AuthPageState extends State<AuthPage> implements AuthViewContract {
                     style: const TextStyle(color: Colors.white),
                   ),
                   const SizedBox(height: 16),
-                  // Password TextField
                   TextField(
                     controller: _passwordController,
                     decoration: InputDecoration(
@@ -101,7 +98,6 @@ class _AuthPageState extends State<AuthPage> implements AuthViewContract {
                     style: const TextStyle(color: Colors.white),
                   ),
                   const SizedBox(height: 16),
-                  // Authentication button
                   ElevatedButton(
                     onPressed: _authenticate,
                     style: ElevatedButton.styleFrom(
@@ -122,7 +118,7 @@ class _AuthPageState extends State<AuthPage> implements AuthViewContract {
                       _presenter.googleSignIn();
                     },
                     icon: Image.asset(
-                      'lib/assets/images/google_logo.jpg', // Add a Google logo image asset
+                      'lib/assets/images/google_logo.jpg',
                       height: 24,
                       width: 24,
                     ),
@@ -166,10 +162,19 @@ class _AuthPageState extends State<AuthPage> implements AuthViewContract {
   @override
   void navigateToHome() {
     final themeModel = ThemeModel();
+    final searchRepository = SearchRepositoryModel();
     final themePresenter = ThemePresenter(themeModel);
+    final searchPresenter = SearchPresenter(searchRepository);
+    final jobRepository = JobRepository(); // Add this
+    final jobSearchPresenter = JobSearchPresenter(jobRepository,searchPresenter); // Add this
+
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (context) => NavBar(themePresenter: themePresenter),
+        builder: (context) => NavBar(
+          themePresenter: themePresenter,
+          searchPresenter: searchPresenter,
+          jobSearchPresenter: jobSearchPresenter, // Pass the new parameter
+        ),
       ),
     );
   }
