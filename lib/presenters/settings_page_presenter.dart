@@ -20,6 +20,11 @@ class SettingsPagePresenter {
     model.birthday = newBirthday;
   }
 
+  void updateProfilePicture(String newUrl) {
+    model.profilePictureUrl = newUrl;
+  }
+
+
   // Save user profile data to Firestore
   Future<void> saveUserProfile(String userId) async {
     try {
