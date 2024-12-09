@@ -21,6 +21,9 @@ import 'presenters/settings_page_presenter.dart';
 import 'views/settings_page_view.dart';
 import 'package:provider/provider.dart';
 import 'package:northstars_final/models/search_repository_model.dart'; // Add this import
+import 'package:northstars_final/views/goal_page_view.dart';
+import 'package:northstars_final/presenters/goal_page_presenter.dart';
+import 'package:northstars_final/models/goal_page_model.dart';
 
 
 // Initialize the notifications plugin globally
@@ -73,10 +76,12 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   final ThemeModel _themeModel = ThemeModel();
   final searchRepository = SearchRepositoryModel();
+  late final GoalPageModel goalPageModel;
   late final ThemePresenter _themePresenter;
   late final SearchPresenter _searchPresenter;
   late final JobRepository _jobRepository;
   late final JobSearchPresenter _jobSearchPresenter;
+  late final GoalPagePresenter _goalPagePresenter;
 
   @override
   void initState() {
@@ -87,6 +92,7 @@ class _MyAppState extends State<MyApp> {
     _searchPresenter = SearchPresenter(searchRepository);
     _jobRepository = JobRepository();
     _jobSearchPresenter = JobSearchPresenter(_jobRepository, _searchPresenter);
+    _goalPagePresenter = GoalPagePresenter(goalPageModel, (data) => print(data));
 
     // Update UI on theme changes
     _themeModel.addListener(() {
