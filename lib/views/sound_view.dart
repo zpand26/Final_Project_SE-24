@@ -22,6 +22,7 @@ class MP3PlayerScreen extends StatefulWidget {
 class _MP3PlayerScreenState extends State<MP3PlayerScreen> {
   final AudioPlayer _audioPlayer = AudioPlayer();
   bool _isPlaying = false;
+  bool _isPaused = false;
 
   @override
   void dispose() {
@@ -30,22 +31,35 @@ class _MP3PlayerScreenState extends State<MP3PlayerScreen> {
   }
 
   Future<void> _playPause() async {
-    if (_isPlaying) {
-      await _audioPlayer.pause();
-    } else {
-      // Replace with the URL or file path of your MP3
-      const audioUrl = 'https://www.example.com/sample.mp3';
-      try {
-        await _audioPlayer.setSource(UrlSource(audioUrl)); // Set the source correctly
-        await _audioPlayer.resume(); // Resume playback
-      } catch (e) {
-        print('Error loading audio: $e');
-      }
-    }
+    const audioPath =
+        'lib/assets/sounds/Bad Game Music_ Double Dribble (Arcade) - National Anthem.mp3';
 
-    setState(() {
-      _isPlaying = !_isPlaying;
-    });
+    try {
+      if (_isPlaying) {
+        if (_isPaused) {
+          // Resume the audio
+          await _audioPlayer.resume();
+        } else {
+          // Pause the audio
+          await _audioPlayer.pause();
+          setState(() {
+            _isPaused = true;
+          });
+        }
+      } else {
+        // Play the local asset audio file
+        await _audioPlayer.play(DeviceFileSource(audioPath));
+        setState(() {
+          _isPaused = false;
+        });
+      }
+
+      setState(() {
+        _isPlaying = !_isPlaying;
+      });
+    } catch (e) {
+      print('Error: ${e.toString()}');
+    }
   }
 
   @override
