@@ -81,7 +81,6 @@ class _MyAppState extends State<MyApp> {
   late final SearchPresenter _searchPresenter;
   late final JobRepository _jobRepository;
   late final JobSearchPresenter _jobSearchPresenter;
-  late final GoalPagePresenter _goalPagePresenter;
 
   @override
   void initState() {
@@ -92,7 +91,7 @@ class _MyAppState extends State<MyApp> {
     _searchPresenter = SearchPresenter(searchRepository);
     _jobRepository = JobRepository();
     _jobSearchPresenter = JobSearchPresenter(_jobRepository, _searchPresenter);
-    _goalPagePresenter = GoalPagePresenter(goalPageModel, (data) => print(data));
+    // (data) => print(data));
 
     // Update UI on theme changes
     _themeModel.addListener(() {

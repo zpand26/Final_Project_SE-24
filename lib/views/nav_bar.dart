@@ -40,8 +40,6 @@ class _NavBarState extends State<NavBar> {
   int _selectedIndex = 0;
   bool _isSearchView = true; // Toggle between SearchView and JobSearchView
   late final SettingsPagePresenter _settingsPagePresenter;
-  late final GoalPagePresenter _goalPagePresenter;
-  late final GoalPageModel goalPageModel;
 
   late final List<Widget> _pages;
 
@@ -50,8 +48,6 @@ class _NavBarState extends State<NavBar> {
     super.initState();
     // Initialize SettingsPagePresenter
     _settingsPagePresenter = SettingsPagePresenter(SettingsPageModel());
-    goalPageModel = GoalPageModel(id:'00', todoText: 'Init Goal');
-    _goalPagePresenter = GoalPagePresenter(goalPageModel, (data) => print(data));
 
     // Initialize pages
     _pages = [
@@ -60,7 +56,6 @@ class _NavBarState extends State<NavBar> {
       AlertsPageContainer(),
       Center(child: Text('Music Page', style: TextStyle(fontSize: 24))),
       SettingsPageView(presenter: _settingsPagePresenter),
-      GoalPageView(_goalPagePresenter),
     ];
   }
 
@@ -131,7 +126,6 @@ class _NavBarState extends State<NavBar> {
             GButton(icon: LineIcons.clock), // Alerts Tab
             GButton(icon: LineIcons.music), // Music Tab
             GButton(icon: LineIcons.user), // Profile/Settings Tab
-            GButton(icon: LineIcons.check) //Goal Page Tab
           ],
         ),
       ),
