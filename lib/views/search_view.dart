@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:search_app_bar_page/search_app_bar_page.dart';
 import '/presenters/search_presenter.dart';
 import '/presenters/job_search_presenter.dart';
-import '/models/search_model.dart';
+import '/models/software_job_model.dart';
 import 'search_view_contract.dart';
 
 class SearchView extends StatefulWidget {

@@ -1,4 +1,4 @@
-import '/models/search_model.dart';
+import '/models/software_job_model.dart';
 
 abstract class SearchViewContract {
   void showJobs(List<SearchModel> jobs);

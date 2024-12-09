@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'job_model.dart';
+import 'data_job_model.dart';
 
 class JobRepository {
   List<Job> _jobs = []; // Initialize as an empty list

@@ -1,5 +1,5 @@
-import '/models/search_repository_model.dart';
-import '/models/search_model.dart';
+import '/models/software_job_repository_model.dart';
+import '/models/software_job_model.dart';
 import '/views/search_view_contract.dart';
 
 class SearchPresenter {

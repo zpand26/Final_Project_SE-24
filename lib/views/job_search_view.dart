@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../presenters/job_search_presenter.dart';
-import '../models/job_model.dart';
+import '../models/data_job_model.dart';
 import 'job_search_view_contract.dart';
 import 'package:search_app_bar_page/search_app_bar_page.dart';
 
@@ -26,6 +26,7 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
   // Track selected filters
   String selectedWorkSetting = "All";
   String selectedEmploymentType = "All";
+  String selectedSortOption = "None";
 
   @override
   void initState() {
@@ -139,6 +140,26 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
                   if (value != null) {
                     setState(() {
                       selectedEmploymentType = value;
+                      isLoading = true;
+                    });
+                    applyFilters();
+                  }
+                },
+              ),
+
+              // Sorting Filter
+              DropdownButton<String>(
+                value: selectedSortOption,
+                items: ["None", "Salary: Low to High", "Salary: High to Low"]
+                    .map((sortOption) => DropdownMenuItem(
+                  value: sortOption,
+                  child: Text(sortOption),
+                ))
+                    .toList(),
+                onChanged: (value) {
+                  if (value != null) {
+                    setState(() {
+                      selectedSortOption = value;
                       isLoading = true;
                     });
                     applyFilters();

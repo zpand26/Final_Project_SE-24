@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:northstars_final/models/search_model.dart';
+import 'package:northstars_final/models/software_job_model.dart';
 import 'package:northstars_final/presenters/search_presenter.dart';
 import 'package:northstars_final/views/nav_bar.dart';
 import 'package:northstars_final/presenters/auth_page_presenter.dart';
 import 'package:northstars_final/presenters/theme_presenter.dart';
 import 'package:northstars_final/models/theme_model.dart';
-import 'package:northstars_final/models/job_repository_model.dart'; // Add this import
+import 'package:northstars_final/models/data_job_repository_model.dart'; // Add this import
 import 'package:northstars_final/presenters/job_search_presenter.dart'; // Add this import
-import 'package:northstars_final/models/search_repository_model.dart'; // Add this import
+import 'package:northstars_final/models/software_job_repository_model.dart'; // Add this import
 
 class AuthPage extends StatefulWidget {
   const AuthPage({super.key});

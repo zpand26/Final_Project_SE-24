@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'search_model.dart';
+import 'software_job_model.dart';
 
 class SearchRepositoryModel {
   List<SearchModel> _searchResults = [];
