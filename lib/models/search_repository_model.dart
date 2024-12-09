@@ -21,7 +21,9 @@ class SearchRepositoryModel {
     return _searchResults.where((job) {
       final matchesLocation = location.toLowerCase() == "all" || job.location.toLowerCase() == location.toLowerCase();
       final matchesJobTitle = jobTitle.toLowerCase() == "all" || job.jobTitle.toLowerCase() == jobTitle.toLowerCase();
-      return matchesLocation && matchesJobTitle;
+      final matchesHybridInTitle = location.toLowerCase() == "hybrid" &&
+          job.jobTitle.toLowerCase().contains("hybrid");
+      return matchesLocation || matchesHybridInTitle && matchesJobTitle;
     }).toList();
   }
 }

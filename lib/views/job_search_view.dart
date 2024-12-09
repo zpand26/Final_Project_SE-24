@@ -3,16 +3,15 @@ import '../presenters/job_search_presenter.dart';
 import '../models/job_model.dart';
 import 'job_search_view_contract.dart';
 import 'package:search_app_bar_page/search_app_bar_page.dart';
-import 'search_view.dart';
 
 class JobSearchView extends StatefulWidget {
   final JobSearchPresenter presenter;
-  final Function(int) onNavigate; // Add the onNavigate parameter
+  final Function(int) onNavigate;
 
   const JobSearchView({
     Key? key,
     required this.presenter,
-    required this.onNavigate, // Include onNavigate in the constructor
+    required this.onNavigate,
   }) : super(key: key);
 
   @override
@@ -165,22 +164,25 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
                   itemCount: filteredJobs.length,
                   itemBuilder: (context, index) {
                     final job = filteredJobs[index];
-                    return ListTile(
-                      title: Text(
-                        '${job.jobTitle} (${job.experienceLevel.toUpperCase()})',
-                        style: const TextStyle(fontWeight: FontWeight.bold),
+                    return Card(
+                      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                      child: ListTile(
+                        title: Text(
+                          '${job.jobTitle} (${job.experienceLevel.toUpperCase()})',
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        subtitle: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Work Setting: ${job.workSetting}'),
+                            Text('Employment Type: ${job.employmentType}'),
+                            Text('Category: ${job.jobCategory}'),
+                            Text('Salary: ${job.salary} ${job.salaryCurrency} (\$${job.salaryInUsd.toStringAsFixed(2)} USD)'),
+                            Text('Residence: ${job.employeeResidence}'),
+                          ],
+                        ),
+                        isThreeLine: true,
                       ),
-                      subtitle: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('Work Setting: ${job.workSetting}'),
-                          Text('Employment Type: ${job.employmentType}'),
-                          Text('Category: ${job.jobCategory}'),
-                          Text('Salary: ${job.salary} ${job.salaryCurrency} (\$${job.salaryInUsd.toStringAsFixed(2)} USD)'),
-                          Text('Residence: ${job.employeeResidence}'),
-                        ],
-                      ),
-                      isThreeLine: true,
                     );
                   },
                 );
