@@ -45,7 +45,7 @@ class _AuthPageState extends State<AuthPage> implements AuthViewContract {
         children: [
           Positioned.fill(
             child: Image.asset(
-              'lib/assets/images/gray-north-star1.png',
+              'lib/assets/images/guiding_hand_logo.png',
               fit: BoxFit.cover,
             ),
           ),
