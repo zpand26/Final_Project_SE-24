@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:search_app_bar_page/search_app_bar_page.dart';
-import '../presenters/search_presenter.dart';
-import '../presenters/job_search_presenter.dart';
+import '/presenters/search_presenter.dart';
+import '/presenters/job_search_presenter.dart';
+import '/models/search_model.dart';
+import 'search_view_contract.dart';
 
 class SearchView extends StatefulWidget {
   final SearchPresenter searchPresenter;
@@ -19,60 +21,62 @@ class SearchView extends StatefulWidget {
   _SearchViewState createState() => _SearchViewState();
 }
 
-class _SearchViewState extends State<SearchView> {
+class _SearchViewState extends State<SearchView> implements SearchViewContract {
+  List<SearchModel> jobs = [];
+  List<SearchModel> filteredJobs = [];
+  String errorMessage = "";
+  bool isLoading = true;
+
   String selectedLocationFilter = "All";
   String selectedTitleFilter = "All";
-  String searchQuery = ""; // State for the search bar
-  List<Map<String, dynamic>> filteredJobs = [];
-  bool isLoading = true;
 
   @override
   void initState() {
     super.initState();
-    _loadJobs();
+    widget.searchPresenter.view = this;
+    widget.searchPresenter.loadJobs();
   }
 
-  Future<void> _loadJobs() async {
+  @override
+  void showJobs(List<SearchModel> newJobs) {
     setState(() {
-      isLoading = true;
+      jobs = newJobs;
+      filteredJobs = newJobs;
+      isLoading = false;
+      errorMessage = "";
     });
-    await widget.searchPresenter.loadJobs('lib/assets/cleaned-data/cleaned_software_jobs.json');
+  }
+
+  @override
+  void showError(String error) {
     setState(() {
-      filteredJobs = widget.searchPresenter.jobList;
+      errorMessage = error;
       isLoading = false;
     });
   }
 
-  Future<void> applyFilters() async {
+  @override
+  void showLoading() {
     setState(() {
       isLoading = true;
     });
+  }
+
+  Future<void> applyFilters() async {
     try {
-      final filtered = await Future.delayed(const Duration(milliseconds: 100), () {
-        return widget.searchPresenter.filterJobs(
-          locationFilter: selectedLocationFilter,
-          titleFilter: selectedTitleFilter,
-          searchQuery: searchQuery,
-        );
-      });
-      setState(() {
-        filteredJobs = filtered;
-        isLoading = false;
-      });
+      widget.searchPresenter.view?.showLoading();
+
+      final filteredJobs = widget.searchPresenter.repository.filterJobs(
+        location: selectedLocationFilter,
+        jobTitle: selectedTitleFilter,
+      );
+
+      widget.searchPresenter.view?.showJobs(filteredJobs);
     } catch (e) {
-      setState(() {
-        isLoading = false;
-      });
-      print("Error applying filters: $e");
+      widget.searchPresenter.view?.showError("Error occurred while filtering jobs: $e");
     }
   }
 
-  void onSearch(String query) {
-    setState(() {
-      searchQuery = query;
-    });
-    applyFilters();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -83,13 +87,13 @@ class _SearchViewState extends State<SearchView> {
           PopupMenuButton<String>(
             onSelected: (value) {
               if (value == 'Go to Job Search') {
-                widget.onNavigate(2); // Navigate to Software Job Search Tab
+                widget.onNavigate(2); // Navigate to a specific view
               }
             },
             itemBuilder: (context) => [
               const PopupMenuItem(
                 value: 'Go to Job Search',
-                child: Text('Go to Software Job Search'),
+                child: Text('Go to Data Job Search'),
               ),
             ],
           ),
@@ -99,6 +103,7 @@ class _SearchViewState extends State<SearchView> {
           ? const Center(child: CircularProgressIndicator())
           : Column(
         children: [
+          // Filters
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -138,51 +143,33 @@ class _SearchViewState extends State<SearchView> {
               ),
             ],
           ),
+          // Results
           Expanded(
-            child: SearchAppBarPage<Map<String, dynamic>>(
+            child: filteredJobs.isEmpty
+                ? const Center(
+              child: Text(
+                'No jobs found',
+                style: TextStyle(fontSize: 16),
+              ),
+            )
+                : SearchAppBarPage<SearchModel>(
               listFull: filteredJobs,
-              stringFilter: (job) => job['Job Title'] ?? '',
+              stringFilter: (job) => job.jobTitle,
               obxListBuilder: (context, list, isModSearch) {
-                if (list.isEmpty) {
-                  return const Center(
-                    child: Text(
-                      'NOTHING FOUND',
-                      style: TextStyle(fontSize: 14),
-                    ),
-                  );
-                }
                 return ListView.builder(
                   itemCount: list.length,
                   itemBuilder: (_, index) {
                     final job = list[index];
                     return Card(
                       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(4),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(14.0),
-                        child: Column(
+                      child: ListTile(
+                        title: Text('${job.jobTitle} - ${job.company}'),
+                        subtitle: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              job['Job Title'] ?? "N/A",
-                              style: const TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            const SizedBox(height: 4),
-                            Text('Company: ${job['Company'] ?? "N/A"}',
-                                style: const TextStyle(fontSize: 16)),
-                            Text('Score: ${job['Company Score'] ?? "N/A"}',
-                                style: const TextStyle(fontSize: 16)),
-                            Text('Location: ${job['Location'] ?? "N/A"}',
-                                style: const TextStyle(fontSize: 16)),
-                            Text('Date Posted: ${job['Date'] ?? "N/A"}',
-                                style: const TextStyle(fontSize: 16)),
-                            Text('Salary: ${job['Salary'] ?? "N/A"}',
-                                style: const TextStyle(fontSize: 16)),
+                            Text('Location: ${job.location}'),
+                            Text('Salary: ${job.salary}'),
+                            Text('Score: ${job.companyScore}'),
                           ],
                         ),
                       ),

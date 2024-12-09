@@ -89,7 +89,7 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
             itemBuilder: (context) => const [
               PopupMenuItem(
                 value: 'search_view',
-                child: Text('Go to Data Job Search'),
+                child: Text('Go to Software Job Search'),
               ),
             ],
           ),

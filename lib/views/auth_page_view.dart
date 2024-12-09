@@ -7,6 +7,7 @@ import 'package:northstars_final/presenters/theme_presenter.dart';
 import 'package:northstars_final/models/theme_model.dart';
 import 'package:northstars_final/models/job_repository_model.dart'; // Add this import
 import 'package:northstars_final/presenters/job_search_presenter.dart'; // Add this import
+import 'package:northstars_final/models/search_repository_model.dart'; // Add this import
 
 class AuthPage extends StatefulWidget {
   const AuthPage({super.key});
@@ -161,9 +162,9 @@ class _AuthPageState extends State<AuthPage> implements AuthViewContract {
   @override
   void navigateToHome() {
     final themeModel = ThemeModel();
-    final searchModel = SearchModel();
+    final searchRepository = SearchRepositoryModel();
     final themePresenter = ThemePresenter(themeModel);
-    final searchPresenter = SearchPresenter(searchModel);
+    final searchPresenter = SearchPresenter(searchRepository);
     final jobRepository = JobRepository(); // Add this
     final jobSearchPresenter = JobSearchPresenter(jobRepository,searchPresenter); // Add this
 

@@ -20,6 +20,8 @@ import 'models/settings_page_model.dart';
 import 'presenters/settings_page_presenter.dart';
 import 'views/settings_page_view.dart';
 import 'package:provider/provider.dart';
+import 'package:northstars_final/models/search_repository_model.dart'; // Add this import
+
 
 // Initialize the notifications plugin globally
 final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
@@ -70,7 +72,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   final ThemeModel _themeModel = ThemeModel();
-  final SearchModel _searchModel = SearchModel();
+  final searchRepository = SearchRepositoryModel();
   late final ThemePresenter _themePresenter;
   late final SearchPresenter _searchPresenter;
   late final JobRepository _jobRepository;
@@ -82,7 +84,7 @@ class _MyAppState extends State<MyApp> {
 
     // Initialize presenters
     _themePresenter = ThemePresenter(_themeModel);
-    _searchPresenter = SearchPresenter(_searchModel);
+    _searchPresenter = SearchPresenter(searchRepository);
     _jobRepository = JobRepository();
     _jobSearchPresenter = JobSearchPresenter(_jobRepository, _searchPresenter);
 
