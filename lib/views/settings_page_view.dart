@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart'; // Add provider for theme management
 import 'package:firebase_auth/firebase_auth.dart';
 import '../models/settings_page_model.dart';
 import '../presenters/settings_page_presenter.dart';
 import 'auth_page_view.dart';
+import '../models/theme_model.dart'; // Import ThemeModel
 
 class SettingsPageView extends StatefulWidget {
   final SettingsPagePresenter presenter;
@@ -20,14 +22,13 @@ class _SettingsPageViewState extends State<SettingsPageView> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   bool _isUploading = false;
 
-  //images
-  final List<String> predefinedImages = [ // copy image address and paste
+  // Predefined images
+  final List<String> predefinedImages = [
     'https://www.usatoday.com/gcdn/media/2020/09/11/USATODAY/usatsports/ghows_gallery-WL-822009996-7ffc2013.jpg?crop=1440,810,x0,y495&width=1440&height=720&format=pjpg&auto=webp',
     'https://www.bkacontent.com/wp-content/uploads/2016/06/Depositphotos_31146757_l-2015.jpg',
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR131D9ROq-XWTaZL0clqCsild1L_MmWUvY8Q&s',
     'https://faroutguides.com/wp-content/uploads/2021/06/north-star-blog-header-image.jpg',
     'https://www.frontierfireprotection.com/wp-content/uploads/freshizer/730cbf2e2455c64c961be8e18e793f6b_3-Things-a-Fire-Needs-2000-c-90.jpg',
-    //format 'insertlinkhere',
   ];
 
   @override
@@ -75,7 +76,6 @@ class _SettingsPageViewState extends State<SettingsPageView> {
       });
 
       try {
-        // Update the model and save the URL
         widget.presenter.updateProfilePicture(selectedImage);
         await widget.presenter.saveUserProfile(_currentUser!.uid);
 
@@ -134,6 +134,8 @@ class _SettingsPageViewState extends State<SettingsPageView> {
 
   @override
   Widget build(BuildContext context) {
+    final themeModel = Provider.of<ThemeModel>(context); // Access ThemeModel for dark mode
+
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
@@ -163,9 +165,9 @@ class _SettingsPageViewState extends State<SettingsPageView> {
             ListTile(
               title: const Text('Dark Mode'),
               trailing: Switch(
-                value: false, // Placeholder, replace with theme logic
+                value: themeModel.isDarkMode, // Use theme state from ThemeModel
                 onChanged: (isDark) {
-                  // Add theme toggle logic here
+                  themeModel.toggleTheme(); // Toggle theme on change
                 },
               ),
             ),

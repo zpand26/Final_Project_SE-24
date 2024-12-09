@@ -62,6 +62,10 @@ dev_dependencies:
   galleryimage: ^1.2.0
   camera: ^0.11.0+2
   image_picker: ^0.8.7
+  provider: ^6.1.2
+  shared_preferences: ^2.1.2
+
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
