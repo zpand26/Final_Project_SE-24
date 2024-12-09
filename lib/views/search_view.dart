@@ -34,7 +34,7 @@ class _SearchViewState extends State<SearchView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Data Job Search'),
+        title: const Text('Software Job Search'),
         actions: [
           PopupMenuButton<String>(
             onSelected: (value) {

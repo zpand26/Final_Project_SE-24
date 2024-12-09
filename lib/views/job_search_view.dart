@@ -78,7 +78,7 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Software Job Search'),
+        title: const Text('Data Job Search'),
         actions: [
           PopupMenuButton<String>(
             onSelected: (value) {
