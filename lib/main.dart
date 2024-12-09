@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:northstars_final/models/search_model.dart';
-import 'views/auth_page_view.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:timezone/data/latest.dart' as tz;
+import 'package:timezone/timezone.dart' as tz;
 import 'package:firebase_core/firebase_core.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'views/auth_page_view.dart';
+import 'views/nav_bar.dart';
+import 'views/alerts_page_container_view.dart';
 import 'models/search_model.dart';
 import 'presenters/search_presenter.dart';
 import 'views/search_view.dart';
@@ -15,9 +20,38 @@ import 'models/settings_page_model.dart';
 import 'presenters/settings_page_presenter.dart';
 import 'views/settings_page_view.dart';
 
+// Initialize the notifications plugin globally
+final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
+FlutterLocalNotificationsPlugin();
+
+// Request notification permissions
+Future<void> requestNotificationPermissions() async {
+  final androidPlugin = flutterLocalNotificationsPlugin
+      .resolvePlatformSpecificImplementation<
+      AndroidFlutterLocalNotificationsPlugin>();
+}
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Initialize Firebase
   await Firebase.initializeApp();
+
+  // Initialize notifications
+  const AndroidInitializationSettings initializationSettingsAndroid =
+  AndroidInitializationSettings('@mipmap/ic_launcher');
+  const InitializationSettings initializationSettings =
+  InitializationSettings(android: initializationSettingsAndroid);
+
+  await flutterLocalNotificationsPlugin.initialize(initializationSettings);
+
+  // Initialize timezone data
+  tz.initializeTimeZones();
+  tz.setLocalLocation(tz.getLocation('America/Chicago')); // Set your local timezone
+
+  // Request notification permissions
+  await requestNotificationPermissions();
+
   runApp(MyApp());
 }
 
@@ -46,7 +80,7 @@ class _MyAppState extends State<MyApp> {
 
     // Initialize job search presenter
     _jobRepository = JobRepository();
-    _jobSearchPresenter = JobSearchPresenter(_jobRepository);
+    _jobSearchPresenter = JobSearchPresenter(_jobRepository, _searchPresenter);
 
     // Update UI on theme changes
     _themeModel.addListener(() {
@@ -71,9 +105,11 @@ class _MyAppState extends State<MyApp> {
         if (snapshot.connectionState == ConnectionState.done) {
           // Once Firebase is initialized, show the app with the theme
           return MaterialApp(
+            title: 'Job App',
             theme: ThemeData.light().copyWith(primaryColor: Colors.blue), // Light theme
             darkTheme: ThemeData.dark(), // Dark theme
-            themeMode: _themeModel.isDarkMode ? ThemeMode.dark : ThemeMode.light, // ThemeMode from ThemeModel
+            themeMode:
+            _themeModel.isDarkMode ? ThemeMode.dark : ThemeMode.light, // ThemeMode from ThemeModel
             home: AuthPage(), // Start with AuthPage
             routes: {
               '/home': (context) => NavBar(
@@ -81,10 +117,19 @@ class _MyAppState extends State<MyApp> {
                 searchPresenter: _searchPresenter,
                 jobSearchPresenter: _jobSearchPresenter,
               ),
-              '/jobSearch': (context) => JobSearchView(presenter: _jobSearchPresenter),
+              '/alerts': (context) => AlertsPageContainer(), // Add AlertsPage route
+              '/jobSearch': (context) => JobSearchView(
+                presenter: _jobSearchPresenter,
+                onNavigate: (index) {
+                  Navigator.pushReplacementNamed(context, '/home'); // Navigate to NavBar with selected index
+                },
+              ),
               '/search': (context) => SearchView(
                 searchPresenter: _searchPresenter,
                 jobSearchPresenter: _jobSearchPresenter,
+                onNavigate: (index) {
+                  Navigator.pushReplacementNamed(context, '/home'); // Navigate to NavBar with selected index
+                },
               ),
             },
           );

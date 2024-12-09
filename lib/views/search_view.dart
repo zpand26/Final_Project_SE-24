@@ -7,11 +7,13 @@ import '../presenters/job_search_presenter.dart';
 class SearchView extends StatefulWidget {
   final SearchPresenter searchPresenter;
   final JobSearchPresenter jobSearchPresenter;
+  final Function(int) onNavigate; // Add the onNavigate callback
 
   const SearchView({
     super.key,
     required this.searchPresenter,
     required this.jobSearchPresenter,
+    required this.onNavigate, // Include onNavigate in the constructor
   });
 
   @override
@@ -31,40 +33,23 @@ class _SearchViewState extends State<SearchView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Search View'),
+        title: const Text('Data Job Search'),
         actions: [
           PopupMenuButton<String>(
             onSelected: (value) {
-              if (value == 'job_search') {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => JobSearchView(
-                      presenter: widget.jobSearchPresenter,
-                    ),
-                  ),
-                );
-              } else if (value == 'search_view') {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => SearchView(
-                      searchPresenter: widget.searchPresenter,
-                      jobSearchPresenter: widget.jobSearchPresenter,
-                    ),
-                  ),
-                );
+              if (value == 'Go to Job Search') {
+                widget.onNavigate(2); // Navigate to Job Search Tab
+              } else if (value == '') {
+                widget.onNavigate(0); // Navigate to Search Tab
               }
             },
             itemBuilder: (context) => [
               const PopupMenuItem(
-                value: 'job_search',
-                child: Text('Go to Job Search'),
+                value: 'Go to Job Search',
+                child: Text('Go to Software Job Search'),
               ),
-              const PopupMenuItem(
-                value: 'search_view',
-                child: Text('Go to Search View'),
-              ),
+
+
             ],
           ),
         ],

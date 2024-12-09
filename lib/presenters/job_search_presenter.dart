@@ -1,12 +1,14 @@
 import '../models/job_repository_model.dart';
 import '../models/job_model.dart';
 import '../views/job_search_view_contract.dart';
+import '../presenters/search_presenter.dart';
 
 class JobSearchPresenter {
   final JobRepository repository;
+  final SearchPresenter searchPresenter;
   JobSearchViewContract? view;
 
-  JobSearchPresenter(this.repository);
+  JobSearchPresenter(this.repository, this.searchPresenter);
 
   Future<void> loadJobs() async {
     try {
@@ -19,13 +21,20 @@ class JobSearchPresenter {
     }
   }
 
-  void filterJobsByWorkSetting(String workSetting) {
+  Future<void> filterJobsByWorkSetting(String workSetting) async {
     try {
-      List<Job> jobs;
+      view?.showLoading();
+
+      // Reload jobs if the main list is empty
+      if (repository.getAllJobs().isEmpty) {
+        await repository.loadJobsFromJson();
+      }
+
+      List<Job> jobs = [];
       if (workSetting.toLowerCase() == "all") {
-        jobs = repository.getAllJobs(); // Show all jobs for "All"
+        jobs = repository.getAllJobs();
       } else {
-        jobs = repository.getJobsByWorkSetting(workSetting); // Filter by specific work setting
+        jobs = repository.getJobsByWorkSetting(workSetting);
       }
 
       if (jobs.isEmpty) {
@@ -34,8 +43,12 @@ class JobSearchPresenter {
         view?.showJobs(jobs);
       }
     } catch (e) {
-      view?.showError("An error occurred while filtering jobs.");
+      view?.showError("Error occurred while filtering jobs: $e");
     }
   }
+
+
+
+
 }
 

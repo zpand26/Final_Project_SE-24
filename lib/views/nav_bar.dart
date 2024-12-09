@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
+import 'search_view.dart';
+import 'job_search_view.dart';
+import 'settings_page_view.dart';
 import '../views/search_view.dart';
 import '../views/settings_page_view.dart';
 import '../models/settings_page_model.dart';
@@ -10,6 +13,9 @@ import '../presenters/search_presenter.dart';
 import '../presenters/job_search_presenter.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'auth_page_view.dart';
+import 'auth_page_view.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:northstars_final/views/alerts_page_container_view.dart';
 
 class NavBar extends StatefulWidget {
   final ThemePresenter themePresenter;
@@ -29,26 +35,54 @@ class NavBar extends StatefulWidget {
 
 class _NavBarState extends State<NavBar> {
   int _selectedIndex = 0;
+  bool _isSearchView = true; // Toggle between SearchView and JobSearchView
+  late final SettingsPagePresenter _settingsPagePresenter;
 
-  // Initialize the SettingsPagePresenter
-  final SettingsPagePresenter _settingsPagePresenter =
-  SettingsPagePresenter(SettingsPageModel());
+  late final List<Widget> _pages;
 
-  // Define the pages for each tab
-  List<Widget> _buildPages() {
-    return [
-      SearchView(
-        searchPresenter: widget.searchPresenter,
-        jobSearchPresenter: widget.jobSearchPresenter,
-      ),
+  @override
+  void initState() {
+    super.initState();
+    // Initialize SettingsPagePresenter
+    _settingsPagePresenter = SettingsPagePresenter(SettingsPageModel());
+
+    // Initialize pages
+    _pages = [
+      _buildSearchTab(),
       Center(child: Text('Business Page', style: TextStyle(fontSize: 24))),
-      Center(child: Text('Alerts Page', style: TextStyle(fontSize: 24))),
+      AlertsPageContainer(),
       Center(child: Text('Music Page', style: TextStyle(fontSize: 24))),
-      SettingsPageView(presenter: _settingsPagePresenter,), // Pass SettingsPagePresenter here
+      SettingsPageView(presenter: _settingsPagePresenter),
     ];
   }
 
-  // Logout function
+  Widget _buildSearchTab() {
+    return _isSearchView
+        ? SearchView(
+      searchPresenter: widget.searchPresenter,
+      jobSearchPresenter: widget.jobSearchPresenter,
+      onNavigate: (index) {
+        setState(() {
+          _isSearchView = false; // Switch to JobSearchView
+        });
+      },
+    )
+        : JobSearchView(
+      presenter: widget.jobSearchPresenter,
+      onNavigate: (index) {
+        setState(() {
+          _isSearchView = true; // Switch back to SearchView
+        });
+      },
+    );
+  }
+
+  void _onNavigate(int index) {
+    setState(() {
+      _selectedIndex = index; // Update selected tab index
+    });
+  }
+
   void _logout() async {
     await FirebaseAuth.instance.signOut();
     Navigator.pushAndRemoveUntil(
@@ -61,7 +95,7 @@ class _NavBarState extends State<NavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _buildPages()[_selectedIndex],
+      body: _selectedIndex == 0 ? _buildSearchTab() : _pages[_selectedIndex],
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
         child: GNav(
@@ -70,7 +104,9 @@ class _NavBarState extends State<NavBar> {
           haptic: true,
           tabBorderRadius: 15,
           tabActiveBorder: Border.all(color: Colors.black, width: 1),
-          tabShadow: [BoxShadow(color: Colors.grey.withOpacity(0.5), blurRadius: 8)],
+          tabShadow: [
+            BoxShadow(color: Colors.grey.withOpacity(0.5), blurRadius: 8),
+          ],
           curve: Curves.easeOutExpo,
           duration: const Duration(milliseconds: 200),
           gap: 8,
@@ -80,11 +116,7 @@ class _NavBarState extends State<NavBar> {
           tabBackgroundColor: Colors.blue.withOpacity(0.1),
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
           selectedIndex: _selectedIndex,
-          onTabChange: (index) {
-            setState(() {
-              _selectedIndex = index; // Update the selected tab index
-            });
-          },
+          onTabChange: _onNavigate,
           tabs: const [
             GButton(icon: LineIcons.search), // Search Tab
             GButton(icon: LineIcons.suitcase), // Business Tab

@@ -56,6 +56,9 @@ dev_dependencies:
   firebase_auth: ^5.3.4
   google_sign_in: ^6.2.2
   csv: ^5.0.0
+  flutter_local_notifications: ^17.1.4
+  permission_handler: ^10.4.5
+  timezone: ^0.9.3
 
 
 # For information on the generic Dart part of this file, see the
