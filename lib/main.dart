@@ -19,6 +19,7 @@ import 'views/job_search_view.dart';
 import 'models/settings_page_model.dart';
 import 'presenters/settings_page_presenter.dart';
 import 'views/settings_page_view.dart';
+import 'package:provider/provider.dart';
 
 // Initialize the notifications plugin globally
 final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
@@ -52,7 +53,12 @@ void main() async {
   // Request notification permissions
   await requestNotificationPermissions();
 
-  runApp(MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => ThemeModel()..loadThemePreference(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatefulWidget {
@@ -73,12 +79,10 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
+
+    // Initialize presenters
     _themePresenter = ThemePresenter(_themeModel);
-
-    // Initialize search presenter
     _searchPresenter = SearchPresenter(_searchModel);
-
-    // Initialize job search presenter
     _jobRepository = JobRepository();
     _jobSearchPresenter = JobSearchPresenter(_jobRepository, _searchPresenter);
 
@@ -90,6 +94,8 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    final themeModel = Provider.of<ThemeModel>(context);
+
     return FutureBuilder(
       future: Firebase.initializeApp(),
       builder: (context, snapshot) {
@@ -108,9 +114,8 @@ class _MyAppState extends State<MyApp> {
             title: 'Job App',
             theme: ThemeData.light().copyWith(primaryColor: Colors.blue), // Light theme
             darkTheme: ThemeData.dark(), // Dark theme
-            themeMode:
-            _themeModel.isDarkMode ? ThemeMode.dark : ThemeMode.light, // ThemeMode from ThemeModel
-            home: AuthPage(), // Start with AuthPage
+            themeMode: themeModel.isDarkMode ? ThemeMode.dark : ThemeMode.light, // Use ThemeModel's themeMode
+            home: const AuthPage(), // Start with AuthPage
             routes: {
               '/home': (context) => NavBar(
                 themePresenter: _themePresenter,

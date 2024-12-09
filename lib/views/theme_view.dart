@@ -1,39 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../presenters/theme_presenter.dart';
+import '../models/theme_model.dart';
 
 class ThemeView extends StatelessWidget {
-  final ThemePresenter themePresenter;
+  final ThemePresenter presenter;
 
-  const ThemeView({super.key, required this.themePresenter});
+  const ThemeView({super.key, required this.presenter});
 
   @override
   Widget build(BuildContext context) {
+    final themeModel = Provider.of<ThemeModel>(context);
+
     return Scaffold(
-      appBar: AppBar(title: const Text('Theme Settings')),
-      body: Padding(
+      appBar: AppBar(
+        title: const Text('Theme Settings'),
+      ),
+      body: ListView(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              'Appearance',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        children: [
+          ListTile(
+            title: const Text('Dark Mode'),
+            trailing: Switch(
+              value: themeModel.isDarkMode,
+              onChanged: (isDark) async {
+                // Toggle theme without passing an argument
+                await presenter.toggleTheme();
+              },
             ),
-            const SizedBox(height: 16),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text('Dark Mode', style: TextStyle(fontSize: 16)),
-                Switch(
-                  value: themePresenter.isDarkMode,
-                  onChanged: (isDark) {
-                    themePresenter.toggleTheme(isDark);
-                  },
-                ),
-              ],
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
