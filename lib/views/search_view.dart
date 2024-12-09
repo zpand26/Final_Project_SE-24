@@ -163,8 +163,10 @@ class _SearchViewState extends State<SearchView> implements SearchViewContract {
                     return Card(
                       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
                       child: ListTile(
-                        title: Text('${job.jobTitle} - ${job.company}'),
-                        subtitle: Column(
+                        title: Text('${job.jobTitle} - ${job.company})',
+                    style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                    subtitle: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text('Location: ${job.location}'),

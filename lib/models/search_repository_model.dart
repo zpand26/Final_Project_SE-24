@@ -23,7 +23,7 @@ class SearchRepositoryModel {
       final matchesJobTitle = jobTitle.toLowerCase() == "all" || job.jobTitle.toLowerCase() == jobTitle.toLowerCase();
       final matchesHybridInTitle = location.toLowerCase() == "hybrid" &&
           job.jobTitle.toLowerCase().contains("hybrid");
-      return matchesLocation || matchesHybridInTitle && matchesJobTitle;
+      return (matchesLocation || matchesHybridInTitle) && matchesJobTitle;
     }).toList();
   }
 }
