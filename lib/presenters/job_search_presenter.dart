@@ -21,7 +21,7 @@ class JobSearchPresenter {
     }
   }
 
-  Future<void> filterJobsByWorkSetting(String workSetting) async {
+  Future<void> filterJobs({String workSetting = "all", String employmentType = "all"}) async {
     try {
       view?.showLoading();
 
@@ -30,15 +30,11 @@ class JobSearchPresenter {
         await repository.loadJobsFromJson();
       }
 
-      List<Job> jobs = [];
-      if (workSetting.toLowerCase() == "all") {
-        jobs = repository.getAllJobs();
-      } else {
-        jobs = repository.getJobsByWorkSetting(workSetting);
-      }
+      // Filter jobs using the new filterJobs method
+      final jobs = repository.filterJobs(workSetting: workSetting, employmentType: employmentType);
 
       if (jobs.isEmpty) {
-        view?.showError("No jobs found for the selected filter.");
+        view?.showError("No jobs found for the selected filters.");
       } else {
         view?.showJobs(jobs);
       }
@@ -46,9 +42,4 @@ class JobSearchPresenter {
       view?.showError("Error occurred while filtering jobs: $e");
     }
   }
-
-
-
-
 }
-

@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:search_app_bar_page/search_app_bar_page.dart';
 import '../presenters/search_presenter.dart';
-import 'job_search_view.dart';
 import '../presenters/job_search_presenter.dart';
 
 class SearchView extends StatefulWidget {
   final SearchPresenter searchPresenter;
-  final JobSearchPresenter jobSearchPresenter;
-  final Function(int) onNavigate; // Add the onNavigate callback
+  final JobSearchPresenter jobSearchPresenter; // Keep JobSearchPresenter
+  final Function(int) onNavigate;
 
   const SearchView({
     super.key,
     required this.searchPresenter,
-    required this.jobSearchPresenter,
-    required this.onNavigate, // Include onNavigate in the constructor
+    required this.jobSearchPresenter, // Include JobSearchPresenter
+    required this.onNavigate,
   });
 
   @override
@@ -24,7 +23,9 @@ class _SearchViewState extends State<SearchView> {
   @override
   void initState() {
     super.initState();
-    widget.searchPresenter.loadJobs('assets/cleaned_data_jobs_test.csv').then((_) {
+    widget.searchPresenter
+        .loadJobs('lib/assets/cleaned-data/cleaned_software_jobs.json')
+        .then((_) {
       setState(() {}); // Refresh the UI after loading jobs
     });
   }
@@ -48,15 +49,13 @@ class _SearchViewState extends State<SearchView> {
                 value: 'Go to Job Search',
                 child: Text('Go to Software Job Search'),
               ),
-
-
             ],
           ),
         ],
       ),
       body: SearchAppBarPage<Map<String, dynamic>>(
-        listFull: widget.searchPresenter.peopleList,
-        stringFilter: (job) => job['jobTitle'],
+        listFull: widget.searchPresenter.jobList,
+        stringFilter: (job) => job['Job Title'],
         obxListBuilder: (context, list, isModSearch) {
           if (list.isEmpty) {
             return const Center(
@@ -81,32 +80,18 @@ class _SearchViewState extends State<SearchView> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        job['jobTitle'],
+                        job['Job Title'],
                         style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       const SizedBox(height: 4),
-                      Text(
-                        'Category: ${job['jobCategory']}',
-                        style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-                      ),
-                      const SizedBox(height: 8),
-                      Text('Work Year: ${job['workYear']}', style: const TextStyle(fontSize: 14)),
-                      Text(
-                          'Salary: ${job['salary']} ${job['salaryCurrency']} (${job['salaryInUsd']} USD)',
-                          style: const TextStyle(fontSize: 14)),
-                      Text('Experience: ${job['experienceLevel']}',
-                          style: const TextStyle(fontSize: 14)),
-                      Text('Employment Type: ${job['employmentType']}',
-                          style: const TextStyle(fontSize: 14)),
-                      Text('Work Setting: ${job['workSetting']}',
-                          style: const TextStyle(fontSize: 14)),
-                      Text('Company Location: ${job['companyLocation']}',
-                          style: const TextStyle(fontSize: 14)),
-                      Text('Company Size: ${job['companySize']}',
-                          style: const TextStyle(fontSize: 14)),
+                      Text('Company: ${job['Company']}', style: const TextStyle(fontSize: 16)),
+                      Text('Score: ${job['Company Score']}', style: const TextStyle(fontSize: 16)),
+                      Text('Location: ${job['Location']}', style: const TextStyle(fontSize: 16)),
+                      Text('Date Posted: ${job['Date']}', style: const TextStyle(fontSize: 16)),
+                      Text('Salary: ${job['Salary']}', style: const TextStyle(fontSize: 16)),
                     ],
                   ),
                 ),

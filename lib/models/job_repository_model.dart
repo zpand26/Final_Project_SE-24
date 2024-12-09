@@ -7,7 +7,7 @@ class JobRepository {
 
   Future<void> loadJobsFromJson() async {
     if (_jobs.isEmpty) {
-      final String response = await rootBundle.loadString('lib/assets/cleaned-data/cleaned_software_jobs.json');
+      final String response = await rootBundle.loadString('lib/assets/cleaned-data/cleaned_data_jobs.json');
       final List<dynamic> data = jsonDecode(response);
       _jobs = data.map((job) => Job.fromMap(job)).toList();
       print("Jobs loaded successfully: ${_jobs.length}");
@@ -19,20 +19,19 @@ class JobRepository {
     return List.from(_jobs); // Return a copy to prevent accidental modification
   }
 
-  List<Job> getJobsByWorkSetting(String workSetting) {
+  List<Job> filterJobs({String workSetting = "all", String employmentType = "all"}) {
     if (_jobs.isEmpty) {
       throw Exception("No jobs loaded. Please call loadJobsFromJson first.");
     }
 
-    final setting = workSetting.toLowerCase();
-    if (setting == "all") {
-      return List.from(_jobs);
-    }
-
     return _jobs.where((job) {
-      final location = job.location.toLowerCase();
-      final title = job.jobTitle.toLowerCase();
-      return location.contains(setting) || title.contains(setting);
+      final matchesWorkSetting = workSetting.toLowerCase() == "all" ||
+          job.workSetting.toLowerCase() == workSetting.toLowerCase();
+
+      final matchesEmploymentType = employmentType.toLowerCase() == "all" ||
+          job.employmentType.toLowerCase() == employmentType.toLowerCase();
+
+      return matchesWorkSetting && matchesEmploymentType;
     }).toList();
   }
 }

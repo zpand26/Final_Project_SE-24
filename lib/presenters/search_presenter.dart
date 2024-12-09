@@ -5,10 +5,10 @@ class SearchPresenter {
 
   SearchPresenter(this._model);
 
-  List<Map<String, dynamic>> get peopleList => _model.jobList;
+  List<Map<String, dynamic>> get jobList => _model.jobList;
 
-  // Load jobs from the model
+  // Load jobs from the model using JSON
   Future<void> loadJobs(String assetPath) async {
-    await _model.loadJobsFromCsv(assetPath);
+    await _model.loadJobsFromJson(assetPath);
   }
 }

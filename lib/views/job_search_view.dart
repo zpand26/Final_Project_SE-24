@@ -23,7 +23,10 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
   List<Job> jobs = [];
   String errorMessage = "";
   bool isLoading = true;
-  String _selectedFilter = "All"; // Track the selected filter
+
+  // Track selected filters
+  String selectedWorkSetting = "All";
+  String selectedEmploymentType = "All";
 
   @override
   void initState() {
@@ -56,6 +59,21 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
     });
   }
 
+  Future<void> applyFilters() async {
+    try {
+      widget.presenter.view?.showLoading();
+
+      final filteredJobs = widget.presenter.repository.filterJobs(
+        workSetting: selectedWorkSetting,
+        employmentType: selectedEmploymentType,
+      );
+
+      widget.presenter.view?.showJobs(filteredJobs);
+    } catch (e) {
+      widget.presenter.view?.showError("Error occurred while filtering jobs: $e");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -86,30 +104,49 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
               errorMessage,
               style: const TextStyle(color: Colors.red),
             ),
-          DropdownButton<String>(
-            value: _selectedFilter,
-            items: ["All", "Full-time", "Part-time", "Remote", "Hybrid"]
-                .map((setting) => DropdownMenuItem(
-              value: setting,
-              child: Text(setting),
-            ))
-                .toList(),
-            onChanged: (value) async {
-              if (value != null) {
-                setState(() {
-                  _selectedFilter = value; // Update the selected filter
-                  isLoading = true; // Show the loading spinner
-                  jobs = []; // Clear the jobs list
-                });
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              // Work Setting Filter
+              DropdownButton<String>(
+                value: selectedWorkSetting,
+                items: ["All", "In-person", "Remote", "Hybrid"]
+                    .map((setting) => DropdownMenuItem(
+                  value: setting,
+                  child: Text(setting),
+                ))
+                    .toList(),
+                onChanged: (value) {
+                  if (value != null) {
+                    setState(() {
+                      selectedWorkSetting = value;
+                      isLoading = true;
+                    });
+                    applyFilters();
+                  }
+                },
+              ),
 
-                // Ensure asynchronous completion of filtering logic
-                 widget.presenter.filterJobsByWorkSetting(value);
-
-                setState(() {
-                  isLoading = false; // Hide loading spinner after filter application
-                });
-              }
-            },
+              // Employment Type Filter
+              DropdownButton<String>(
+                value: selectedEmploymentType,
+                items: ["All", "Full-time", "Part-time"]
+                    .map((type) => DropdownMenuItem(
+                  value: type,
+                  child: Text(type),
+                ))
+                    .toList(),
+                onChanged: (value) {
+                  if (value != null) {
+                    setState(() {
+                      selectedEmploymentType = value;
+                      isLoading = true;
+                    });
+                    applyFilters();
+                  }
+                },
+              ),
+            ],
           ),
           Expanded(
             child: SearchAppBarPage<Job>(
@@ -129,8 +166,21 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
                   itemBuilder: (context, index) {
                     final job = filteredJobs[index];
                     return ListTile(
-                      title: Text(job.jobTitle),
-                      subtitle: Text('${job.location} • ${job.salaryRange}'),
+                      title: Text(
+                        '${job.jobTitle} (${job.experienceLevel.toUpperCase()})',
+                        style: const TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Work Setting: ${job.workSetting}'),
+                          Text('Employment Type: ${job.employmentType}'),
+                          Text('Category: ${job.jobCategory}'),
+                          Text('Salary: ${job.salary} ${job.salaryCurrency} (\$${job.salaryInUsd.toStringAsFixed(2)} USD)'),
+                          Text('Residence: ${job.employeeResidence}'),
+                        ],
+                      ),
+                      isThreeLine: true,
                     );
                   },
                 );

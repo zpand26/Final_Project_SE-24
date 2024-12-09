@@ -78,6 +78,7 @@ flutter:
       - lib/assets/images/google_logo.jpg
       - assets/cleaned_data_jobs_test.csv
       - lib/assets/cleaned-data/cleaned_software_jobs.json
+      - lib/assets/cleaned-data/cleaned_data_jobs.json
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
