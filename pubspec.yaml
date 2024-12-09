@@ -89,6 +89,8 @@ flutter:
       - lib/assets/cleaned-data/cleaned_software_jobs.json
       - lib/assets/cleaned-data/cleaned_data_jobs.json
       - lib/assets/images/guiding_hand_logo.png
+      - assets/sounds/music.mp3
+      - assets/sounds/music2.mp3
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -13,9 +13,8 @@ import '../presenters/search_presenter.dart';
 import '../presenters/job_search_presenter.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'auth_page_view.dart';
-import 'auth_page_view.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:northstars_final/views/alerts_page_container_view.dart';
+import '../views/sound_view.dart'; // Import the music page
 
 class NavBar extends StatefulWidget {
   final ThemePresenter themePresenter;
@@ -51,7 +50,7 @@ class _NavBarState extends State<NavBar> {
       _buildSearchTab(),
       Center(child: Text('Business Page', style: TextStyle(fontSize: 24))),
       AlertsPageContainer(),
-      Center(child: Text('Music Page', style: TextStyle(fontSize: 24))),
+      MP3PlayerApp(), // Link the music page here
       SettingsPageView(presenter: _settingsPagePresenter),
     ];
   }
