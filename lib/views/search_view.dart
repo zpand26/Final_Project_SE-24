@@ -4,6 +4,7 @@ import '/presenters/search_presenter.dart';
 import '/presenters/job_search_presenter.dart';
 import '/models/software_job_model.dart';
 import 'search_view_contract.dart';
+import 'package:northstars_final/models/citySalaryStats.dart';
 
 class SearchView extends StatefulWidget {
   final SearchPresenter searchPresenter;
@@ -26,9 +27,12 @@ class _SearchViewState extends State<SearchView> implements SearchViewContract {
   List<SearchModel> filteredJobs = [];
   String errorMessage = "";
   bool isLoading = true;
+  List<CitySalaryStats> citySalaryStats = [];
 
   String selectedLocationFilter = "All";
   String selectedTitleFilter = "All";
+
+  bool _isSalaryStatsVisible = false;
 
   final TextEditingController _searchController = TextEditingController();
   String searchQuery = "";
@@ -65,161 +69,231 @@ class _SearchViewState extends State<SearchView> implements SearchViewContract {
     });
   }
 
-  Future<void> applyFilters() async {
-    try {
-      widget.searchPresenter.view?.showLoading();
+  void showSalaryStats() {
+    setState(() {
+      _isSalaryStatsVisible = !_isSalaryStatsVisible;
+    });
 
+    if (_isSalaryStatsVisible) {
+      setState(() {
+        citySalaryStats = widget.searchPresenter.sortCities(filteredJobs);
+      });
+    }
+  }
+
+
+    Future<void> applyFilters() async {
+      try {
+        widget.searchPresenter.view?.showLoading();
+
+        final filteredJobs = widget.searchPresenter.repository.filterJobs(
+          location: selectedLocationFilter,
+          jobTitle: selectedTitleFilter,
+        );
+
+        widget.searchPresenter.view?.showJobs(filteredJobs);
+      } catch (e) {
+        widget.searchPresenter.view?.showError(
+            "Error occurred while filtering jobs: $e");
+      }
+    }
+
+    void compareSalaries() {
       final filteredJobs = widget.searchPresenter.repository.filterJobs(
         location: selectedLocationFilter,
         jobTitle: selectedTitleFilter,
       );
 
-      widget.searchPresenter.view?.showJobs(filteredJobs);
-    } catch (e) {
-      widget.searchPresenter.view?.showError("Error occurred while filtering jobs: $e");
+      widget.searchPresenter.sortCities(filteredJobs);
+
+
+      //widget.searchPresenter.view?.showJobs(filteredJobs);
     }
-  }
 
-  void applySearch() {
-    setState(() {
-      filteredJobs = jobs
-          .where((job) =>
-          job.jobTitle.toLowerCase().contains(searchQuery.toLowerCase()))
-          .toList();
-    });
-  }
+    void applySearch() {
+      setState(() {
+        filteredJobs = jobs
+            .where((job) =>
+            job.jobTitle.toLowerCase().contains(searchQuery.toLowerCase()))
+            .toList();
+      });
+    }
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Software Job Search'),
-        actions: [
-          PopupMenuButton<String>(
-            onSelected: (value) {
-              if (value == 'Go to Job Search') {
-                widget.onNavigate(2); // Navigate to a specific view
-              }
-            },
-            itemBuilder: (context) => [
-              const PopupMenuItem(
-                value: 'Go to Job Search',
-                child: Text('Go to Data Job Search'),
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        appBar: AppBar(
+          title: const Text('Software Job Search'),
+          actions: [
+            PopupMenuButton<String>(
+              onSelected: (value) {
+                if (value == 'Go to Job Search') {
+                  widget.onNavigate(2); // Navigate to a specific view
+                }
+              },
+              itemBuilder: (context) =>
+              [
+                const PopupMenuItem(
+                  value: 'Go to Job Search',
+                  child: Text('Go to Data Job Search'),
+                ),
+              ],
+            ),
+          ],
+        ),
+        body: isLoading
+            ? const Center(child: CircularProgressIndicator())
+            : Column(
+          children: [
+            if (errorMessage.isNotEmpty)
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  errorMessage,
+                  style: const TextStyle(color: Colors.red),
+                ),
               ),
-            ],
-          ),
-        ],
-      ),
-      body: isLoading
-          ? const Center(child: CircularProgressIndicator())
-          : Column(
-        children: [
-          if (errorMessage.isNotEmpty)
+            // Search Bar
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text(
-                errorMessage,
-                style: const TextStyle(color: Colors.red),
-              ),
-            ),
-          // Search Bar
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: TextField(
-              controller: _searchController,
-              onChanged: (value) {
-                setState(() {
-                  searchQuery = value;
-                });
-                applySearch();
-              },
-              style: const TextStyle(fontSize: 16),
-              decoration: InputDecoration(
-                prefixIcon: const Icon(Icons.search),
-                hintText: "Search jobs...",
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
+              child: TextField(
+                controller: _searchController,
+                onChanged: (value) {
+                  setState(() {
+                    searchQuery = value;
+                  });
+                  applySearch();
+                },
+                style: const TextStyle(fontSize: 16),
+                decoration: InputDecoration(
+                  prefixIcon: const Icon(Icons.search),
+                  hintText: "Search jobs...",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
                 ),
               ),
             ),
-          ),
-          // Filters
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              DropdownButton<String>(
-                value: selectedLocationFilter,
-                items: ["All", "Remote", "Hybrid"]
-                    .map((location) => DropdownMenuItem(
-                  value: location,
-                  child: Text(location),
-                ))
-                    .toList(),
-                onChanged: (value) {
-                  if (value != null) {
-                    setState(() {
-                      selectedLocationFilter = value;
-                    });
-                    applyFilters();
-                  }
-                },
-              ),
-              DropdownButton<String>(
-                value: selectedTitleFilter,
-                items: ["All", "Full-time", "Part-time"]
-                    .map((title) => DropdownMenuItem(
-                  value: title,
-                  child: Text(title),
-                ))
-                    .toList(),
-                onChanged: (value) {
-                  if (value != null) {
-                    setState(() {
-                      selectedTitleFilter = value;
-                    });
-                    applyFilters();
-                  }
-                },
-              ),
-            ],
-          ),
-          // Results
-          Expanded(
-            child: filteredJobs.isEmpty
-                ? const Center(
-              child: Text(
-                'No jobs found',
-                style: TextStyle(fontSize: 16),
-              ),
-            )
-                : ListView.builder(
-              itemCount: filteredJobs.length,
-              itemBuilder: (_, index) {
-                final job = filteredJobs[index];
-                return Card(
-                  margin: const EdgeInsets.symmetric(
-                      horizontal: 16, vertical: 4),
-                  child: ListTile(
-                    title: Text(
-                      '${job.jobTitle} - ${job.company})',
-                      style: const TextStyle(
-                          fontWeight: FontWeight.bold),
-                    ),
-                    subtitle: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Location: ${job.location}'),
-                        Text('Salary: ${job.salary}'),
-                        Text('Score: ${job.companyScore}'),
-                      ],
-                    ),
-                  ),
-                );
-              },
+            // Filters
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                DropdownButton<String>(
+                  value: selectedLocationFilter,
+                  items: ["All", "Remote", "Hybrid"]
+                      .map((location) =>
+                      DropdownMenuItem(
+                        value: location,
+                        child: Text(location),
+                      ))
+                      .toList(),
+                  onChanged: (value) {
+                    if (value != null) {
+                      setState(() {
+                        selectedLocationFilter = value;
+                      });
+                      applyFilters();
+                    }
+                  },
+                ),
+                ElevatedButton(
+                    onPressed: showSalaryStats,
+                    child: Text(_isSalaryStatsVisible
+                        ? 'Show Jobs'
+                        : 'Salary by City')),
+                DropdownButton<String>(
+                  value: selectedTitleFilter,
+                  items: ["All", "Full-time", "Part-time"]
+                      .map((title) =>
+                      DropdownMenuItem(
+                        value: title,
+                        child: Text(title),
+                      ))
+                      .toList(),
+                  onChanged: (value) {
+                    if (value != null) {
+                      setState(() {
+                        selectedTitleFilter = value;
+                      });
+                      applyFilters();
+                    }
+                  },
+                ),
+              ],
             ),
-          ),
-        ],
-      ),
-    );
-  }
+            // Results
+            Expanded(
+              child: _isSalaryStatsVisible
+                  ? citySalaryStats.isEmpty
+                  ? const Center(
+                child: Text(
+                  'No city salary stats found',
+                  style: TextStyle(fontSize: 16),
+                ),
+              )
+                  : ListView.builder(
+                itemCount: citySalaryStats.length,
+                itemBuilder: (_, index) {
+                  final cityStat = citySalaryStats[index];
+                  return Card(
+                    margin: const EdgeInsets.symmetric(
+                        horizontal: 16, vertical: 4),
+                    child: ListTile(
+                      title: Text(
+                        cityStat.city,
+                        style: const TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Min Salary: \$${cityStat.minSalary
+                              .toStringAsFixed(0)}'),
+                          Text('Max Salary: \$${cityStat.maxSalary
+                              .toStringAsFixed(0)}'),
+                          Text('Avg Salary: \$${cityStat.averageSalary
+                              .toStringAsFixed(0)}'),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              )
+                  : filteredJobs.isEmpty
+              // If filtered jobs are visible and empty, show "No jobs found"
+                  ? const Center(
+                child: Text(
+                  'No jobs found',
+                  style: TextStyle(fontSize: 16),
+                ),
+              )
+                  : ListView.builder(
+                itemCount: filteredJobs.length,
+                itemBuilder: (_, index) {
+                  final job = filteredJobs[index];
+                  return Card(
+                    margin: const EdgeInsets.symmetric(
+                        horizontal: 16, vertical: 4),
+                    child: ListTile(
+                      title: Text(
+                        '${job.jobTitle} - ${job.company}',
+                        style: const TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Location: ${job.location}'),
+                          Text('Salary: ${job.salary}'),
+                          Text('Score: ${job.companyScore}'),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+
+          ],
+        ),
+      );
+    }
 }
