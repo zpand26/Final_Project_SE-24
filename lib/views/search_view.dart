@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:search_app_bar_page/search_app_bar_page.dart';
 import '/presenters/search_presenter.dart';
 import '/presenters/job_search_presenter.dart';
-import '/models/search_model.dart';
+import '/models/software_job_model.dart';
 import 'search_view_contract.dart';
 
 class SearchView extends StatefulWidget {
@@ -29,6 +29,9 @@ class _SearchViewState extends State<SearchView> implements SearchViewContract {
 
   String selectedLocationFilter = "All";
   String selectedTitleFilter = "All";
+
+  final TextEditingController _searchController = TextEditingController();
+  String searchQuery = "";
 
   @override
   void initState() {
@@ -77,6 +80,14 @@ class _SearchViewState extends State<SearchView> implements SearchViewContract {
     }
   }
 
+  void applySearch() {
+    setState(() {
+      filteredJobs = jobs
+          .where((job) =>
+          job.jobTitle.toLowerCase().contains(searchQuery.toLowerCase()))
+          .toList();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -103,6 +114,35 @@ class _SearchViewState extends State<SearchView> implements SearchViewContract {
           ? const Center(child: CircularProgressIndicator())
           : Column(
         children: [
+          if (errorMessage.isNotEmpty)
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                errorMessage,
+                style: const TextStyle(color: Colors.red),
+              ),
+            ),
+          // Search Bar
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              controller: _searchController,
+              onChanged: (value) {
+                setState(() {
+                  searchQuery = value;
+                });
+                applySearch();
+              },
+              style: const TextStyle(fontSize: 16),
+              decoration: InputDecoration(
+                prefixIcon: const Icon(Icons.search),
+                hintText: "Search jobs...",
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+            ),
+          ),
           // Filters
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -152,31 +192,28 @@ class _SearchViewState extends State<SearchView> implements SearchViewContract {
                 style: TextStyle(fontSize: 16),
               ),
             )
-                : SearchAppBarPage<SearchModel>(
-              listFull: filteredJobs,
-              stringFilter: (job) => job.jobTitle,
-              obxListBuilder: (context, list, isModSearch) {
-                return ListView.builder(
-                  itemCount: list.length,
-                  itemBuilder: (_, index) {
-                    final job = list[index];
-                    return Card(
-                      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                      child: ListTile(
-                        title: Text('${job.jobTitle} - ${job.company})',
-                    style: const TextStyle(fontWeight: FontWeight.bold),
-                        ),
+                : ListView.builder(
+              itemCount: filteredJobs.length,
+              itemBuilder: (_, index) {
+                final job = filteredJobs[index];
+                return Card(
+                  margin: const EdgeInsets.symmetric(
+                      horizontal: 16, vertical: 4),
+                  child: ListTile(
+                    title: Text(
+                      '${job.jobTitle} - ${job.company})',
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold),
+                    ),
                     subtitle: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Location: ${job.location}'),
-                            Text('Salary: ${job.salary}'),
-                            Text('Score: ${job.companyScore}'),
-                          ],
-                        ),
-                      ),
-                    );
-                  },
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Location: ${job.location}'),
+                        Text('Salary: ${job.salary}'),
+                        Text('Score: ${job.companyScore}'),
+                      ],
+                    ),
+                  ),
                 );
               },
             ),

@@ -30,7 +30,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  audioplayers: ^6.1.0
+  just_audio: ^0.9.22
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -67,6 +68,7 @@ dev_dependencies:
   flutter_local_notifications: ^17.1.4
   permission_handler: ^10.4.5
   timezone: ^0.9.3
+  intl: ^0.18.0
 
 
 # For information on the generic Dart part of this file, see the
@@ -87,6 +89,9 @@ flutter:
       - assets/cleaned_data_jobs_test.csv
       - lib/assets/cleaned-data/cleaned_software_jobs.json
       - lib/assets/cleaned-data/cleaned_data_jobs.json
+      - lib/assets/images/guiding_hand_logo.png
+      - assets/sounds/music.mp3
+      - assets/sounds/music2.mp3
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

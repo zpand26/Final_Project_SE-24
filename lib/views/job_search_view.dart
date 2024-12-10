@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import '../presenters/job_search_presenter.dart';
-import '../models/job_model.dart';
+import '../models/data_job_model.dart';
 import 'job_search_view_contract.dart';
-import 'package:search_app_bar_page/search_app_bar_page.dart';
 
 class JobSearchView extends StatefulWidget {
   final JobSearchPresenter presenter;
@@ -20,24 +19,31 @@ class JobSearchView extends StatefulWidget {
 
 class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewContract {
   List<Job> jobs = [];
+  List<Job> displayedJobs = [];
   String errorMessage = "";
   bool isLoading = true;
 
   // Track selected filters
   String selectedWorkSetting = "All";
   String selectedEmploymentType = "All";
+  String selectedSalarySortOption = "None";
+  String selectedCompanySize = "All";
+  String searchQuery = "";
+
+  final TextEditingController _searchController = TextEditingController();
 
   @override
   void initState() {
     super.initState();
-    widget.presenter.view = this; // Attach the view to the presenter
-    widget.presenter.loadJobs(); // Load jobs initially
+    widget.presenter.view = this;
+    widget.presenter.loadJobs();
   }
 
   @override
   void showJobs(List<Job> newJobs) {
     setState(() {
       jobs = newJobs;
+      displayedJobs = newJobs;
       isLoading = false;
       errorMessage = "";
     });
@@ -58,19 +64,143 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
     });
   }
 
+  // Apply filters and search query
   Future<void> applyFilters() async {
     try {
-      widget.presenter.view?.showLoading();
+      setState(() {
+        isLoading = true;
+      });
 
-      final filteredJobs = widget.presenter.repository.filterJobs(
+      // Filter jobs based on work setting, employment type, and company size
+      List<Job> filteredJobs = widget.presenter.repository.filterJobs(
         workSetting: selectedWorkSetting,
         employmentType: selectedEmploymentType,
+        companySize: selectedCompanySize,
       );
 
-      widget.presenter.view?.showJobs(filteredJobs);
+      // Apply salary sorting
+      if (selectedSalarySortOption == "Salary: Low to High") {
+        filteredJobs.sort((a, b) => a.salaryInUsd.compareTo(b.salaryInUsd));
+      } else if (selectedSalarySortOption == "Salary: High to Low") {
+        filteredJobs.sort((a, b) => b.salaryInUsd.compareTo(a.salaryInUsd));
+      }
+
+      // Apply search query
+      if (searchQuery.isNotEmpty) {
+        filteredJobs = filteredJobs
+            .where((job) => job.jobTitle.toLowerCase().contains(searchQuery.toLowerCase()))
+            .toList();
+      }
+
+      setState(() {
+        displayedJobs = filteredJobs;
+        isLoading = false;
+      });
     } catch (e) {
-      widget.presenter.view?.showError("Error occurred while filtering jobs: $e");
+      setState(() {
+        isLoading = false;
+        widget.presenter.view?.showError("Error filtering jobs: $e");
+      });
     }
+  }
+
+  // Show filter dialog
+  void _showFilterDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return StatefulBuilder(
+          builder: (context, setState) {
+            return AlertDialog(
+              title: Text('Apply Filters'),
+              content: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  // Work Setting
+                  DropdownButton<String>(
+                    value: selectedWorkSetting,
+                    items: ["All", "In-person", "Remote", "Hybrid"]
+                        .map((setting) => DropdownMenuItem(
+                      value: setting,
+                      child: Text(setting),
+                    ))
+                        .toList(),
+                    onChanged: (value) {
+                      setState(() {
+                        selectedWorkSetting = value!;
+                      });
+                    },
+                  ),
+
+                  // Employment Type
+                  DropdownButton<String>(
+                    value: selectedEmploymentType,
+                    items: ["All", "Full-time", "Part-time"]
+                        .map((type) => DropdownMenuItem(
+                      value: type,
+                      child: Text(type),
+                    ))
+                        .toList(),
+                    onChanged: (value) {
+                      setState(() {
+                        selectedEmploymentType = value!;
+                      });
+                    },
+                  ),
+
+                  // Company Size
+                  DropdownButton<String>(
+                    value: selectedCompanySize,
+                    items: ["All", "S", "M", "L"]
+                        .map((size) => DropdownMenuItem(
+                      value: size,
+                      child: Text(size),
+                    ))
+                        .toList(),
+                    onChanged: (value) {
+                      setState(() {
+                        selectedCompanySize = value!;
+                      });
+                    },
+                  ),
+
+                  // Salary Sort Option
+                  DropdownButton<String>(
+                    value: selectedSalarySortOption,
+                    items: ["None", "Salary: Low to High", "Salary: High to Low"]
+                        .map((option) => DropdownMenuItem(
+                      value: option,
+                      child: Text(option),
+                    ))
+                        .toList(),
+                    onChanged: (value) {
+                      setState(() {
+                        selectedSalarySortOption = value!;
+                      });
+                    },
+                  ),
+                ],
+              ),
+              actions: <Widget>[
+                TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text('Cancel'),
+                ),
+                TextButton(
+                  onPressed: () {
+                    applyFilters();
+                    Navigator.pop(context);
+                  },
+                  child: Text('Apply'),
+                ),
+              ],
+            );
+          },
+        );
+      },
+    );
   }
 
   @override
@@ -79,10 +209,15 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
       appBar: AppBar(
         title: const Text('Data Job Search'),
         actions: [
+          // Filter Button
+          IconButton(
+            icon: Icon(Icons.filter_alt),
+            onPressed: _showFilterDialog,
+          ),
           PopupMenuButton<String>(
             onSelected: (value) {
               if (value == 'search_view') {
-                widget.onNavigate(0); // Navigate to the Search Tab
+                widget.onNavigate(0);
               }
             },
             itemBuilder: (context) => const [
@@ -103,88 +238,61 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
               errorMessage,
               style: const TextStyle(color: Colors.red),
             ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              // Work Setting Filter
-              DropdownButton<String>(
-                value: selectedWorkSetting,
-                items: ["All", "In-person", "Remote", "Hybrid"]
-                    .map((setting) => DropdownMenuItem(
-                  value: setting,
-                  child: Text(setting),
-                ))
-                    .toList(),
-                onChanged: (value) {
-                  if (value != null) {
-                    setState(() {
-                      selectedWorkSetting = value;
-                      isLoading = true;
-                    });
-                    applyFilters();
-                  }
-                },
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              controller: _searchController,
+              onChanged: (value) {
+                setState(() {
+                  searchQuery = value;
+                });
+                applyFilters();
+              },
+              style: const TextStyle(fontSize: 16),
+              decoration: InputDecoration(
+                prefixIcon: const Icon(Icons.search),
+                hintText: "Search jobs...",
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
               ),
-
-              // Employment Type Filter
-              DropdownButton<String>(
-                value: selectedEmploymentType,
-                items: ["All", "Full-time", "Part-time"]
-                    .map((type) => DropdownMenuItem(
-                  value: type,
-                  child: Text(type),
-                ))
-                    .toList(),
-                onChanged: (value) {
-                  if (value != null) {
-                    setState(() {
-                      selectedEmploymentType = value;
-                      isLoading = true;
-                    });
-                    applyFilters();
-                  }
-                },
-              ),
-            ],
+            ),
           ),
           Expanded(
-            child: SearchAppBarPage<Job>(
-              listFull: jobs,
-              stringFilter: (job) => job.jobTitle, // Filter by job title
-              obxListBuilder: (context, filteredJobs, isModSearch) {
-                if (filteredJobs.isEmpty) {
-                  return const Center(
-                    child: Text(
-                      'NOTHING FOUND',
-                      style: TextStyle(fontSize: 14),
+            child: displayedJobs.isEmpty
+                ? const Center(
+              child: Text(
+                'NOTHING FOUND',
+                style: TextStyle(fontSize: 14),
+              ),
+            )
+                : ListView.builder(
+              itemCount: displayedJobs.length,
+              itemBuilder: (context, index) {
+                final job = displayedJobs[index];
+                return Card(
+                  margin: const EdgeInsets.symmetric(
+                      horizontal: 16, vertical: 4),
+                  child: ListTile(
+                    title: Text(
+                      '${job.jobTitle} (${job.experienceLevel.toUpperCase()})',
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold),
                     ),
-                  );
-                }
-                return ListView.builder(
-                  itemCount: filteredJobs.length,
-                  itemBuilder: (context, index) {
-                    final job = filteredJobs[index];
-                    return Card(
-                      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                      child: ListTile(
-                        title: Text(
-                          '${job.jobTitle} (${job.experienceLevel.toUpperCase()})',
-                          style: const TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        subtitle: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Work Setting: ${job.workSetting}'),
-                            Text('Employment Type: ${job.employmentType}'),
-                            Text('Category: ${job.jobCategory}'),
-                            Text('Salary: ${job.salary} ${job.salaryCurrency} (\$${job.salaryInUsd.toStringAsFixed(2)} USD)'),
-                            Text('Residence: ${job.employeeResidence}'),
-                          ],
-                        ),
-                        isThreeLine: true,
-                      ),
-                    );
-                  },
+                    subtitle: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Work Setting: ${job.workSetting}'),
+                        Text('Employment Type: ${job.employmentType}'),
+                        Text('Category: ${job.jobCategory}'),
+                        Text(
+                            'Salary: ${job.salary} ${job.salaryCurrency} (\$${job.salaryInUsd.toStringAsFixed(2)} USD)'),
+                        Text('Residence: ${job.employeeResidence}'),
+                        Text('Company Size: ${job.companySize.toUpperCase()}'),
+                      ],
+                    ),
+                    isThreeLine: true,
+                  ),
                 );
               },
             ),

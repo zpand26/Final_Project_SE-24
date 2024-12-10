@@ -41,7 +41,7 @@ class AlertsPresenter {
       await flutterLocalNotificationsPlugin.zonedSchedule(
         0, // Notification ID
         title,
-        'It\'s time for your alarm!',
+        'It\'s time for your job interview!!',
         tz.TZDateTime.from(alarmTime, tz.local), // Ensure this time is correct
         notificationDetails,
         androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle, // Updated parameter

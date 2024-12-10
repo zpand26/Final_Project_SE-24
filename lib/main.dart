@@ -7,20 +7,20 @@ import 'package:permission_handler/permission_handler.dart';
 import 'views/auth_page_view.dart';
 import 'views/nav_bar.dart';
 import 'views/alerts_page_container_view.dart';
-import 'models/search_model.dart';
+import 'models/software_job_model.dart';
 import 'presenters/search_presenter.dart';
 import 'views/search_view.dart';
 import 'models/theme_model.dart';
 import 'presenters/theme_presenter.dart';
 import 'views/nav_bar.dart';
-import 'models/job_repository_model.dart';
+import 'models/data_job_repository_model.dart';
 import 'presenters/job_search_presenter.dart';
 import 'views/job_search_view.dart';
 import 'models/settings_page_model.dart';
 import 'presenters/settings_page_presenter.dart';
 import 'views/settings_page_view.dart';
 import 'package:provider/provider.dart';
-import 'package:northstars_final/models/search_repository_model.dart'; // Add this import
+import 'package:northstars_final/models/software_job_repository_model.dart'; // Add this import
 import 'package:northstars_final/views/goal_page_view.dart';
 import 'package:northstars_final/presenters/goal_page_presenter.dart';
 import 'package:northstars_final/models/goal_page_model.dart';
