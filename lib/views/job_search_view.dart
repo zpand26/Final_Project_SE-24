@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../presenters/job_search_presenter.dart';
 import '../models/data_job_model.dart';
 import 'job_search_view_contract.dart';
-import 'package:search_app_bar_page/search_app_bar_page.dart';
 
 class JobSearchView extends StatefulWidget {
   final JobSearchPresenter presenter;
@@ -20,6 +19,7 @@ class JobSearchView extends StatefulWidget {
 
 class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewContract {
   List<Job> jobs = [];
+  List<Job> displayedJobs = []; // Jobs to display after filtering and searching
   String errorMessage = "";
   bool isLoading = true;
 
@@ -27,6 +27,9 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
   String selectedWorkSetting = "All";
   String selectedEmploymentType = "All";
   String selectedSortOption = "None";
+  String searchQuery = ""; // Track search query
+
+  final TextEditingController _searchController = TextEditingController();
 
   @override
   void initState() {
@@ -39,6 +42,7 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
   void showJobs(List<Job> newJobs) {
     setState(() {
       jobs = newJobs;
+      displayedJobs = newJobs; // Display all jobs initially
       isLoading = false;
       errorMessage = "";
     });
@@ -59,18 +63,42 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
     });
   }
 
+  // Apply filters and search query
   Future<void> applyFilters() async {
     try {
-      widget.presenter.view?.showLoading();
+      setState(() {
+        isLoading = true;
+      });
 
-      final filteredJobs = widget.presenter.repository.filterJobs(
+      // Filter jobs based on work setting and employment type
+      List<Job> filteredJobs = widget.presenter.repository.filterJobs(
         workSetting: selectedWorkSetting,
         employmentType: selectedEmploymentType,
       );
 
-      widget.presenter.view?.showJobs(filteredJobs);
+      // Apply sorting
+      if (selectedSortOption == "Salary: Low to High") {
+        filteredJobs.sort((a, b) => a.salary.compareTo(b.salary));
+      } else if (selectedSortOption == "Salary: High to Low") {
+        filteredJobs.sort((a, b) => b.salary.compareTo(a.salary));
+      }
+
+      // Apply search query
+      if (searchQuery.isNotEmpty) {
+        filteredJobs = filteredJobs
+            .where((job) => job.jobTitle.toLowerCase().contains(searchQuery.toLowerCase()))
+            .toList();
+      }
+
+      setState(() {
+        displayedJobs = filteredJobs; // Update displayed jobs
+        isLoading = false;
+      });
     } catch (e) {
-      widget.presenter.view?.showError("Error occurred while filtering jobs: $e");
+      setState(() {
+        isLoading = false;
+        widget.presenter.view?.showError("Error filtering jobs: $e");
+      });
     }
   }
 
@@ -168,44 +196,60 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
               ),
             ],
           ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              controller: _searchController,
+              onChanged: (value) {
+                setState(() {
+                  searchQuery = value;
+                });
+                applyFilters();
+              },
+              style: const TextStyle(fontSize: 16),
+              decoration: InputDecoration(
+                prefixIcon: const Icon(Icons.search),
+                hintText: "Search jobs...",
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+            ),
+          ),
           Expanded(
-            child: SearchAppBarPage<Job>(
-              listFull: jobs,
-              stringFilter: (job) => job.jobTitle, // Filter by job title
-              obxListBuilder: (context, filteredJobs, isModSearch) {
-                if (filteredJobs.isEmpty) {
-                  return const Center(
-                    child: Text(
-                      'NOTHING FOUND',
-                      style: TextStyle(fontSize: 14),
+            child: displayedJobs.isEmpty
+                ? const Center(
+              child: Text(
+                'NOTHING FOUND',
+                style: TextStyle(fontSize: 14),
+              ),
+            )
+                : ListView.builder(
+              itemCount: displayedJobs.length,
+              itemBuilder: (context, index) {
+                final job = displayedJobs[index];
+                return Card(
+                  margin: const EdgeInsets.symmetric(
+                      horizontal: 16, vertical: 4),
+                  child: ListTile(
+                    title: Text(
+                      '${job.jobTitle} (${job.experienceLevel.toUpperCase()})',
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold),
                     ),
-                  );
-                }
-                return ListView.builder(
-                  itemCount: filteredJobs.length,
-                  itemBuilder: (context, index) {
-                    final job = filteredJobs[index];
-                    return Card(
-                      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                      child: ListTile(
-                        title: Text(
-                          '${job.jobTitle} (${job.experienceLevel.toUpperCase()})',
-                          style: const TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        subtitle: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Work Setting: ${job.workSetting}'),
-                            Text('Employment Type: ${job.employmentType}'),
-                            Text('Category: ${job.jobCategory}'),
-                            Text('Salary: ${job.salary} ${job.salaryCurrency} (\$${job.salaryInUsd.toStringAsFixed(2)} USD)'),
-                            Text('Residence: ${job.employeeResidence}'),
-                          ],
-                        ),
-                        isThreeLine: true,
-                      ),
-                    );
-                  },
+                    subtitle: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Work Setting: ${job.workSetting}'),
+                        Text('Employment Type: ${job.employmentType}'),
+                        Text('Category: ${job.jobCategory}'),
+                        Text(
+                            'Salary: ${job.salary} ${job.salaryCurrency} (\$${job.salaryInUsd.toStringAsFixed(2)} USD)'),
+                        Text('Residence: ${job.employeeResidence}'),
+                      ],
+                    ),
+                    isThreeLine: true,
+                  ),
                 );
               },
             ),

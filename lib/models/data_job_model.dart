@@ -33,7 +33,7 @@ class Job {
       jobTitle: map['job_title'] ?? '',
       jobCategory: map['job_category'] ?? '',
       salaryCurrency: map['salary_currency'] ?? '',
-      salary: (map['salary'] ?? 0).toDouble(),
+      salary: double.tryParse(map['salary']?.toString() ?? '0') ?? 0.0,
       salaryInUsd: (map['salary_in_usd'] ?? 0).toDouble(),
       employeeResidence: map['employee_residence'] ?? '',
       experienceLevel: map['experience_level'] ?? '',
