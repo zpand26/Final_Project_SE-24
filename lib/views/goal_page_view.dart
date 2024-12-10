@@ -31,7 +31,7 @@ class _goalPageViewState extends State<GoalPageView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepPurple,
+      backgroundColor: Colors.blueGrey,
       body: Column(
         children: <Widget>[
           Expanded(
@@ -51,7 +51,7 @@ class _goalPageViewState extends State<GoalPageView> {
 
   AppBar _buildAppBar() {
     return AppBar(
-      backgroundColor: Colors.yellow,
+      backgroundColor: Colors.deepPurpleAccent,
       elevation: 0,
       title: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         Icon(

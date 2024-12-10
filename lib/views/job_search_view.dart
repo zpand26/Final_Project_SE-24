@@ -28,6 +28,7 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
   String selectedEmploymentType = "All";
   String selectedSalarySortOption = "None";
   String selectedCompanySize = "All";
+  String selectedCountry = "All";
   String searchQuery = "";
 
   final TextEditingController _searchController = TextEditingController();
@@ -76,6 +77,7 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
         workSetting: selectedWorkSetting,
         employmentType: selectedEmploymentType,
         companySize: selectedCompanySize,
+        companyLocation: selectedCountry,
       );
 
       // Apply salary sorting
@@ -176,6 +178,22 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
                     onChanged: (value) {
                       setState(() {
                         selectedSalarySortOption = value!;
+                      });
+                    },
+                  ),
+
+                  // Job Category (New Dropdown)
+                  DropdownButton<String>(
+                    value: selectedCountry,
+                    items: ["All", "Algeria", "American Samoa", "Andorra", "Argentina", "Armenia", "Australia", "Austria", "Bahamas", "Belgium", "Bosnia and Herzegovina", "Brazil", "Canada", "Central African Republic", "China", "Colombia", "Croatia", "Czech Republic", "Denmark", "Ecuador", "Egypt", "Estonia", "Finland", "France", "Germany", "Ghana", "Gibraltar", "Greece", "Honduras", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Japan", "Kenya", "Latvia", "Lithuania", "Luxembourg", "Malaysia", "Malta", "Mauritius", "Mexico", "Moldova", "Netherlands", "New Zealand", "Nigeria", "Pakistan", "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Romania", "Russia", "Saudi Arabia", "Singapore", "Slovenia", "South Africa", "South Korea", "Spain", "Sweden", "Switzerland", "Thailand", "Turkey", "Ukraine", "United Arab Emirates", "United Kingdom", "United States"]
+                        .map((category) => DropdownMenuItem(
+                      value: category,
+                      child: Text(category),
+                    ))
+                        .toList(),
+                    onChanged: (value) {
+                      setState(() {
+                        selectedCountry = value!;
                       });
                     },
                   ),
