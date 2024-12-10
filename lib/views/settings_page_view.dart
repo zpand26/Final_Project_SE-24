@@ -180,20 +180,51 @@ class _SettingsPageViewState extends State<SettingsPageView> {
               trailing: Switch(
                 value: themeModel.isDarkMode,
                 onChanged: (isDark) {
-                  themeModel.toggleTheme();
+                  themeModel.toggleTheme(); // Toggles between dark and light mode
                 },
               ),
             ),
-            const Divider(),
+            const Divider(), // Adds a divider for clarity
             ListTile(
               title: const Text('Logout'),
               leading: const Icon(Icons.logout, color: Colors.red),
               onTap: () async {
+                // Signs out the user and navigates to AuthPage
                 await FirebaseAuth.instance.signOut();
                 Navigator.pushAndRemoveUntil(
                   context,
                   MaterialPageRoute(builder: (context) => const AuthPage()),
-                      (route) => false,
+                      (route) => false, // Removes all previous routes
+                );
+              },
+            ),
+            const Divider(), // Adds another divider for clarity
+            ListTile(
+              title: const Text('Credits'),
+              onTap: () {
+                // Displays a dialog showing credits
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      title: const Text('Data Sources & Credits'),
+                      content: const Text(
+                        'This app uses the following data sets:\n\n'
+                            '1. Software Engineer Jobs & Salaries 2024 by Emre Öksüz, on Kaggle\n\n'
+                            '2. Jobs and Salaries in Data Science by Hummaam Qaasim on Kaggle\n\n'
+                            'Thank you to all the contributors!',
+                        style: TextStyle(fontSize: 14),
+                      ),
+                      actions: <Widget>[
+                        TextButton(
+                          onPressed: () {
+                            Navigator.of(context).pop(); // Closes the dialog
+                          },
+                          child: const Text('Close'),
+                        ),
+                      ],
+                    );
+                  },
                 );
               },
             ),
