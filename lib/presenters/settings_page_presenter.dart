@@ -6,16 +6,18 @@ class SettingsPagePresenter {
 
   SettingsPagePresenter(this.model);
 
-  // Firestore reference to the 'users' collection
   final CollectionReference usersCollection =
   FirebaseFirestore.instance.collection('users');
 
-  // Update the username in the model
+  // Update fields
   void updateUsername(String newUsername) {
     model.username = newUsername;
   }
 
-  // Update the birthday in the model
+  void updateName(String newName) {
+    model.name = newName;
+  }
+
   void updateBirthday(DateTime newBirthday) {
     model.birthday = newBirthday;
   }
@@ -24,6 +26,25 @@ class SettingsPagePresenter {
     model.profilePictureUrl = newUrl;
   }
 
+  void updateDescription(String newDescription) {
+    model.description = newDescription;
+  }
+
+  void updateJobTitle(String newJobTitle) {
+    model.jobTitle = newJobTitle;
+  }
+
+  void updateSkills(List<String> newSkills) {
+    model.skills = newSkills;
+  }
+
+  void updateEducation(String newEducation) {
+    model.education = newEducation;
+  }
+
+  void updateCertifications(List<String> newCertifications) {
+    model.certifications = newCertifications;
+  }
 
   // Save user profile data to Firestore
   Future<void> saveUserProfile(String userId) async {
@@ -43,8 +64,14 @@ class SettingsPagePresenter {
         final data = docSnapshot.data() as Map<String, dynamic>;
         final loadedModel = SettingsPageModel.fromFirestore(data);
         model.username = loadedModel.username;
+        model.name = loadedModel.name;
         model.birthday = loadedModel.birthday;
         model.profilePictureUrl = loadedModel.profilePictureUrl;
+        model.description = loadedModel.description;
+        model.jobTitle = loadedModel.jobTitle;
+        model.skills = loadedModel.skills;
+        model.education = loadedModel.education;
+        model.certifications = loadedModel.certifications;
         print('User profile loaded from Firestore');
       } else {
         print('No profile data found for user');
