@@ -26,7 +26,7 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
   // Track selected filters
   String selectedWorkSetting = "All";
   String selectedEmploymentType = "All";
-  String selectedSortOption = "None";
+  String selectedSalarySortOption = "None";
   String searchQuery = ""; // Track search query
 
   final TextEditingController _searchController = TextEditingController();
@@ -75,19 +75,14 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
         workSetting: selectedWorkSetting,
         employmentType: selectedEmploymentType,
       );
-
-      // Apply sorting
-      if (selectedSortOption == "Salary: Low to High") {
+      
+      // Apply salary sorting
+      if (selectedSalarySortOption == "Salary: Low to High") {
         filteredJobs.sort((a, b) => a.salaryInUsd.compareTo(b.salaryInUsd));
-      } else if (selectedSortOption == "Salary: High to Low") {
+      } else if (selectedSalarySortOption == "Salary: High to Low") {
         filteredJobs.sort((a, b) => b.salaryInUsd.compareTo(a.salaryInUsd));
       }
 
-      if (selectedSortOption == "Size: low to High") {
-
-      } else if (selectedSortOption == "Size: High to Low"){
-
-      }
 
       // Apply search query
       if (searchQuery.isNotEmpty) {
@@ -183,7 +178,7 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
 
               // Sorting Filter
               DropdownButton<String>(
-                value: selectedSortOption,
+                value: selectedSalarySortOption,
                 items: ["None", "Salary: Low to High", "Salary: High to Low"]
                     .map((sortOption) => DropdownMenuItem(
                   value: sortOption,
@@ -193,7 +188,7 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
                 onChanged: (value) {
                   if (value != null) {
                     setState(() {
-                      selectedSortOption = value;
+                      selectedSalarySortOption = value;
                       isLoading = true;
                     });
                     applyFilters();
