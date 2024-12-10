@@ -19,7 +19,11 @@ class JobRepository {
     return List.from(_jobs); // Return a copy to prevent accidental modification
   }
 
-  List<Job> filterJobs({String workSetting = "all", String employmentType = "all"}) {
+  List<Job> filterJobs({
+    String workSetting = "all",
+    String employmentType = "all",
+    String companySize = "all"
+  }) {
     if (_jobs.isEmpty) {
       throw Exception("No jobs loaded. Please call loadJobsFromJson first.");
     }
@@ -31,7 +35,10 @@ class JobRepository {
       final matchesEmploymentType = employmentType.toLowerCase() == "all" ||
           job.employmentType.toLowerCase() == employmentType.toLowerCase();
 
-      return matchesWorkSetting && matchesEmploymentType;
+      final matchesCompanySize = companySize.toLowerCase() == "all" ||
+          job.companySize.toLowerCase() == companySize.toLowerCase(); // Apply company size filter
+
+      return matchesWorkSetting && matchesEmploymentType && matchesCompanySize;
     }).toList();
   }
 }

@@ -27,6 +27,7 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
   String selectedWorkSetting = "All";
   String selectedEmploymentType = "All";
   String selectedSalarySortOption = "None";
+  String selectedCompanySize = "All";
   String searchQuery = ""; // Track search query
 
   final TextEditingController _searchController = TextEditingController();
@@ -70,19 +71,19 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
         isLoading = true;
       });
 
-      // Filter jobs based on work setting and employment type
+      // Filter jobs based on work setting, employment type, and company size
       List<Job> filteredJobs = widget.presenter.repository.filterJobs(
         workSetting: selectedWorkSetting,
         employmentType: selectedEmploymentType,
+        companySize: selectedCompanySize, // Add company size filter
       );
-      
+
       // Apply salary sorting
       if (selectedSalarySortOption == "Salary: Low to High") {
         filteredJobs.sort((a, b) => a.salaryInUsd.compareTo(b.salaryInUsd));
       } else if (selectedSalarySortOption == "Salary: High to Low") {
         filteredJobs.sort((a, b) => b.salaryInUsd.compareTo(a.salaryInUsd));
       }
-
 
       // Apply search query
       if (searchQuery.isNotEmpty) {
@@ -176,7 +177,27 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
                 },
               ),
 
-              // Sorting Filter
+              //filter company size
+              DropdownButton<String>(
+                value: selectedCompanySize,
+                items: ["All", "S", "M", "L"]  // Small, Medium, Large options
+                    .map((size) => DropdownMenuItem(
+                  value: size,
+                  child: Text(size),
+                ))
+                    .toList(),
+                onChanged: (value) {
+                  if (value != null) {
+                    setState(() {
+                      selectedCompanySize = value;
+                      isLoading = true;
+                    });
+                    applyFilters();
+                  }
+                },
+              ),
+
+              // Sorting by salary
               DropdownButton<String>(
                 value: selectedSalarySortOption,
                 items: ["None", "Salary: Low to High", "Salary: High to Low"]
