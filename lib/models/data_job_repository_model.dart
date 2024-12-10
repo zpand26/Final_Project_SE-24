@@ -22,7 +22,8 @@ class JobRepository {
   List<Job> filterJobs({
     String workSetting = "all",
     String employmentType = "all",
-    String companySize = "all"
+    String companySize = "all",
+    String companyLocation = "all"
   }) {
     if (_jobs.isEmpty) {
       throw Exception("No jobs loaded. Please call loadJobsFromJson first.");
@@ -38,7 +39,10 @@ class JobRepository {
       final matchesCompanySize = companySize.toLowerCase() == "all" ||
           job.companySize.toLowerCase() == companySize.toLowerCase(); // Apply company size filter
 
-      return matchesWorkSetting && matchesEmploymentType && matchesCompanySize;
+      final matchesCountry = companyLocation.toLowerCase() == "all" ||
+          job.companyLocation.toLowerCase() == companyLocation.toLowerCase();
+
+      return matchesWorkSetting && matchesEmploymentType && matchesCompanySize && matchesCountry;
     }).toList();
   }
 }
