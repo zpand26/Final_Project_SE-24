@@ -3,8 +3,8 @@ import 'package:provider/provider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../models/settings_page_model.dart';
 import '../presenters/settings_page_presenter.dart';
-import 'auth_page_view.dart';
-import '../models/theme_model.dart';
+import '../models/theme_model.dart'; // For ThemeModel
+import '../views/auth_page_view.dart'; // Ensure this is correctly imported
 
 class SettingsPageView extends StatefulWidget {
   final SettingsPagePresenter presenter;
@@ -17,25 +17,17 @@ class SettingsPageView extends StatefulWidget {
 
 class _SettingsPageViewState extends State<SettingsPageView> {
   final TextEditingController _usernameController = TextEditingController();
-  final TextEditingController _headlineController = TextEditingController();
+  final TextEditingController _descriptionController = TextEditingController();
   final TextEditingController _jobTitleController = TextEditingController();
-  final TextEditingController _phoneNumberController = TextEditingController();
-  final TextEditingController _websiteController = TextEditingController();
-  final TextEditingController _industryController = TextEditingController();
+  final TextEditingController _skillsController = TextEditingController();
+
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>(); // Key for sidebar
 
   DateTime? _selectedBirthday;
   User? _currentUser;
   bool _isUploading = false;
 
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-
-  final List<String> predefinedImages = [
-    'https://www.usatoday.com/gcdn/media/2020/09/11/USATODAY/usatsports/ghows_gallery-WL-822009996-7ffc2013.jpg?crop=1440,810,x0,y495&width=1440&height=720&format=pjpg&auto=webp',
-    'https://www.bkacontent.com/wp-content/uploads/2016/06/Depositphotos_31146757_l-2015.jpg',
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR131D9ROq-XWTaZL0clqCsild1L_MmWUvY8Q&s',
-    'https://faroutguides.com/wp-content/uploads/2021/06/north-star-blog-header-image.jpg',
-    'https://www.frontierfireprotection.com/wp-content/uploads/freshizer/730cbf2e2455c64c961be8e18e793f6b_3-Things-a-Fire-Needs-2000-c-90.jpg',
-  ];
+  final List<String> _skills = [];
 
   @override
   void initState() {
@@ -46,15 +38,44 @@ class _SettingsPageViewState extends State<SettingsPageView> {
       widget.presenter.loadUserProfile(_currentUser!.uid).then((_) {
         setState(() {
           _usernameController.text = widget.presenter.model.username ?? '';
-          _headlineController.text = widget.presenter.model.headline ?? '';
+          _descriptionController.text = widget.presenter.model.description ?? '';
           _jobTitleController.text = widget.presenter.model.jobTitle ?? '';
-          _phoneNumberController.text = widget.presenter.model.phoneNumber ?? '';
-          _websiteController.text = widget.presenter.model.website ?? '';
-          _industryController.text = widget.presenter.model.industry ?? '';
+          _skills.addAll(widget.presenter.model.skills ?? []);
           _selectedBirthday = widget.presenter.model.birthday;
         });
       });
     }
+  }
+
+  void _addSkill() {
+    final skill = _skillsController.text.trim();
+    if (skill.isNotEmpty) {
+      setState(() {
+        _skills.add(skill);
+        _skillsController.clear();
+      });
+    }
+  }
+
+  void _removeSkill(String skill) {
+    setState(() {
+      _skills.remove(skill);
+    });
+  }
+
+  void _saveProfile() {
+    if (_currentUser == null) return;
+
+    widget.presenter.updateUsername(_usernameController.text);
+    widget.presenter.updateDescription(_descriptionController.text);
+    widget.presenter.updateJobTitle(_jobTitleController.text);
+    widget.presenter.updateSkills(_skills);
+
+    widget.presenter.saveUserProfile(_currentUser!.uid);
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('Profile updated!')),
+    );
   }
 
   Future<void> _pickBirthday() async {
@@ -72,88 +93,19 @@ class _SettingsPageViewState extends State<SettingsPageView> {
     }
   }
 
-  Future<void> _selectProfilePicture() async {
-    final selectedImage = await showDialog<String>(
-      context: context,
-      builder: (BuildContext context) {
-        return SimpleDialog(
-          title: const Text('Select a Profile Picture'),
-          children: predefinedImages.map((imageUrl) {
-            return SimpleDialogOption(
-              onPressed: () {
-                Navigator.pop(context, imageUrl); // Return the selected URL
-              },
-              child: Row(
-                children: [
-                  Image.network(imageUrl, width: 50, height: 50),
-                  const SizedBox(width: 10),
-                  const Text('Select'),
-                ],
-              ),
-            );
-          }).toList(),
-        );
-      },
-    );
-
-    if (selectedImage != null && _currentUser != null) {
-      setState(() {
-        _isUploading = true;
-      });
-
-      try {
-        widget.presenter.updateProfilePicture(selectedImage);
-        await widget.presenter.saveUserProfile(_currentUser!.uid);
-
-        setState(() {
-          _isUploading = false;
-        });
-
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Profile picture updated!')),
-        );
-      } catch (e) {
-        setState(() {
-          _isUploading = false;
-        });
-
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Error saving profile picture: $e')),
-        );
-      }
-    }
-  }
-
-  void _saveProfile() {
-    if (_currentUser == null) return;
-
-    widget.presenter.updateUsername(_usernameController.text);
-    widget.presenter.updateHeadline(_headlineController.text);
-    widget.presenter.updateJobTitle(_jobTitleController.text);
-    widget.presenter.updatePhoneNumber(_phoneNumberController.text);
-    widget.presenter.updateWebsite(_websiteController.text);
-    widget.presenter.updateIndustry(_industryController.text);
-
-    widget.presenter.saveUserProfile(_currentUser!.uid);
-
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Profile updated!')),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     final themeModel = Provider.of<ThemeModel>(context);
 
     return Scaffold(
-      key: _scaffoldKey,
+      key: _scaffoldKey, // Assign the scaffold key here
       appBar: AppBar(
         title: const Text('Settings Page'),
         actions: [
           IconButton(
             icon: const Icon(Icons.settings),
             onPressed: () {
-              _scaffoldKey.currentState?.openEndDrawer();
+              _scaffoldKey.currentState?.openEndDrawer(); // Use the key to open the sidebar
             },
           ),
         ],
@@ -201,7 +153,7 @@ class _SettingsPageViewState extends State<SettingsPageView> {
             const Text('Profile Picture'),
             const SizedBox(height: 10),
             GestureDetector(
-              onTap: _selectProfilePicture,
+              onTap: () {}, // Placeholder for profile picture update
               child: CircleAvatar(
                 radius: 50,
                 backgroundImage: widget.presenter.model.profilePictureUrl != null
@@ -244,26 +196,30 @@ class _SettingsPageViewState extends State<SettingsPageView> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text('Professional Information', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                    const SizedBox(height: 10),
                     TextField(
-                      controller: _headlineController,
-                      decoration: const InputDecoration(labelText: 'Headline'),
+                      controller: _descriptionController,
+                      decoration: const InputDecoration(labelText: 'Description'),
                     ),
                     TextField(
                       controller: _jobTitleController,
                       decoration: const InputDecoration(labelText: 'Job Title'),
                     ),
+                    const SizedBox(height: 20),
+                    const Text('Skills'),
                     TextField(
-                      controller: _phoneNumberController,
-                      decoration: const InputDecoration(labelText: 'Phone Number'),
+                      controller: _skillsController,
+                      decoration: const InputDecoration(labelText: 'Add a Skill'),
+                      onSubmitted: (_) => _addSkill(),
                     ),
-                    TextField(
-                      controller: _websiteController,
-                      decoration: const InputDecoration(labelText: 'Website'),
-                    ),
-                    TextField(
-                      controller: _industryController,
-                      decoration: const InputDecoration(labelText: 'Industry'),
+                    const SizedBox(height: 10),
+                    Wrap(
+                      spacing: 8.0,
+                      children: _skills
+                          .map((skill) => Chip(
+                        label: Text(skill),
+                        onDeleted: () => _removeSkill(skill),
+                      ))
+                          .toList(),
                     ),
                   ],
                 ),
@@ -271,7 +227,7 @@ class _SettingsPageViewState extends State<SettingsPageView> {
             ),
             const SizedBox(height: 20),
 
-            // Save Button
+            // Save Button at the Bottom
             ElevatedButton(
               onPressed: _saveProfile,
               child: const Text('Save Profile'),

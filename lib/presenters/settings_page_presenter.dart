@@ -6,11 +6,10 @@ class SettingsPagePresenter {
 
   SettingsPagePresenter(this.model);
 
-  // Firestore reference to the 'users' collection
   final CollectionReference usersCollection =
   FirebaseFirestore.instance.collection('users');
 
-  // Update fields in the model
+  // Update fields
   void updateUsername(String newUsername) {
     model.username = newUsername;
   }
@@ -23,8 +22,8 @@ class SettingsPagePresenter {
     model.profilePictureUrl = newUrl;
   }
 
-  void updateHeadline(String newHeadline) {
-    model.headline = newHeadline;
+  void updateDescription(String newDescription) {
+    model.description = newDescription;
   }
 
   void updateJobTitle(String newJobTitle) {
@@ -35,31 +34,6 @@ class SettingsPagePresenter {
     model.skills = newSkills;
   }
 
-  void updatePhoneNumber(String newPhoneNumber) {
-    model.phoneNumber = newPhoneNumber;
-  }
-
-  void updateWebsite(String newWebsite) {
-    model.website = newWebsite;
-  }
-
-  void updateEducation(String newEducation) {
-    model.education = newEducation;
-  }
-
-  void updateCertifications(List<String> newCertifications) {
-    model.certifications = newCertifications;
-  }
-
-  void updateIndustry(String newIndustry) {
-    model.industry = newIndustry;
-  }
-
-  void updatePreferredLocation(String newLocation) {
-    model.preferredLocation = newLocation;
-  }
-
-  // Save user profile data to Firestore
   Future<void> saveUserProfile(String userId) async {
     try {
       await usersCollection.doc(userId).set(model.toFirestore());
@@ -69,7 +43,6 @@ class SettingsPagePresenter {
     }
   }
 
-  // Load user profile data from Firestore
   Future<void> loadUserProfile(String userId) async {
     try {
       final docSnapshot = await usersCollection.doc(userId).get();
@@ -79,15 +52,9 @@ class SettingsPagePresenter {
         model.username = loadedModel.username;
         model.birthday = loadedModel.birthday;
         model.profilePictureUrl = loadedModel.profilePictureUrl;
-        model.headline = loadedModel.headline;
+        model.description = loadedModel.description;
         model.jobTitle = loadedModel.jobTitle;
         model.skills = loadedModel.skills;
-        model.phoneNumber = loadedModel.phoneNumber;
-        model.website = loadedModel.website;
-        model.education = loadedModel.education;
-        model.certifications = loadedModel.certifications;
-        model.industry = loadedModel.industry;
-        model.preferredLocation = loadedModel.preferredLocation;
         print('User profile loaded from Firestore');
       } else {
         print('No profile data found for user');
