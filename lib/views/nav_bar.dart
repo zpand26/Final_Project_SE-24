@@ -15,17 +15,22 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'auth_page_view.dart';
 import 'package:northstars_final/views/alerts_page_container_view.dart';
 import '../views/sound_view.dart'; // Import the music page
+import 'package:northstars_final/views/goal_page_view.dart';
+import 'package:northstars_final/presenters/goal_page_presenter.dart';
+import 'package:northstars_final/models/goal_page_model.dart';
 
 class NavBar extends StatefulWidget {
   final ThemePresenter themePresenter;
   final SearchPresenter searchPresenter;
   final JobSearchPresenter jobSearchPresenter;
+  final GoalPagePresenter goalPagePresenter;
 
   const NavBar({
     super.key,
     required this.themePresenter,
     required this.searchPresenter,
     required this.jobSearchPresenter,
+    required this.goalPagePresenter,
   });
 
   @override
@@ -36,6 +41,7 @@ class _NavBarState extends State<NavBar> {
   int _selectedIndex = 0;
   bool _isSearchView = true; // Toggle between SearchView and JobSearchView
   late final SettingsPagePresenter _settingsPagePresenter;
+  late final GoalPagePresenter _goalPagePresenter;
 
   late final List<Widget> _pages;
 
@@ -44,11 +50,12 @@ class _NavBarState extends State<NavBar> {
     super.initState();
     // Initialize SettingsPagePresenter
     _settingsPagePresenter = SettingsPagePresenter(SettingsPageModel());
+    _goalPagePresenter = GoalPagePresenter(GoalPageModel(), (data) => print(data));
 
     // Initialize pages
     _pages = [
       _buildSearchTab(),
-      Center(child: Text('Business Page', style: TextStyle(fontSize: 24))),
+      GoalPageView(_goalPagePresenter), //Center(child: Text('Business Page', style: TextStyle(fontSize: 24))),
       AlertsPageContainer(),
       MP3PlayerApp(), // Link the music page here
       SettingsPageView(presenter: _settingsPagePresenter),
@@ -118,7 +125,7 @@ class _NavBarState extends State<NavBar> {
           onTabChange: _onNavigate,
           tabs: const [
             GButton(icon: LineIcons.search), // Search Tab
-            GButton(icon: LineIcons.suitcase), // Business Tab
+            GButton(icon: LineIcons.check), // Goals Tab
             GButton(icon: LineIcons.clock), // Alerts Tab
             GButton(icon: LineIcons.music), // Music Tab
             GButton(icon: LineIcons.user), // Profile/Settings Tab
