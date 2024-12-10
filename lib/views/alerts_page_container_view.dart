@@ -21,16 +21,27 @@ class _AlertsPageContainerState extends State<AlertsPageContainer> {
   void initState() {
     super.initState();
     _initializeNotifications();
-    _presenter = AlertsPresenter(AlarmManager(), (updatedAlarms) {
+
+    final alarmManager = AlarmManager();
+
+    alarmManager.loadAlarms().then((_) {
+      _presenter = AlertsPresenter(alarmManager, (updatedAlarms) {
+        setState(() {
+          _alarms = updatedAlarms;
+        });
+      });
+
       setState(() {
-        _alarms = updatedAlarms;
+        _alarms = alarmManager.getAlarms();
       });
     });
   }
 
   void _initializeNotifications() {
-    const androidInitializationSettings = AndroidInitializationSettings('@mipmap/ic_launcher');
-    const initializationSettings = InitializationSettings(android: androidInitializationSettings);
+    const androidInitializationSettings =
+    AndroidInitializationSettings('@mipmap/ic_launcher');
+    const initializationSettings =
+    InitializationSettings(android: androidInitializationSettings);
 
     flutterLocalNotificationsPlugin.initialize(initializationSettings);
 

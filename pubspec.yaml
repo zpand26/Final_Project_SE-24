@@ -68,6 +68,7 @@ dev_dependencies:
   flutter_local_notifications: ^17.1.4
   permission_handler: ^10.4.5
   timezone: ^0.9.3
+  intl: ^0.18.0
 
 
 # For information on the generic Dart part of this file, see the
