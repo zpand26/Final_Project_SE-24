@@ -1,7 +1,7 @@
 import 'package:northstars_final/models/goal_page_model.dart';
 import 'package:northstars_final/models/goal_item.dart';
 class GoalPagePresenter {
-  final GoalPageModel goalPageModel;
+  GoalPageModel goalPageModel = GoalPageModel();
   final Function(List<GoalPageModel>) updateView;
 
   GoalPagePresenter(this.goalPageModel, this.updateView);

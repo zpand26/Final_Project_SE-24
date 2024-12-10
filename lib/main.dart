@@ -76,7 +76,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   final ThemeModel _themeModel = ThemeModel();
   final searchRepository = SearchRepositoryModel();
-  late final GoalPageModel goalPageModel;
+  final GoalPageModel goalPageModel = GoalPageModel();
   late final ThemePresenter _themePresenter;
   late final SearchPresenter _searchPresenter;
   late final JobRepository _jobRepository;
