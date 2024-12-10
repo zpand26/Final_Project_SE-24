@@ -19,7 +19,7 @@ class JobSearchView extends StatefulWidget {
 
 class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewContract {
   List<Job> jobs = [];
-  List<Job> displayedJobs = []; // Jobs to display after filtering and searching
+  List<Job> displayedJobs = [];
   String errorMessage = "";
   bool isLoading = true;
 
@@ -28,22 +28,22 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
   String selectedEmploymentType = "All";
   String selectedSalarySortOption = "None";
   String selectedCompanySize = "All";
-  String searchQuery = ""; // Track search query
+  String searchQuery = "";
 
   final TextEditingController _searchController = TextEditingController();
 
   @override
   void initState() {
     super.initState();
-    widget.presenter.view = this; // Attach the view to the presenter
-    widget.presenter.loadJobs(); // Load jobs initially
+    widget.presenter.view = this;
+    widget.presenter.loadJobs();
   }
 
   @override
   void showJobs(List<Job> newJobs) {
     setState(() {
       jobs = newJobs;
-      displayedJobs = newJobs; // Display all jobs initially
+      displayedJobs = newJobs;
       isLoading = false;
       errorMessage = "";
     });
@@ -75,7 +75,7 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
       List<Job> filteredJobs = widget.presenter.repository.filterJobs(
         workSetting: selectedWorkSetting,
         employmentType: selectedEmploymentType,
-        companySize: selectedCompanySize, // Add company size filter
+        companySize: selectedCompanySize,
       );
 
       // Apply salary sorting
@@ -93,7 +93,7 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
       }
 
       setState(() {
-        displayedJobs = filteredJobs; // Update displayed jobs
+        displayedJobs = filteredJobs;
         isLoading = false;
       });
     } catch (e) {
@@ -104,16 +104,120 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
     }
   }
 
+  // Show filter dialog
+  void _showFilterDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return StatefulBuilder(
+          builder: (context, setState) {
+            return AlertDialog(
+              title: Text('Apply Filters'),
+              content: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  // Work Setting
+                  DropdownButton<String>(
+                    value: selectedWorkSetting,
+                    items: ["All", "In-person", "Remote", "Hybrid"]
+                        .map((setting) => DropdownMenuItem(
+                      value: setting,
+                      child: Text(setting),
+                    ))
+                        .toList(),
+                    onChanged: (value) {
+                      setState(() {
+                        selectedWorkSetting = value!;
+                      });
+                    },
+                  ),
+
+                  // Employment Type
+                  DropdownButton<String>(
+                    value: selectedEmploymentType,
+                    items: ["All", "Full-time", "Part-time"]
+                        .map((type) => DropdownMenuItem(
+                      value: type,
+                      child: Text(type),
+                    ))
+                        .toList(),
+                    onChanged: (value) {
+                      setState(() {
+                        selectedEmploymentType = value!;
+                      });
+                    },
+                  ),
+
+                  // Company Size
+                  DropdownButton<String>(
+                    value: selectedCompanySize,
+                    items: ["All", "S", "M", "L"]
+                        .map((size) => DropdownMenuItem(
+                      value: size,
+                      child: Text(size),
+                    ))
+                        .toList(),
+                    onChanged: (value) {
+                      setState(() {
+                        selectedCompanySize = value!;
+                      });
+                    },
+                  ),
+
+                  // Salary Sort Option
+                  DropdownButton<String>(
+                    value: selectedSalarySortOption,
+                    items: ["None", "Salary: Low to High", "Salary: High to Low"]
+                        .map((option) => DropdownMenuItem(
+                      value: option,
+                      child: Text(option),
+                    ))
+                        .toList(),
+                    onChanged: (value) {
+                      setState(() {
+                        selectedSalarySortOption = value!;
+                      });
+                    },
+                  ),
+                ],
+              ),
+              actions: <Widget>[
+                TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text('Cancel'),
+                ),
+                TextButton(
+                  onPressed: () {
+                    applyFilters();
+                    Navigator.pop(context);
+                  },
+                  child: Text('Apply'),
+                ),
+              ],
+            );
+          },
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Data Job Search'),
         actions: [
+          // Filter Button
+          IconButton(
+            icon: Icon(Icons.filter_alt),
+            onPressed: _showFilterDialog,
+          ),
           PopupMenuButton<String>(
             onSelected: (value) {
               if (value == 'search_view') {
-                widget.onNavigate(0); // Navigate to the Search Tab
+                widget.onNavigate(0);
               }
             },
             itemBuilder: (context) => const [
@@ -134,90 +238,6 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
               errorMessage,
               style: const TextStyle(color: Colors.red),
             ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              // Work Setting Filter
-              DropdownButton<String>(
-                value: selectedWorkSetting,
-                items: ["All", "In-person", "Remote", "Hybrid"]
-                    .map((setting) => DropdownMenuItem(
-                  value: setting,
-                  child: Text(setting),
-                ))
-                    .toList(),
-                onChanged: (value) {
-                  if (value != null) {
-                    setState(() {
-                      selectedWorkSetting = value;
-                      isLoading = true;
-                    });
-                    applyFilters();
-                  }
-                },
-              ),
-
-              // Employment Type Filter
-              DropdownButton<String>(
-                value: selectedEmploymentType,
-                items: ["All", "Full-time", "Part-time"]
-                    .map((type) => DropdownMenuItem(
-                  value: type,
-                  child: Text(type),
-                ))
-                    .toList(),
-                onChanged: (value) {
-                  if (value != null) {
-                    setState(() {
-                      selectedEmploymentType = value;
-                      isLoading = true;
-                    });
-                    applyFilters();
-                  }
-                },
-              ),
-
-              //filter company size
-              DropdownButton<String>(
-                value: selectedCompanySize,
-                items: ["All", "S", "M", "L"]  // Small, Medium, Large options
-                    .map((size) => DropdownMenuItem(
-                  value: size,
-                  child: Text(size),
-                ))
-                    .toList(),
-                onChanged: (value) {
-                  if (value != null) {
-                    setState(() {
-                      selectedCompanySize = value;
-                      isLoading = true;
-                    });
-                    applyFilters();
-                  }
-                },
-              ),
-
-              // Sorting by salary
-              DropdownButton<String>(
-                value: selectedSalarySortOption,
-                items: ["None", "Salary: Low to High", "Salary: High to Low"]
-                    .map((sortOption) => DropdownMenuItem(
-                  value: sortOption,
-                  child: Text(sortOption),
-                ))
-                    .toList(),
-                onChanged: (value) {
-                  if (value != null) {
-                    setState(() {
-                      selectedSalarySortOption = value;
-                      isLoading = true;
-                    });
-                    applyFilters();
-                  }
-                },
-              ),
-            ],
-          ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextField(
