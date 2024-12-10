@@ -43,6 +43,7 @@ class _goalPageViewState extends State<GoalPageView> {
           generateAddGoalForm(),
           generateClearAllButton(),
           generateClearDoneButton(),
+          //generateGoalDurationMenu(),
       ],
       ),
     );
@@ -133,6 +134,31 @@ class _goalPageViewState extends State<GoalPageView> {
       ],
     );
   }
+
+  /*Row generateGoalDurationButton(){
+    return Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
+    children: [
+      DropdownButton<String>(
+        value: goalDuration,
+    items: ["All", "Remote", "Hybrid"]
+        .map((location) =>
+    DropdownMenuItem(
+    value: location,
+    child: Text(location),
+    ))
+        .toList(),
+    onChanged: (value) {
+    if (value != null) {
+    setState(() {
+    selectedLocationFilter = value;
+    });
+    applyFilters();
+    }
+    },
+    ),
+    ],
+    );
+  }*/
 
   /*void generateDurationButton(){
     ListView(
