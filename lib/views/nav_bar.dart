@@ -56,11 +56,10 @@ class _NavBarState extends State<NavBar> {
     // Initialize pages
     _pages = [
       _buildSearchTab(),
-      Center(child: Text('Business Page', style: TextStyle(fontSize: 24))),
+      GoalPageView(_goalPagePresenter), //Center(child: Text('Business Page', style: TextStyle(fontSize: 24))),
       AlertsPageContainer(),
       Center(child: Text('Music Page', style: TextStyle(fontSize: 24))),
       SettingsPageView(presenter: _settingsPagePresenter),
-      GoalPageView(_goalPagePresenter),
     ];
   }
 
@@ -127,7 +126,7 @@ class _NavBarState extends State<NavBar> {
           onTabChange: _onNavigate,
           tabs: const [
             GButton(icon: LineIcons.search), // Search Tab
-            GButton(icon: LineIcons.suitcase), // Business Tab
+            GButton(icon: LineIcons.check), // Goals Tab
             GButton(icon: LineIcons.clock), // Alerts Tab
             GButton(icon: LineIcons.music), // Music Tab
             GButton(icon: LineIcons.user), // Profile/Settings Tab

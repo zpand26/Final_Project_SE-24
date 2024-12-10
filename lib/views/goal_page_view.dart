@@ -96,7 +96,7 @@ class _goalPageViewState extends State<GoalPageView> {
       ),
       )
       );
-      list.add(Card as GestureDetector);
+      list.add(text);
     }
     return list;
   }
