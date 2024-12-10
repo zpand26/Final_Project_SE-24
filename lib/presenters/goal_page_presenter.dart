@@ -14,5 +14,8 @@ class GoalPagePresenter {
     goalPageModel.goals.add(goal);
   }
 
+  void clearGoals(){
+    goalPageModel.goals.clear();
+  }
 
 }
