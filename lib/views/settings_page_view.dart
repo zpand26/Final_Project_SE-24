@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart'; // Add provider for theme management
+import 'package:provider/provider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../models/settings_page_model.dart';
 import '../presenters/settings_page_presenter.dart';
 import 'auth_page_view.dart';
-import '../models/theme_model.dart'; // Import ThemeModel
+import '../models/theme_model.dart';
 
 class SettingsPageView extends StatefulWidget {
   final SettingsPagePresenter presenter;
@@ -17,12 +17,18 @@ class SettingsPageView extends StatefulWidget {
 
 class _SettingsPageViewState extends State<SettingsPageView> {
   final TextEditingController _usernameController = TextEditingController();
+  final TextEditingController _headlineController = TextEditingController();
+  final TextEditingController _jobTitleController = TextEditingController();
+  final TextEditingController _phoneNumberController = TextEditingController();
+  final TextEditingController _websiteController = TextEditingController();
+  final TextEditingController _industryController = TextEditingController();
+
   DateTime? _selectedBirthday;
   User? _currentUser;
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   bool _isUploading = false;
 
-  // Place URL of images here
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
   final List<String> predefinedImages = [
     'https://www.usatoday.com/gcdn/media/2020/09/11/USATODAY/usatsports/ghows_gallery-WL-822009996-7ffc2013.jpg?crop=1440,810,x0,y495&width=1440&height=720&format=pjpg&auto=webp',
     'https://www.bkacontent.com/wp-content/uploads/2016/06/Depositphotos_31146757_l-2015.jpg',
@@ -40,8 +46,28 @@ class _SettingsPageViewState extends State<SettingsPageView> {
       widget.presenter.loadUserProfile(_currentUser!.uid).then((_) {
         setState(() {
           _usernameController.text = widget.presenter.model.username ?? '';
+          _headlineController.text = widget.presenter.model.headline ?? '';
+          _jobTitleController.text = widget.presenter.model.jobTitle ?? '';
+          _phoneNumberController.text = widget.presenter.model.phoneNumber ?? '';
+          _websiteController.text = widget.presenter.model.website ?? '';
+          _industryController.text = widget.presenter.model.industry ?? '';
           _selectedBirthday = widget.presenter.model.birthday;
         });
+      });
+    }
+  }
+
+  Future<void> _pickBirthday() async {
+    final DateTime? picked = await showDatePicker(
+      context: context,
+      initialDate: _selectedBirthday ?? DateTime.now(),
+      firstDate: DateTime(1900),
+      lastDate: DateTime(2100),
+    );
+    if (picked != null && picked != _selectedBirthday) {
+      setState(() {
+        _selectedBirthday = picked;
+        widget.presenter.updateBirthday(picked);
       });
     }
   }
@@ -98,43 +124,26 @@ class _SettingsPageViewState extends State<SettingsPageView> {
     }
   }
 
-  Future<void> _pickBirthday() async {
-    final DateTime? picked = await showDatePicker(
-      context: context,
-      initialDate: _selectedBirthday ?? DateTime.now(),
-      firstDate: DateTime(1900),
-      lastDate: DateTime(2100),
-    );
-    if (picked != null && picked != _selectedBirthday) {
-      setState(() {
-        _selectedBirthday = picked;
-        widget.presenter.updateBirthday(picked);
-      });
-    }
-  }
-
   void _saveProfile() {
     if (_currentUser == null) return;
 
     widget.presenter.updateUsername(_usernameController.text);
+    widget.presenter.updateHeadline(_headlineController.text);
+    widget.presenter.updateJobTitle(_jobTitleController.text);
+    widget.presenter.updatePhoneNumber(_phoneNumberController.text);
+    widget.presenter.updateWebsite(_websiteController.text);
+    widget.presenter.updateIndustry(_industryController.text);
+
     widget.presenter.saveUserProfile(_currentUser!.uid);
+
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(content: Text('Profile updated!')),
     );
   }
 
-  void _logout() async {
-    await FirebaseAuth.instance.signOut();
-    Navigator.pushAndRemoveUntil(
-      context,
-      MaterialPageRoute(builder: (context) => const AuthPage()),
-          (route) => false,
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
-    final themeModel = Provider.of<ThemeModel>(context); // Access ThemeModel for dark mode
+    final themeModel = Provider.of<ThemeModel>(context);
 
     return Scaffold(
       key: _scaffoldKey,
@@ -142,7 +151,7 @@ class _SettingsPageViewState extends State<SettingsPageView> {
         title: const Text('Settings Page'),
         actions: [
           IconButton(
-            icon: const Icon(Icons.settings, size: 30),
+            icon: const Icon(Icons.settings),
             onPressed: () {
               _scaffoldKey.currentState?.openEndDrawer();
             },
@@ -151,66 +160,36 @@ class _SettingsPageViewState extends State<SettingsPageView> {
       ),
       endDrawer: Drawer(
         child: ListView(
-          padding: EdgeInsets.zero,
           children: [
             DrawerHeader(
-              decoration: BoxDecoration(
-                color: Theme.of(context).primaryColor,
-              ),
+              decoration: BoxDecoration(color: Theme.of(context).primaryColor),
               child: const Text(
                 'Appearance Settings',
-                style: TextStyle(color: Colors.white, fontSize: 20),
+                style: TextStyle(color: Colors.white),
               ),
             ),
             ListTile(
               title: const Text('Dark Mode'),
               trailing: Switch(
-                value: themeModel.isDarkMode, // Use theme state from ThemeModel
+                value: themeModel.isDarkMode,
                 onChanged: (isDark) {
-                  themeModel.toggleTheme(); // Toggle theme on change
+                  themeModel.toggleTheme();
                 },
               ),
-            ),
-            const Divider(), // Adds a divider for clarity
-            ListTile(
-              title: const Text('Credits'),
-              onTap: () {
-                // You can show a dialog or navigate to a new screen for credits
-                showDialog(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return AlertDialog(
-                      title: const Text('Data Sources & Credits'),
-                      content: const Text(
-                        'This app uses the following data sets:\n\n'
-                            '1. Software Engineer Jobs & Salaries 2024 by Emre Öksüz, on Kaggle\n'
-                            '\n'
-                            '2. Jobs and Salaries in Data Science by Hummaam Qaasim on Kaggle\n'
-                            '\n'
-                            '\n'
-                            'Thank you to all the contributors!',
-                        style: TextStyle(fontSize: 14),
-                      ),
-                      actions: <Widget>[
-                        TextButton(
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                          },
-                          child: const Text('Close'),
-                        ),
-                      ],
-                    );
-                  },
-                );
-              },
             ),
             const Divider(),
             ListTile(
               title: const Text('Logout'),
               leading: const Icon(Icons.logout, color: Colors.red),
-              onTap: _logout,
+              onTap: () async {
+                await FirebaseAuth.instance.signOut();
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => const AuthPage()),
+                      (route) => false,
+                );
+              },
             ),
-
           ],
         ),
       ),
@@ -218,36 +197,31 @@ class _SettingsPageViewState extends State<SettingsPageView> {
         padding: const EdgeInsets.all(16.0),
         child: ListView(
           children: [
-            const Text('Profile Picture', style: TextStyle(fontSize: 18)),
+            // Profile Picture Section
+            const Text('Profile Picture'),
             const SizedBox(height: 10),
             GestureDetector(
               onTap: _selectProfilePicture,
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  CircleAvatar(
-                    radius: 50,
-                    backgroundImage: widget.presenter.model.profilePictureUrl != null
-                        ? NetworkImage(widget.presenter.model.profilePictureUrl!)
-                        : null,
-                    child: widget.presenter.model.profilePictureUrl == null
-                        ? const Icon(Icons.person, size: 50)
-                        : null,
-                  ),
-                  if (_isUploading)
-                    const CircularProgressIndicator(),
-                ],
+              child: CircleAvatar(
+                radius: 50,
+                backgroundImage: widget.presenter.model.profilePictureUrl != null
+                    ? NetworkImage(widget.presenter.model.profilePictureUrl!)
+                    : null,
+                child: widget.presenter.model.profilePictureUrl == null
+                    ? const Icon(Icons.person, size: 50)
+                    : null,
               ),
             ),
             const SizedBox(height: 20),
+
+            // Username Section
             TextField(
               controller: _usernameController,
-              decoration: const InputDecoration(
-                labelText: 'Username',
-                border: OutlineInputBorder(),
-              ),
+              decoration: const InputDecoration(labelText: 'Username'),
             ),
             const SizedBox(height: 20),
+
+            // Birthday Section
             ListTile(
               title: const Text('Birthday'),
               subtitle: Text(
@@ -259,6 +233,45 @@ class _SettingsPageViewState extends State<SettingsPageView> {
               onTap: _pickBirthday,
             ),
             const SizedBox(height: 20),
+
+            // Professional Information Section
+            Card(
+              elevation: 4,
+              margin: const EdgeInsets.symmetric(vertical: 10),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text('Professional Information', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                    const SizedBox(height: 10),
+                    TextField(
+                      controller: _headlineController,
+                      decoration: const InputDecoration(labelText: 'Headline'),
+                    ),
+                    TextField(
+                      controller: _jobTitleController,
+                      decoration: const InputDecoration(labelText: 'Job Title'),
+                    ),
+                    TextField(
+                      controller: _phoneNumberController,
+                      decoration: const InputDecoration(labelText: 'Phone Number'),
+                    ),
+                    TextField(
+                      controller: _websiteController,
+                      decoration: const InputDecoration(labelText: 'Website'),
+                    ),
+                    TextField(
+                      controller: _industryController,
+                      decoration: const InputDecoration(labelText: 'Industry'),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
+
+            // Save Button
             ElevatedButton(
               onPressed: _saveProfile,
               child: const Text('Save Profile'),
