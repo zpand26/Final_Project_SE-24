@@ -21,7 +21,7 @@ class _goalPageViewState extends State<GoalPageView> {
     super.initState();
   }
 
-  void updateView(List<GoalPageModel> todos) {
+  void updateView(List<GoalPageModel> goals) {
     setState(() {
 
     });
@@ -79,9 +79,12 @@ class _goalPageViewState extends State<GoalPageView> {
         });
       },
     child:
-      Text(
-       '${goal.description}',
-          style: TextStyle(
+      Card(
+        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+          child: ListTile(
+            title: Text('${goal.description}',
+            style:
+          TextStyle(
             fontSize: 22,
             color: goal.done ? Colors.grey
                 : Colors.black,
@@ -90,8 +93,10 @@ class _goalPageViewState extends State<GoalPageView> {
             TextDecoration.none,
           ),
           ),
+      ),
+      )
       );
-      list.add(text);
+      list.add(Card as GestureDetector);
     }
     return list;
   }
@@ -120,11 +125,35 @@ class _goalPageViewState extends State<GoalPageView> {
   return ElevatedButton(
     child: Text ('Remove all'),
      onPressed: (){
-      setState((){
-        widget.goalPagePresenter.clearGoals();
+      _confirmClear();
       });
-      },
+  }
+
+    void _confirmClear(){
+    showDialog(
+      context: context,
+      builder: (BuildContext context){
+        return AlertDialog(
+          title: Text('Really remove all goals?',
+            style: TextStyle(fontSize:14),
+          ),
+          actions: <Widget>[
+            TextButton(
+              onPressed: ()=> Navigator.of(context).pop(),
+              child: Text('Cancel')),
+              TextButton(
+                onPressed: (){
+                setState((){
+                  widget.goalPagePresenter.clearGoals();
+                });
+                Navigator.of(context).pop();
+                },
+                  child: Text('Clear all')),
+          ],
+
+        );
+        },
     );
-    }
+  }
 
 }

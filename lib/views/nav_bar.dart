@@ -24,12 +24,14 @@ class NavBar extends StatefulWidget {
   final ThemePresenter themePresenter;
   final SearchPresenter searchPresenter;
   final JobSearchPresenter jobSearchPresenter;
+  final GoalPagePresenter goalPagePresenter;
 
   const NavBar({
     super.key,
     required this.themePresenter,
     required this.searchPresenter,
     required this.jobSearchPresenter,
+    required this.goalPagePresenter,
   });
 
   @override
@@ -40,6 +42,7 @@ class _NavBarState extends State<NavBar> {
   int _selectedIndex = 0;
   bool _isSearchView = true; // Toggle between SearchView and JobSearchView
   late final SettingsPagePresenter _settingsPagePresenter;
+  late final GoalPagePresenter _goalPagePresenter;
 
   late final List<Widget> _pages;
 
@@ -48,6 +51,7 @@ class _NavBarState extends State<NavBar> {
     super.initState();
     // Initialize SettingsPagePresenter
     _settingsPagePresenter = SettingsPagePresenter(SettingsPageModel());
+    _goalPagePresenter = GoalPagePresenter(GoalPageModel(), (data) => print(data));
 
     // Initialize pages
     _pages = [
@@ -56,6 +60,7 @@ class _NavBarState extends State<NavBar> {
       AlertsPageContainer(),
       Center(child: Text('Music Page', style: TextStyle(fontSize: 24))),
       SettingsPageView(presenter: _settingsPagePresenter),
+      GoalPageView(_goalPagePresenter),
     ];
   }
 

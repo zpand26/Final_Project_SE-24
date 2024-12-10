@@ -8,6 +8,9 @@ import 'package:northstars_final/models/theme_model.dart';
 import 'package:northstars_final/models/job_repository_model.dart'; // Add this import
 import 'package:northstars_final/presenters/job_search_presenter.dart'; // Add this import
 import 'package:northstars_final/models/search_repository_model.dart'; // Add this import
+import 'package:northstars_final/views/goal_page_view.dart';
+import 'package:northstars_final/presenters/goal_page_presenter.dart';
+import 'package:northstars_final/models/goal_page_model.dart';
 
 class AuthPage extends StatefulWidget {
   const AuthPage({super.key});
@@ -167,13 +170,15 @@ class _AuthPageState extends State<AuthPage> implements AuthViewContract {
     final searchPresenter = SearchPresenter(searchRepository);
     final jobRepository = JobRepository(); // Add this
     final jobSearchPresenter = JobSearchPresenter(jobRepository,searchPresenter); // Add this
+    final goalPagePresenter = GoalPagePresenter(GoalPageModel(), (data) => print(data));
 
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
         builder: (context) => NavBar(
           themePresenter: themePresenter,
           searchPresenter: searchPresenter,
-          jobSearchPresenter: jobSearchPresenter, // Pass the new parameter
+          jobSearchPresenter: jobSearchPresenter,
+          goalPagePresenter: goalPagePresenter,// Pass the new parameter
         ),
       ),
     );
