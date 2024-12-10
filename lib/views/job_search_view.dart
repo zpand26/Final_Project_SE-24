@@ -78,9 +78,15 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
 
       // Apply sorting
       if (selectedSortOption == "Salary: Low to High") {
-        filteredJobs.sort((a, b) => a.salary.compareTo(b.salary));
+        filteredJobs.sort((a, b) => a.salaryInUsd.compareTo(b.salaryInUsd));
       } else if (selectedSortOption == "Salary: High to Low") {
-        filteredJobs.sort((a, b) => b.salary.compareTo(a.salary));
+        filteredJobs.sort((a, b) => b.salaryInUsd.compareTo(a.salaryInUsd));
+      }
+
+      if (selectedSortOption == "Size: low to High") {
+
+      } else if (selectedSortOption == "Size: High to Low"){
+
       }
 
       // Apply search query
@@ -246,6 +252,7 @@ class _JobSearchViewState extends State<JobSearchView> implements JobSearchViewC
                         Text(
                             'Salary: ${job.salary} ${job.salaryCurrency} (\$${job.salaryInUsd.toStringAsFixed(2)} USD)'),
                         Text('Residence: ${job.employeeResidence}'),
+                        Text('Company Size: ${job.companySize.toUpperCase()}'),
                       ],
                     ),
                     isThreeLine: true,
