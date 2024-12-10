@@ -145,7 +145,7 @@ class _MP3PlayerScreenState extends State<MP3PlayerScreen> {
           children: [
             // Song 1 UI
             Text(
-              'Motivational Song',
+              'Humid Rain - Nolen Sellwood',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 10),
