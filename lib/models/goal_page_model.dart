@@ -3,5 +3,4 @@ class GoalPageModel {
 
   List<GoalItem> goals = [];
 
-
 }

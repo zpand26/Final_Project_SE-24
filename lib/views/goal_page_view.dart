@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:northstars_final/presenters/goal_page_presenter.dart';
 import 'package:northstars_final/models/goal_page_model.dart';
@@ -30,16 +31,18 @@ class _goalPageViewState extends State<GoalPageView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.deepPurple,
       body: Column(
         children: <Widget>[
+          Expanded(
+            child: ListView(
+              children:
+              generateGoalList(),
+            ),
+          ),
           generateAddGoalForm(),
           generateClearAllButton(),
-          Expanded(
-          child: ListView(
-            children:
-          generateGoalList(),
-          ),
-          ),
+          generateClearDoneButton(),
       ],
       ),
     );
@@ -80,12 +83,13 @@ class _goalPageViewState extends State<GoalPageView> {
       },
     child:
       Card(
+        color: Colors.white70,
         margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
           child: ListTile(
-            title: Text('${goal.description}',
+            title: Text(goal.description,
             style:
           TextStyle(
-            fontSize: 22,
+            fontSize: 14,
             color: goal.done ? Colors.grey
                 : Colors.black,
             decoration: goal.done ?
@@ -104,9 +108,17 @@ class _goalPageViewState extends State<GoalPageView> {
   Column generateAddGoalForm(){
     return Column(
       children: <Widget>[
-        TextField(controller: _goalController,),
-        ElevatedButton(
-          child: Text('Add Goal'),
+        Padding(padding: EdgeInsets.all(3),
+          child: TextField(decoration: InputDecoration(filled: true, fillColor: Colors.lightBlueAccent), controller: _goalController)),
+        Container(
+          color: Colors.indigo,
+          alignment: Alignment.bottomCenter,
+         height: 50,
+          margin: const EdgeInsets.all(10),
+            child: ElevatedButton.icon(
+          style: ElevatedButton.styleFrom(
+          shape: ContinuousRectangleBorder()),
+          label: Text('Add Goal'),
           onPressed: (){
             if (_goalController.text.isNotEmpty){
               setState((){
@@ -117,16 +129,59 @@ class _goalPageViewState extends State<GoalPageView> {
             }
           }
         ),
+        ),
       ],
     );
   }
 
-  ElevatedButton generateClearAllButton(){
-  return ElevatedButton(
-    child: Text ('Remove all'),
+  /*void generateDurationButton(){
+    ListView(
+      children: CupertinoSegmentedControl<int>(
+      padding: EdgeInsets.all(10),
+      children: [
+        0: Text('Long-term'),
+        1: Text('Short-term'),
+      ]
+      onValueChanged: (groupValue){
+        print(groupvalue)
+    },
+  )
+  }*/
+
+  Container generateClearAllButton(){
+    return Container(
+      color: Colors.indigo,
+        alignment: Alignment.bottomCenter,
+        height: 50,
+        margin: const EdgeInsets.all(3),
+    child: ElevatedButton.icon(
+    style: ElevatedButton.styleFrom(
+    shape: ContinuousRectangleBorder()),
+    label: Text ('Remove all'),
      onPressed: (){
       _confirmClear();
-      });
+      }
+      ),
+    );
+  }
+
+  Container generateClearDoneButton(){
+    return Container(
+      color: Colors.indigo,
+      alignment: Alignment.bottomCenter,
+      height: 50,
+      margin: const EdgeInsets.all(3),
+    child: ElevatedButton.icon(
+        style: ElevatedButton.styleFrom(
+            shape: ContinuousRectangleBorder()),
+        label: Text ('Remove completed goals'),
+        onPressed: (){
+          setState(() {
+            widget.goalPagePresenter.deleteDoneGoals();
+          });
+        }
+        ),
+    );
   }
 
     void _confirmClear(){
